@@ -38,15 +38,15 @@ The MPU-6050 works by using tiny sensors inside it to detect movement and rotati
 
 #### The gyroscope
 
-The **gyroscope** in the MPU-6050 _measures rotation_. This sensor operates on the principles of angular momentum, maintaining its orientation via the gyroscopic effect. This fascinating phenomenon allows the measurement of rotation direction and angles by identifying deviations from an initial axis.
+The gyroscope in the MPU-6050 _measures rotation_. This sensor operates on the principles of angular momentum, maintaining its orientation via the gyroscopic effect. This fascinating phenomenon allows the measurement of rotation direction and angles by identifying deviations from an initial axis.
 
 #### The accelerometer
 
-The **accelerometer** in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
+The accelerometer in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
 
 #### The Digital Motion Processor (DMP)
 
-The **DMP** in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
+The DMP in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
 
 ### b. The OLED screen: Visualize the data
 
