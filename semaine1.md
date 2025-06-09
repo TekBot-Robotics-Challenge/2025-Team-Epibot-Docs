@@ -26,19 +26,29 @@ The MPU-6050 is a sophisticated device that combines:
 - a Digital Motion Processor (DMP)
 
 This effectively makes the MPU-6050 the world's first 6-axis motion processing unit. It measures pitch (lateral axis rotation), roll (longitudinal axis rotation) and yaw (vertical axis rotation), which are fundamental for determining an object's orientation along the x, y and z axes.
+The MPU-6050 communicates with the Microcontroller Unit (MCU) using the Inter-Integrated Circuit (I2C) connection protocol through the Serial Clock Line (SCL) and Serial Data Line (SDA) wires, which lets the devices exchange information easily. This setup allows the MPU-6050 to measure the speed, the rotation and the orientation of an object, all of which help the robot understand how it's moving in space. 
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/59d5bcdb-afe3-46cf-83fc-9d5e54b45559">
 </p>
 
-<!-- add def of I2C, gyroscope, accelerometer, SCL, SDA -->
 The MPU-6050 works by using tiny sensors inside it to detect movement and rotation in three directions. It can also be connected to an external compass to provide even more detailed motion tracking.
 
-The MPU-6050 communicates with the Microcontroller Unit (MCU) using the Inter-Integrated Circuit (I2C) connection protocol through the Serial Clock Line (SCL) and Serial Data Line (SDA) wires, which lets the devices exchange information easily. This setup allows the MPU-6050 to measure the speed, the rotation and the orientation of an object, all of which help the robot understand how it's moving in space. 
+#### The gyroscope
 
-This sensor can also connect to other sensors (e.g: magnetic sensors) to track even more complex movements. It's designed to work with different voltage levels and can be used in systems where many sensors need to work together.
+The gyroscope in the MPU-6050 measures rotation. This sensor operates on the principles of angular momentum, maintaining its orientation
+via the gyroscopic effect. This fascinating phenomenon allows the measurement of rotation direction and angles 
+by identifying deviations from an initial axis.
 
-### b. Other main components 
+#### The accelerometer
+
+The accelerometer in the MPU-6050 measures acceleration: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
+
+#### The Digital Motion Processor (DMP)
+
+The DMP in the MPU-6050 processes the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
+
+### b. Other main components
 
 #### The OLED screen: Visualize the data
 
