@@ -1,5 +1,12 @@
 # __TEST INPUT: DOCUMENTATION__
 
+In this documentation:
+
+- General context of the test
+- Description of main components
+- Assembly of components
+- Helpful ressources used for this project and its documentation
+
 ## General context
 
 Understanding orientation in space, knowing what is left, right, up or down, is a fundamental skill acquired through our senses during childhood.
@@ -8,7 +15,7 @@ For robots, this spatial awareness must be replicated using sensors like gyrosco
 
 This test focuses on identifying and using a sensor that combines both the functions of a gyroscope and an accelerometer to determine spatial orientation and motion, which are essential for navigation and control.
 
-## PART 1: Description of components
+## PART 1: Description of main components
 
 ### a. The MPU-6050: gyroscope and accelerometer in one sensor
 
@@ -20,17 +27,24 @@ The MPU-6050 is a sophisticated device that combines:
 
 This effectively makes the MPU-6050 the world's first 6-axis motion processing unit. It measures pitch (lateral axis rotation), roll (longitudinal axis rotation) and yaw (vertical axis rotation), which are fundamental for determining an object's orientation along the x, y and z axes.
 
+![Image of the MPU-6050 sensor](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2FElectronicCats%2Fmpu6050&psig=AOvVaw0S9KTUqJXcL3D5iDYlkXDa&ust=1749517271234000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCOjAk_aR440DFQAAAAAdAAAAABAE)
+
+<!-- add image -->
+
+<!-- add def of I2C, gyroscope, accelerometer, SCL, SDA -->
 The MPU-6050 works by using tiny sensors inside it to detect movement and rotation in three directions. It can also be connected to an external compass to provide even more detailed motion tracking.
 
 The MPU-6050 communicates with the Microcontroller Unit (MCU) using the Inter-Integrated Circuit (I2C) connection protocol through the Serial Clock Line (SCL) and Serial Data Line (SDA) wires, which lets the devices exchange information easily. This setup allows the MPU-6050 to measure the speed, the rotation and the orientation of an object, all of which help the robot understand how it's moving in space. 
 
 This sensor can also connect to other sensors (e.g: magnetic sensors) to track even more complex movements. It's designed to work with different voltage levels and can be used in systems where many sensors need to work together.
 
-### b. Other components 
+### b. Other main components 
 
 #### The OLED screen: Visualize the data
 
 The SSD1306 is a popular and compact OLED display module used in a variety of projects to display text or graphics. It communicates with the microcontroller via the I2C communication protocol (just like the MPU-6050 sensor), making it easy to integrate.
+
+<!-- add image -->
 
 The SSD1306 is ideal for viewing the pitch, roll and yaw readings from the MPU-6050 sensor, with a simple, yet pleasing interface or menu. It also allows for real-time motion updates.
 
@@ -38,4 +52,14 @@ The SSD1306 is ideal for viewing the pitch, roll and yaw readings from the MPU-6
 
 The Arduino is a small electronic board that acts as the "brain" of the project. It can be programmed to control sensors, screens, motors, lights and much more. It acts as a basic computer that interacts with the physical world. These attributes of the Arduino make it perfect for this project, as it can read data from our MPU-6050 and output it on our SSD1306 screen while handling communication between all components using I2C.
 
-<!-- add def of I2C, gyroscope, accelerometer, SCL, SDA -->
+<!-- add image -->
+
+## PART 2: Assembly of components
+
+### a. The Arduino code
+
+#### Fetching data from the MPU-6050 sensor
+
+#### Outputting the readings onto the SSD1306 screen
+
+### b. Creating our custom power supply
