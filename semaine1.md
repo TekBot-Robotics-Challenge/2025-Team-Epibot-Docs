@@ -29,10 +29,7 @@ This effectively makes the MPU-6050 the world's first 6-axis motion processing u
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/59d5bcdb-afe3-46cf-83fc-9d5e54b45559">
-    <em>MPU-6050 sensor
 </p>
-
-<!-- ![MPU-6050 sensor](https://github.com/user-attachments/assets/59d5bcdb-afe3-46cf-83fc-9d5e54b45559) -->
 
 <!-- add def of I2C, gyroscope, accelerometer, SCL, SDA -->
 The MPU-6050 works by using tiny sensors inside it to detect movement and rotation in three directions. It can also be connected to an external compass to provide even more detailed motion tracking.
@@ -48,11 +45,8 @@ This sensor can also connect to other sensors (e.g: magnetic sensors) to track e
 The SSD1306 is a popular and compact OLED display module used in a variety of projects to display text or graphics. It communicates with the microcontroller via the I2C communication protocol (just like the MPU-6050 sensor), making it easy to integrate.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9" width="500">
-    <em>SSD1306 screen
+    <img src="https://github.com/user-attachments/assets/7cfd0c36-6237-4052-9faf-cabdfcbb0275" width="500">
 </p>
-
-<!-- ![SSD1306 OLED screen](https://github.com/user-attachments/assets/7cfd0c36-6237-4052-9faf-cabdfcbb0275) -->
 
 The SSD1306 is ideal for viewing the pitch, roll and yaw readings from the MPU-6050 sensor, with a simple, yet pleasing interface or menu. It also allows for real-time motion updates.
 
@@ -62,9 +56,7 @@ The Arduino is a small electronic board that acts as the "brain" of the project.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
-    <em>The Arduino Board
 </p>
-<!-- ![The Arduino Board](https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9) -->
 
 ## PART 2: Assembly of components
 
