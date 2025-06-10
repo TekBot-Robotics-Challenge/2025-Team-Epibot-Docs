@@ -1,0 +1,131 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f093fb;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="circleGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ff6b6b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#ee5a52;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <linearGradient id="circleGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ecdc4;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#44a08d;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <linearGradient id="circleGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#45b7d1;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#96c93d;stop-opacity:0.4" />
+    </linearGradient>
+    
+    <!-- Filters -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="blur">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+  
+  <!-- Geometric shapes -->
+  <circle cx="150" cy="120" r="80" fill="url(#circleGradient1)" filter="url(#glow)" opacity="0.7">
+    <animateTransform attributeName="transform" type="rotate" values="0 150 120;360 150 120" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="650" cy="180" r="60" fill="url(#circleGradient2)" filter="url(#glow)" opacity="0.6">
+    <animateTransform attributeName="transform" type="rotate" values="360 650 180;0 650 180" dur="15s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="200" cy="450" r="70" fill="url(#circleGradient3)" filter="url(#glow)" opacity="0.5">
+    <animateTransform attributeName="transform" type="rotate" values="0 200 450;360 200 450" dur="25s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Hexagons -->
+  <polygon points="400,50 440,70 440,110 400,130 360,110 360,70" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="2">
+    <animateTransform attributeName="transform" type="rotate" values="0 400 90;360 400 90" dur="30s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <polygon points="700,350 730,365 730,395 700,410 670,395 670,365" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5">
+    <animateTransform attributeName="transform" type="rotate" values="360 700 382;0 700 382" dur="25s" repeatCount="indefinite"/>
+  </polygon>
+  
+  <!-- Tech symbols -->
+  <g transform="translate(500,300)" opacity="0.3">
+    <rect x="-15" y="-15" width="30" height="30" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="2" rx="5">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <circle cx="0" cy="0" r="8" fill="rgba(255,255,255,0.3)"/>
+  </g>
+  
+  <g transform="translate(100,300)" opacity="0.4">
+    <path d="M-10,-10 L10,-10 L10,10 L-10,10 Z" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
+      <animateTransform attributeName="transform" type="scale" values="1;1.2;1" dur="3s" repeatCount="indefinite"/>
+    </path>
+    <path d="M-5,-5 L5,5 M5,-5 L-5,5" stroke="rgba(255,255,255,0.6)" stroke-width="2"/>
+  </g>
+  
+  <!-- Floating particles -->
+  <circle cx="300" cy="200" r="3" fill="rgba(255,255,255,0.6)">
+    <animate attributeName="cy" values="200;180;200" dur="4s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="550" cy="400" r="2" fill="rgba(255,255,255,0.5)">
+    <animate attributeName="cy" values="400;420;400" dur="5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.8;0.5" dur="5s" repeatCount="indefinite"/>
+  </circle>
+  
+  <circle cx="750" cy="500" r="2.5" fill="rgba(255,255,255,0.4)">
+    <animate attributeName="cy" values="500;480;500" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.4;0.7;0.4" dur="6s" repeatCount="indefinite"/>
+  </circle>
+  
+  <!-- Network connections -->
+  <g opacity="0.2">
+    <line x1="150" y1="120" x2="400" y2="90" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+      <animate attributeName="opacity" values="0.2;0.5;0.2" dur="8s" repeatCount="indefinite"/>
+    </line>
+    <line x1="650" y1="180" x2="500" y2="300" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+      <animate attributeName="opacity" values="0.2;0.4;0.2" dur="10s" repeatCount="indefinite"/>
+    </line>
+    <line x1="200" y1="450" x2="700" y2="350" stroke="rgba(255,255,255,0.3)" stroke-width="1">
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="12s" repeatCount="indefinite"/>
+    </line>
+  </g>
+  
+  <!-- Central focus element -->
+  <g transform="translate(400,300)" opacity="0.8">
+    <circle r="50" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-dasharray="5,5">
+      <animateTransform attributeName="transform" type="rotate" values="0;360" dur="15s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="30" fill="none" stroke="rgba(255,255,255,0.6)" stroke-width="1" stroke-dasharray="3,3">
+      <animateTransform attributeName="transform" type="rotate" values="360;0" dur="10s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="10" fill="rgba(255,255,255,0.8)">
+      <animate attributeName="r" values="10;15;10" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Code-like elements -->
+  <g transform="translate(50,500)" opacity="0.3">
+    <text x="0" y="0" fill="rgba(255,255,255,0.5)" font-family="monospace" font-size="12">&lt;/&gt;</text>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="4s" repeatCount="indefinite"/>
+  </g>
+  
+  <g transform="translate(720,100)" opacity="0.4">
+    <text x="0" y="0" fill="rgba(255,255,255,0.6)" font-family="monospace" font-size="14">{}</text>
+    <animate attributeName="opacity" values="0.4;0.8;0.4" dur="5s" repeatCount="indefinite"/>
+  </g>
+</svg>
