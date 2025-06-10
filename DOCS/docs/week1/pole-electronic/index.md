@@ -1,1 +1,0 @@
-# Helloc Pole Electronic
