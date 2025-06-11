@@ -78,6 +78,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 
 #### Here's a synoptic diagram to better illustrate it all:
 
+```
 **9V Battery**
      |
      v
@@ -99,7 +100,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
          |                         |
    **SSD1306 OLED**         **MPU-6050**
     (I2C: SDA, SCL, 5V, GND)    (I2C: SDA, SCL, 5V, GND)
-
+```
 ## PART 2: Assembly of components
 
 ### a. The Arduino code
