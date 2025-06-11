@@ -79,16 +79,16 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 #### Here's a synoptic diagram to better illustrate it all:
 
 ```
-**9V Battery**
+[9V Battery]
      |
      v
-**Tension Regulator** ------> [5V] --------------------------+
+[Tension Regulator] ------> [5V] --------------------------+
      |                                                 |
      +--------------------- GND -----------------------+----+
                                                        |    |
                                                        |    |
          +---------------------------+                 |    |
-         |         **Arduino Uno**       |                 |    |
+         |       [Arduino Uno]       |                 |    |
          |  [5V]---------------------+-----------------+    |
          |  [GND]--------------------+----------------------+ 
          |  [SDA] <-------+          |
@@ -98,9 +98,10 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
                 |           |
          +------+           +------+
          |                         |
-   **SSD1306 OLED**         **MPU-6050**
-    (I2C: SDA, SCL, 5V, GND)    (I2C: SDA, SCL, 5V, GND)
+   [SSD1306 OLED]             [MPU-6050]
+(I2C: SDA, SCL, 5V, GND)  (I2C: SDA, SCL, 5V, GND)
 ```
+
 ## PART 2: Assembly of components
 
 ### a. The Arduino code
