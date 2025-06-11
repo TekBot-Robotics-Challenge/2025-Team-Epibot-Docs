@@ -20,7 +20,7 @@ This test focuses on identifying and using a sensor that **combines both the fun
 
 ### a. The MPU-6050: gyroscope and accelerometer in one sensor
 
-The **MPU-6050** is a sophisticated device that combines:
+The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-guide-to-setup%2Cconfiguration%2Cand-noise-management.html?srsltid=AfmBOooVL5CkBlAuw8WV0Yz7l7ZA2u8Ld6yBZFQf7kaTwiemNMmpUUey&utm_source=chatgpt.com#8.%20MPU-6050-Based%20Motion%20Trajectory%20Calculation) is a sophisticated device that combines:
 
 - a 3-axis gyroscope
 - a 3-axis accelerometer
@@ -46,7 +46,7 @@ The [accelerometer](https://en.wikipedia.org/wiki/Accelerometer) in the MPU-6050
 
 #### The Digital Motion Processor (DMP)
 
-The DMP in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
+The Digital Motion Processor in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
 
 ### b. The OLED screen: Visualize the data
 
@@ -60,7 +60,7 @@ The SSD1306 is **ideal** for viewing the pitch, roll and yaw readings from the M
 
 ### c. The Arduino UNO: Central Control Unit
 
-The [Arduino](https://docs.arduino.cc/hardware/uno-rev3/) UNO is a small electronic board that acts as the **"brain"** of the project. It can be programmed to control sensors, screens, motors, lights and much more. It acts as a basic computer that interacts with the physical world. These attributes of the Arduino make it perfect for this project, as it can read data from our MPU-6050 and output it on our SSD1306 screen while handling communication between all components using I2C.
+The [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) is a small electronic board that acts as the **"brain"** of the project. It can be programmed to control sensors, screens, motors, lights and much more. It acts as a basic computer that interacts with the physical world. These attributes of the Arduino make it perfect for this project, as it can read data from our MPU-6050 and output it on our SSD1306 screen while handling communication between all components using I2C.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
