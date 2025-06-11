@@ -5,8 +5,8 @@ In this documentation:
 - [General context](#general-context)
 - [PART 1: Description of components](#part-1-description-of-main-components)
 - [PART 2: Assembly of components](#part-2-assembly-of-components)
-- [Testing the project](#testing-the-project)
-- [Sources used for this documentation](#sources-used-for-this-documentation)
+- [PART 3: Testing the project](#part-3-testing-the-project)
+- [Helpful ressources you can consult](#helpful-ressources-you-can-consult)
 
 ## General context
 
@@ -38,11 +38,11 @@ The MPU-6050 works by using tiny sensors inside it to detect movement and rotati
 
 #### The gyroscope
 
-The gyroscope in the MPU-6050 _measures rotation_. This sensor operates on the principles of angular momentum, maintaining its orientation via the gyroscopic effect. This fascinating phenomenon allows the measurement of rotation direction and angles by identifying deviations from an initial axis.
+The [gyroscope](https://en.wikipedia.org/wiki/Gyroscope) in the MPU-6050 _measures rotation_. This sensor operates on the principles of angular momentum, maintaining its orientation via the gyroscopic effect. This fascinating phenomenon allows the measurement of rotation direction and angles by identifying deviations from an initial axis.
 
 #### The accelerometer
 
-The accelerometer in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
+The [accelerometer](https://en.wikipedia.org/wiki/Accelerometer) in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
 
 #### The Digital Motion Processor (DMP)
 
@@ -58,15 +58,26 @@ The **SSD1306** is a popular and compact OLED display module used in a variety o
 
 The SSD1306 is **ideal** for viewing the pitch, roll and yaw readings from the MPU-6050 sensor, with a simple, yet pleasing interface or menu. It also allows for real-time motion updates.
 
-### c. The Arduino board: Central Control Unit
+### c. The Arduino UNO: Central Control Unit
 
-The [Arduino](https://docs.arduino.cc/) is a small electronic board that acts as the **"brain"** of the project. It can be programmed to control sensors, screens, motors, lights and much more. It acts as a basic computer that interacts with the physical world. These attributes of the Arduino make it perfect for this project, as it can read data from our MPU-6050 and output it on our SSD1306 screen while handling communication between all components using I2C.
+The [Arduino](https://docs.arduino.cc/hardware/uno-rev3/) UNO is a small electronic board that acts as the **"brain"** of the project. It can be programmed to control sensors, screens, motors, lights and much more. It acts as a basic computer that interacts with the physical world. These attributes of the Arduino make it perfect for this project, as it can read data from our MPU-6050 and output it on our SSD1306 screen while handling communication between all components using I2C.
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
 </p>
 
 ### d. Creating our custom power supply
+
+To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that, we will use:
+
+- The **Arduino UNO** as the main controller
+- Our **MPU-6050 sensor**
+- The **SSD10306 OLED display**
+- A **tension regulator**
+- A **9V electric battery** as our external power source
+
+<!-- #### Here's a synoptic diagram to better illustrate it all: -->
+
 <!-- <p align="center">
     <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
 </p> -->
@@ -80,3 +91,20 @@ The [Arduino](https://docs.arduino.cc/) is a small electronic board that acts as
 #### Outputting the readings onto the SSD1306 screen
 
 ### b. Joining the components
+
+#### Connecting the SSD1306 to the Arduino
+
+![screen to arduino](image.png)
+
+## PART 3: Testing the project
+
+## Helpful ressources you can consult
+
+- [Download KiCad](https://www.kicad.org/)
+- [Download the Arduino IDE](https://www.arduino.cc/)
+- https://lastminuteengineers.com/mpu6050-accel-gyro-arduino-tutorial/
+- https://lastminuteengineers.com/oled-display-arduino-tutorial/
+- https://en.wikipedia.org/wiki/
+- https://www.instructables.com
+- https://docs.arduino.cc/
+- https://www.geeksforgeeks.org
