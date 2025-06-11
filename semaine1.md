@@ -101,7 +101,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 #### Connecting the MPU-6050 to the Arduino UNO
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/24712601-d2ee-4b3e-91b5-27eb747b680c">
+    <img src="https://github.com/user-attachments/assets/24712601-d2ee-4b3e-91b5-27eb747b680c" width="500">
 </p>
 
 ## PART 3: Testing the project
