@@ -3,7 +3,7 @@
 In this documentation:
 
 - [General context](#general-context)
-- [PART 1: Description of components](#part-1-description-of-main-components)
+- [PART 1: Description of components](#part-1-description-of-components)
 - [PART 2: Assembly of components](#part-2-assembly-of-components)
 - [PART 3: Testing the project](#part-3-testing-the-project)
 - [Helpful ressources you can consult](#helpful-ressources-you-can-consult)
@@ -95,7 +95,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 #### Connecting the SSD1306 to the Arduino UNO
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/d6634e37-e542-4dfd-8961-57af85efb327">
+    <img src="https://github.com/user-attachments/assets/d6634e37-e542-4dfd-8961-57af85efb327" width="600">
 </p>
 
 #### Connecting the MPU-6050 to the Arduino UNO
@@ -106,7 +106,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 
 ## PART 3: Testing the project
 
-Check the wiring again first,then place the setup flat in the palm of your hand.
+Check the wiring again first, then place the setup flat in the palm of your hand.
 
 - To test the pitch, tilt your hand up and down (like a head nod).
 - To test the roll, tilt your hand sideways (like moving your head left and right).
