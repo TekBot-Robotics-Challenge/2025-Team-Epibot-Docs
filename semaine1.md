@@ -76,7 +76,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 - A **tension regulator**
 - A **9V electric battery** as our external power source
 
-<!-- #### Here's a synoptic diagram to better illustrate it all: -->
+#### Here's a synoptic diagram to better illustrate it all:
 
 <!-- <p align="center">
     <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
@@ -92,11 +92,33 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 
 ### b. Joining the components
 
-#### Connecting the SSD1306 to the Arduino
+#### Connecting the SSD1306 to the Arduino UNO
 
-![screen to arduino](image.png)
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d6634e37-e542-4dfd-8961-57af85efb327">
+</p>
+
+#### Connecting the MPU-6050 to the Arduino UNO
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/24712601-d2ee-4b3e-91b5-27eb747b680c">
+</p>
 
 ## PART 3: Testing the project
+
+Check the wiring again first,then place the setup flat in the palm of your hand.
+
+- To test the pitch, tilt your hand up and down (like a head nod).
+- To test the roll, tilt your hand sideways (like moving your head left and right).
+- To test the yaw, spin your hand in place clockwise or counter-clockwise while keeping it level.
+
+#### Here's a demonstration video
+
+<!-- <p align="center">
+    <a href="the video" target="_blank">
+        <img src="the thumbnail" width="600">
+    </a>
+</p> -->
 
 ## Helpful ressources you can consult
 
