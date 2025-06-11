@@ -22,8 +22,8 @@ This test focuses on identifying and using a sensor that **combines both the fun
 
 The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-guide-to-setup%2Cconfiguration%2Cand-noise-management.html?srsltid=AfmBOooVL5CkBlAuw8WV0Yz7l7ZA2u8Ld6yBZFQf7kaTwiemNMmpUUey&utm_source=chatgpt.com#8.%20MPU-6050-Based%20Motion%20Trajectory%20Calculation) is a sophisticated device that combines:
 
-- a 3-axis gyroscope
-- a 3-axis accelerometer
+- a 3-axis [gyroscope](https://en.wikipedia.org/wiki/Gyroscope)
+- a 3-axis [accelerometer](https://en.wikipedia.org/wiki/Accelerometer)
 - a Digital Motion Processor (DMP)
 
 This effectively makes the MPU-6050 the world's first 6-axis motion processing unit. It measures pitch (lateral axis rotation), roll (longitudinal axis rotation) and yaw (vertical axis rotation), which are fundamental for determining an object's orientation along the x, y and z axes.
@@ -42,11 +42,11 @@ The [gyroscope](https://en.wikipedia.org/wiki/Gyroscope) in the MPU-6050 _measur
 
 #### The accelerometer
 
-The [accelerometer](https://en.wikipedia.org/wiki/Accelerometer) in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the piezoelectric effect to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
+The [accelerometer](https://en.wikipedia.org/wiki/Accelerometer) in the MPU-6050 _measures acceleration_: how fast an object speeds up, slows down, or changes its direction. It uses the [piezoelectric effect](https://en.wikipedia.org/wiki/Piezoelectricity) to evaluate acceleration forces, detecting the electrical charge produced by a moving object. In other terms, it works by detecting tiny forces inside the sensor when it moves.
 
 #### The Digital Motion Processor (DMP)
 
-The Digital Motion Processor in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as Kalman filtering. The result is quaternions, a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
+The Digital Motion Processor in the MPU-6050 _processes_ the rotation data from the gyroscope and the movement data from the accelerometer through sophisticated algorithms such as [Kalman filtering](https://en.wikipedia.org/wiki/Kalman_filter). The result is [quaternions](https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation), a mathematical representation that blends rotational and translational data for in-depth motion analysis. The DMP also takes a load off the main processor, making the whole system faster and more efficient.
 
 ### b. The OLED screen: Visualize the data
 
@@ -78,9 +78,27 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 
 #### Here's a synoptic diagram to better illustrate it all:
 
-<!-- <p align="center">
-    <img src="https://github.com/user-attachments/assets/3198e572-b41c-4c76-8e33-dbfeda0f17e9">
-</p> -->
+**9V Battery**
+     |
+     v
+**Tension Regulator** ------> [5V] --------------------------+
+     |                                                 |
+     +--------------------- GND -----------------------+----+
+                                                       |    |
+                                                       |    |
+         +---------------------------+                 |    |
+         |         **Arduino Uno**       |                 |    |
+         |  [5V]---------------------+-----------------+    |
+         |  [GND]--------------------+----------------------+ 
+         |  [SDA] <-------+          |
+         |  [SCL] <-------+          |
+         +---------------------------+
+                ^           ^
+                |           |
+         +------+           +------+
+         |                         |
+   **SSD1306 OLED**         **MPU-6050**
+    (I2C: SDA, SCL, 5V, GND)    (I2C: SDA, SCL, 5V, GND)
 
 ## PART 2: Assembly of components
 
