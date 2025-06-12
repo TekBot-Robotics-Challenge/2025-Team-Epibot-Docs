@@ -4,8 +4,9 @@ In this documentation:
 
 - [General context](#general-context)
 - [PART 1: Description of components](#part-1-description-of-components)
-- [PART 2: Assembly of components](#part-2-assembly-of-components)
-- [PART 3: Testing the project](#part-3-testing-the-project)
+- [PART 2: The Arduino Code](#part-2-the-arduino-code)
+- [PART 3: Assembly of components](#part-2-assembly-of-components)
+- [PART 4: Testing the project](#part-3-testing-the-project)
 - [Helpful ressources you can consult](#helpful-ressources-you-can-consult)
 
 ## General context
@@ -68,38 +69,43 @@ The [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) is a small electro
 
 ### d. Creating our custom power supply
 
-To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that, we will use:
-
-- The **Arduino UNO** as the main controller
-- Our **MPU-6050 sensor**
-- The **SSD10306 OLED display**
-- A **tension regulator**
-- A **9V electric battery** as our external power source
+To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that we will use the **built-in tension regulator** from the Arduino UNO board and a **9V electric battery".
 
 #### Here's a synoptic diagram to better illustrate it all:
 
 ```
-    [9V Battery]
-         |
-         v
-    [Tension Regulator] ------> [5V] --------------------------+
-             |                                                 |
-         +--------------------- GND -----------------------+----+
-                                                           |    |
-                                                           |    |
-             +---------------------------+                 |    |
-             |       [Arduino Uno]       |                 |    |
-             |  [5V]---------------------+-----------------+    |
-             |  [GND]--------------------+----------------------+ 
-             |  [SDA] <-------+          |
-             |  [SCL] <-------+          |
-             +---------------------------+
-                    ^           ^
-                    |           |
-             +------+           +------+
-             |                         |
-       [SSD1306 OLED]             [MPU-6050]
-    (I2C: SDA, SCL, 5V, GND)  (I2C: SDA, SCL, 5V, GND)
+     [9V Battery]
+    +------------+
+    |  (+)   (-) |
+    +--|-----|---+
+       |     |
+      VIN   GND
+       |     |
++---------------------------------------+
+|           Arduino Uno Board           |
+|  +------------+   +-----+   +------+  |
+|  |   VIN      |   | 5V  |   | GND  |  |
+|  +------------+   +-----+   +------+  |
+|        |            |          |      |
+|        |            |          |      |
+|        |            |          |      |
+|        +------------+----------+------+
+|                     |          |
+|                 +---+---+      |
+|                 |       |      |
+|              [A4/SDA] [A5/SCL] |
+|                 |       |      |
++-----------------+-------+------+
+                  |       |
+   +--------------+       +--------------+
+   |                                 |
++---------------------+     +--------------------+
+|   SSD1306 OLED      |     |   MPU-6050 Sensor  |
+|   VCC  (to 5V)      |     |   VCC  (to 5V)     |
+|   GND  (to GND)     |     |   GND  (to GND)    |
+|   SDA  (to A4/SDA)  |     |   SDA  (to A4/SDA) |
+|   SCL  (to A5/SCL)  |     |   SCL  (to A5/SCL) |
++---------------------+     +--------------------+
 ```
 
 ## PART 2: Assembly of components
@@ -196,10 +202,10 @@ We then need to add our power source (9V electric battery) and our tension regul
 +-------------------+   |    |
                         |    |
                     +---+----+---+
-                    | Arduino Uno |
-                    |   5V  GND   |
-                    |   A4  A5    |
-                    +---+----+----+
+                    | Arduino Uno|
+                    |   5V  GND  |
+                    |   A4  A5   |
+                    +---+----+---+
                         |    |
             +-----------+    +--------+
             |                        |
