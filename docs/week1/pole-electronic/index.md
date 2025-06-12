@@ -104,7 +104,7 @@ The following images showcase the connections to be made between the SSD1306, th
 For illustration purposes and to get a deeper overview of the connection made in beatween the components, we made a [KiCad](https://docs.kicad.org/) schematic (download the KiCad EDA [here](https://www.kicad.org/)). Here's our schematic:
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/55bbe9c8-a23c-45e2-9cd4-c2b116e15bf8" width="600">
+    <img src="https://github.com/user-attachments/assets/43aaf30d-b976-4e55-bf47-786b4c8feff7" width="600">
 </p>
 
 All components are connected using the **I2C bus**, a synchronous serial communication protocol. The **MPU6050** sensor and the **OLED screen (SSD1306)** are both placed on a breadboard, which serves as a convenient platform for making electrical connections without soldering. Both devices are wired **in parallel** to the same SDA and SCL pins of the Arduino, meaning their respective SDA and SCL pins are linked together on the [breadboard](https://en.wikipedia.org/wiki/Breadboard) and then connected to the Arduino’s SDA (A4) and SCL (A5) pins. The I2C protocol allows these devices to **share the same communication lines** by assigning each a **unique address** (typically 0x3C for the SSD1306 and 0x68 for the MPU-6050), enabling the Arduino to communicate with each device individually over the shared bus. This whole setup is powered by a **9V electric battery** connected to the Jack port of the Arduino UNO board, port through which the Arduino UNO, thanks to it's built-in tension regulator, is able to receive and reduce the tension to 5V for the safety of our modules. 
