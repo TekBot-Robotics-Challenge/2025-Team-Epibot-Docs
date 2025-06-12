@@ -4,8 +4,8 @@ In this documentation:
 
 - [General context](#general-context)
 - [PART 1: Description of components](#part-1-description-of-components)
-- [PART 2: The Arduino Code](#part-2-the-arduino-code)
-- [PART 3: Assembly of components](#part-2-assembly-of-components)
+- [PART 2: Assembly of components](#part-2-assembly-of-components)
+- [PART 3: The Arduino Code](#part-2-the-arduino-code)
 - [PART 4: Testing the project](#part-3-testing-the-project)
 - [Helpful ressources you can consult](#helpful-ressources-you-can-consult)
 
@@ -107,67 +107,7 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 |   SCL  (to A5/SCL)  |     |   SCL  (to A5/SCL) |
 +---------------------+     +--------------------+
 ```
-
 ## PART 2: Assembly of components
-
-### a. The Arduino code
-
-Download the Arduino IDE using this [link](https://www.arduino.cc/). Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
-
-- The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
-
-  ```
-  #include <Wire.h>
-  ```
-- The **Adafruit SSD1306** library for managing our SSD1306 module
-
-  ```
-  #include <Adafruit_SSD1306.h>
-  #include <Adafruit_GFX.h>  // Required for graphics
-  ```
-- The **Adafruit MPU6050** library for managing
-
-  ```
-  #include <Adafruit_MPU6050.h>
-  #include <Adafruit_Sensor.h>  // Required for sensor data structures
-  ```
-Next, in the **setup()** function, we call `Serial.begin(115200);` to start the _serial monitor_ at 115200 [bauds](https://en.wikipedia.org/wiki/Baud), and `Wire.begin();` to start the I2C bus.
-
-#### Fetching data from the MPU-6050 sensor
-
-We first need to initialize the MPU-6050 sensor. For that, in the **setup()** function, we call `mpu.initialize();`. 
-
-In the **loop()** function, we do this for reading raw data from our MPU-6050 sensor:
-
-```
-int16_t ax, ay, az;
-mpu.getAcceleration(&ax, &ay, &az);
-```
-
-This fetched data represents the object's acceleration following the X, Y and Z axes. We will then need to perform a conversion of this data to **m/s²**. From that, we can then estimate the **total acceleration** and **rotation** by using some trigonometrical formulas.
-
-#### Outputting the readings onto the SSD1306 screen
-
-We first need to declare our SSD1306 display.
-
-```
-#define SCREEN_WIDTH 128           // in pixels
-#define SCREEN_HEIGHT 64           // in pixels
-#define SCREEN_ADDRESS 0x3C        // Standard I2C address for SSD1306
-#define OLED_RESET -1              // No reset pin used with I2C
-
-// ---------- Display declaration ----------
-Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
-```
-
-We then initialize the SSD1306 OLED module in the **setup()** function by doing:
-`display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)`. 
-
-Although optional, we decided to display our school's logo at the screen's startup. You can choose to also display an image at startup. For that, you will need to convert your image to the 1-bit (monochrome) format employed by the SSD1306. You can use this [tool](https://javl.github.io/image2cpp/) to generate a 1-bit map for your image. You will only need to upload your image file and adjust the settings. You can then use `display.drawBitmap(0, 0, myLogo, 128, 64, WHITE);` to draw your image from your generated 1-bit map to the screen.
-
-To print the readings from our sensor to the screen, we use `display.clearDisplay();` to first clear the screen buffer, then `display.print()` to write to the screen and finally `display.display();` to display everything.
-
-### b. Joining the components
 
 The following images showcase the connections to be made between the SSD1306, the MPU-6050 and the Arduino UNO.
 
@@ -219,6 +159,63 @@ We then need to add our power source (9V electric battery) and our tension regul
     +-------------------+   +-------------------+
 ```
 After the wiring is done, we need to connect our Arduino UNO board to a computer through USB to program it using our Arduino Code.
+
+## PART 3: The Arduino code
+
+Download the Arduino IDE using this [link](https://www.arduino.cc/). Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+
+- The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
+
+  ```
+  #include <Wire.h>
+  ```
+- The **Adafruit SSD1306** library for managing our SSD1306 module
+
+  ```
+  #include <Adafruit_SSD1306.h>
+  #include <Adafruit_GFX.h>  // Required for graphics
+  ```
+- The **Adafruit MPU6050** library for managing
+
+  ```
+  #include <Adafruit_MPU6050.h>
+  #include <Adafruit_Sensor.h>  // Required for sensor data structures
+  ```
+Next, in the **setup()** function, we call `Serial.begin(115200);` to start the _serial monitor_ at 115200 [bauds](https://en.wikipedia.org/wiki/Baud), and `Wire.begin();` to start the I2C bus.
+
+### Fetching data from the MPU-6050 sensor
+
+We first need to initialize the MPU-6050 sensor. For that, in the **setup()** function, we call `mpu.initialize();`. 
+
+In the **loop()** function, we do this for reading raw data from our MPU-6050 sensor:
+
+```
+int16_t ax, ay, az;
+mpu.getAcceleration(&ax, &ay, &az);
+```
+
+This fetched data represents the object's acceleration following the X, Y and Z axes. We will then need to perform a conversion of this data to **m/s²**. From that, we can then estimate the **total acceleration** and **rotation** by using some trigonometrical formulas.
+
+### Outputting the readings onto the SSD1306 screen
+
+We first need to declare our SSD1306 display.
+
+```
+#define SCREEN_WIDTH 128           // in pixels
+#define SCREEN_HEIGHT 64           // in pixels
+#define SCREEN_ADDRESS 0x3C        // Standard I2C address for SSD1306
+#define OLED_RESET -1              // No reset pin used with I2C
+
+// ---------- Display declaration ----------
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+```
+
+We then initialize the SSD1306 OLED module in the **setup()** function by doing:
+`display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)`. 
+
+Although optional, we decided to display our school's logo at the screen's startup. You can choose to also display an image at startup. For that, you will need to convert your image to the 1-bit (monochrome) format employed by the SSD1306. You can use this [tool](https://javl.github.io/image2cpp/) to generate a 1-bit map for your image. You will only need to upload your image file and adjust the settings. You can then use `display.drawBitmap(0, 0, myLogo, 128, 64, WHITE);` to draw your image from your generated 1-bit map to the screen.
+
+To print the readings from our sensor to the screen, we use `display.clearDisplay();` to first clear the screen buffer, then `display.print()` to write to the screen and finally `display.display();` to display everything.
 
 ## PART 3: Testing the project
 
