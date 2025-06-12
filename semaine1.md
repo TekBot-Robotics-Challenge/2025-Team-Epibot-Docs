@@ -5,8 +5,8 @@ In this documentation:
 - [General context](#general-context)
 - [PART 1: Description of components](#part-1-description-of-components)
 - [PART 2: Assembly of components](#part-2-assembly-of-components)
-- [PART 3: The Arduino Code](#part-2-the-arduino-code)
-- [PART 4: Testing the project](#part-3-testing-the-project)
+- [PART 3: The Arduino Code](#part-3-the-arduino-code)
+- [PART 4: Testing the project](#part-4-testing-the-project)
 - [Helpful ressources you can consult](#helpful-ressources-you-can-consult)
 
 ## General context
@@ -74,39 +74,29 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 #### Here's a synoptic diagram to better illustrate it all:
 
 ```
-     [9V Battery]
-    +------------+
-    |  (+)   (-) |
-    +--|-----|---+
-       |     |
-      VIN   GND
-       |     |
-+---------------------------------------+
-|           Arduino Uno Board           |
-|  +------------+   +-----+   +------+  |
-|  |   VIN      |   | 5V  |   | GND  |  |
-|  +------------+   +-----+   +------+  |
-|        |            |          |      |
-|        |            |          |      |
-|        |            |          |      |
-|        +------------+----------+------+
-|                     |          |
-|                 +---+---+      |
-|                 |       |      |
-|              [A4/SDA] [A5/SCL] |
-|                 |       |      |
-+-----------------+-------+------+
-                  |       |
-   +--------------+       +--------------+
-   |                                 |
-+---------------------+     +--------------------+
-|   SSD1306 OLED      |     |   MPU-6050 Sensor  |
-|   VCC  (to 5V)      |     |   VCC  (to 5V)     |
-|   GND  (to GND)     |     |   GND  (to GND)    |
-|   SDA  (to A4/SDA)  |     |   SDA  (to A4/SDA) |
-|   SCL  (to A5/SCL)  |     |   SCL  (to A5/SCL) |
-+---------------------+     +--------------------+
+                        +-----------------+
+                        |   9V Battery    |
+                        |                 |
+                        |   +        GND  |
+                        +---|---------|---+
+                            |         |
+                           VIN       GND
+                            |         |
+                        +---+---------+---+
+                        |   Arduino Uno   |
+                        |   (built-in     |
+                        |   regulator)    |
+                        +---+---------+---+
+                                 |        
+                                [5V] 
+                                 |
+                                 | 
+                        +--------+--------+
+                        |    Modules      |
+                        |   (OLED, MPU)   |
+                        +-----------------+
 ```
+
 ## PART 2: Assembly of components
 
 The following images showcase the connections to be made between the SSD1306, the MPU-6050 and the Arduino UNO.
@@ -126,43 +116,13 @@ The following images showcase the connections to be made between the SSD1306, th
 We then need to add our power source (9V electric battery) and our tension regulator (for the safety of all components). It should look like:
 
 ```
-+-------------------+        +-------------------+
-|    9V Battery     |        |  SSD1306 OLED     |
-|   +---------+     |        |   (I2C Module)    |
-|   |  +9V    |-----+--------| VCC   (to 5V)     |
-|   |  GND    |-----+--------| GND   (to GND)    |
-+---------+---+     |        | SDA   (to Uno A4) |
-          |         |        | SCL   (to Uno A5) |
-          v         |        +-------------------+
-+-------------------+
-| Tension Regulator |
-|   IN: 9V          |
-|  OUT: 5V ---------+--------+
-|  OUT: GND --------+---+    |
-+-------------------+   |    |
-                        |    |
-                    +---+----+---+
-                    | Arduino Uno|
-                    |   5V  GND  |
-                    |   A4  A5   |
-                    +---+----+---+
-                        |    |
-            +-----------+    +--------+
-            |                        |
-    +-------------------+   +-------------------+
-    |   MPU-6050        |   |  SSD1306 OLED     |
-    |   (I2C Module)    |   |   (I2C Module)    |
-    | VCC (to 5V)       |   | VCC (to 5V)       |
-    | GND (to GND)      |   | GND (to GND)      |
-    | SDA (to Uno A4)   |   | SDA (to Uno A4)   |
-    | SCL (to Uno A5)   |   | SCL (to Uno A5)   |
-    +-------------------+   +-------------------+
+OUR KICAD HERE
 ```
 After the wiring is done, we need to connect our Arduino UNO board to a computer through USB to program it using our Arduino Code.
 
 ## PART 3: The Arduino code
 
-Download the Arduino IDE using this [link](https://www.arduino.cc/). Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+Download the Arduino IDE using this [link](https://www.arduino.cc/). It's a software that will allow you to run and upload your code to the Arduino UNO board through a USB wire. Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
 
 - The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
 
@@ -181,6 +141,7 @@ Download the Arduino IDE using this [link](https://www.arduino.cc/). Once the in
   #include <Adafruit_MPU6050.h>
   #include <Adafruit_Sensor.h>  // Required for sensor data structures
   ```
+
 Next, in the **setup()** function, we call `Serial.begin(115200);` to start the _serial monitor_ at 115200 [bauds](https://en.wikipedia.org/wiki/Baud), and `Wire.begin();` to start the I2C bus.
 
 ### Fetching data from the MPU-6050 sensor
@@ -217,7 +178,7 @@ Although optional, we decided to display our school's logo at the screen's start
 
 To print the readings from our sensor to the screen, we use `display.clearDisplay();` to first clear the screen buffer, then `display.print()` to write to the screen and finally `display.display();` to display everything.
 
-## PART 3: Testing the project
+## PART 4: Testing the project
 
 Check the wiring again first, place the setup flat in the palm of your hand.
 
