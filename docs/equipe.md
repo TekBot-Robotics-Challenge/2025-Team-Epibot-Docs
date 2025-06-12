@@ -2,9 +2,7 @@
 
 ---
 
-<video src="/videos/trailer.mp4" controls style="width: 100%; max-width: 350px; height: auto;">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
+<iframe width="auto" height="315" src="https://youtube.com/embed/LwDQmpc5Iqg?feature=share" frameborder="0" allowfullscreen></iframe>
 
 Our multidisciplinary team brings together complementary talents to tackle this 5-week challenge. Each member contributes their unique expertise while collaborating closely across all poles.
 
@@ -15,6 +13,12 @@ Our multidisciplinary team brings together complementary talents to tackle this 
 ### Mission
 
 The main mission of the IT sub-team is to develop intelligent and modular software solutions that enable autonomous behavior, real-time decision-making, and seamless communication between hardware components and user interfaces. These systems must evolve across the selection tests and culminate in an integrated solution for the final conveyor belt triage challenge.
+
+### **`An Intensive Work Session`**
+
+---
+
+<iframe width="auto" height="315" src="https://youtube.com/embed/Ky9Q4LyUVHM?feature=share" frameborder="0" allowfullscreen></iframe>
 
 <h2 style="font-size: 24px; font-weight: bold; color: #949CDF;">
   Expertise
@@ -112,12 +116,9 @@ Implement a pathfinding algorithm (A*, Dijkstra, etc.) in a simulated environmen
 - Visualization in Gazebo and RViz2
 - Well-documented implementation and performance analysis
 
----
+--- 
 
 ## Mechanical Pole
-
-### Mission  
-Design and manufacture robust and efficient mechanical components that bring our project to life.
 
 ### Expertise  
 - CAD and 3D modeling  
@@ -129,7 +130,96 @@ Design and manufacture robust and efficient mechanical components that bring our
 - Compact and ergonomic design  
 - Structural reliability  
 - Easy assembly and maintenance  
-- Mechanical/electronic integration  
+- Mechanical/electronic integration 
+
+### Mission
+
+The mechanical sub-team is tasked with designing, modeling, and assembling robust and functional mechanical systems that meet the technical requirements of the pre-selection tests and final challenge. These systems must ensure seamless integration with electronic and software components while maintaining reliable and precise mechanical performance.
+
+<h2 style="font-size: 24px; font-weight: bold; color: #949CDF;">
+  Expertise
+</h2>
+
+<p style="font-size: 14px; font-weight: bold;">
+  Computer-Aided Design (CAD)
+</p>
+
+- Mastery of CAD tools like SolidWorks for creating parts and assemblies.
+- Application of geometric constraints and adherence to dimensions.
+
+<p style="font-size: 14px; font-weight: bold;">
+  Analysis and Simulation
+</p>
+
+- Calculation of mechanical properties (center of gravity, mass, tolerances).
+- Validation through simulations for real-world behavior.
+
+<p style="font-size: 14px; font-weight: bold;">
+  Fabrication and Assembly
+</p>
+
+- Design for additive (3D printing) or subtractive manufacturing.
+- Adherence to assembly specifications (alignment, fixation, movement).
+
+<p style="font-size: 14px; font-weight: bold;">
+  Dimensioning and Optimization
+</p> 
+
+- Sizing components (axes, billets, jaws) to withstand loads and stresses.
+- Weight minimization while maximizing robustness.
+  
+<p style="font-size: 14px; font-weight: bold;">
+  Documentation
+</p> 
+
+- Detailed documentation including assembly plans, design diagrams, and performance analyses.
+- Regular updates on GitHub with clear and organized content.
+
+<p style="font-size: 14px; font-weight: bold;">
+  Challenge Goals
+</p> 
+
+### Test 1: Beginner Level
+
+#### Objective :
+
+Create simple parts from 2D sketches and validate their mass and dimensions. Assemble a mechanical gripper following provided plans.
+
+#### Deliverables :
+
+Accurate SolidWorks models with strict adherence to dimensions and materials.
+Precise center of gravity calculation for two configurations.
+
+### Test 2: Intermediate Level
+
+#### Objective :
+
+Design and modify complex parts by adjusting geometric parameters. Create a functional assembly from provided parts.
+
+#### Deliverables :
+
+Models with ±1% precision on calculated mass.
+Perfect alignment of chain links and geometric constraints.
+
+### Test 3: Advanced Level
+
+Objective : Design a complex part meeting strict technical specifications and develop a complete mechanical solution (e.g., conveyor).
+
+#### Deliverables :
+
+3D model of a complex part validated for different dimensions.
+Functional mechanical system adhering to specifications.
+
+### Final Test: Conveyor System
+
+#### Objective :
+
+Design and build a conveyor capable of sorting objects by color. Collaborate with electronics and IT teams to integrate sensors, web interface, and sorting algorithms.
+
+#### Deliverables :
+
+Conveyor meeting specifications (650 mm length, 100 mm height).
+Functional assembly for object movement and sorting.
 
 ---
 

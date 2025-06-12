@@ -2,7 +2,7 @@
 
 We designed a small simulation program for waste collection.
 
-We created a **Robot** class, which is inherited by two other classes: [CollectorRobot](CollectorRobot.md) and [SorterRobot](SorterRobot.md).
+We created a **Robot** class, which is inherited by two other classes: ***<em style="color: #949CDF;">CollectorRobot</em>*** and ***<em style="color: #949CDF;">SorterRobot</em>*** .
 
 As their names suggest:
 
@@ -12,6 +12,9 @@ As their names suggest:
   
 During program execution, the collection and sorting process will be visualized using <em style="color: #949CDF;">Ncurses</em>.
 
+[![UML](/images/UML_Robot.png)](/images/UML_Robot.png)
+
+---
 
 # Robot Abstract Class
 
@@ -20,6 +23,7 @@ The `Robot.hpp` header defines the abstract base class for [SorterRobot](SorterR
 ---
 
 ## Enumerations
+
 ### WasteType
 ```c++
 enum WasteType {
@@ -64,6 +68,7 @@ typedef struct waste_s {
     char character;
     WasteType type;
     Position position;
+    float weight;
     bool operator==(const waste_s& other) const {
         return character == other.character &&
                type == other.type &&
@@ -77,6 +82,7 @@ Represents a waste item with:
 - `character`: a char symbolizing the waste
 - `type`: the type of waste (`WasteType`)
 - `position`: the waste's position (`Position`)
+- `weight`: the waste's weight
 - `operator==`: allows comparison between two `Waste` objects (useful for searching in containers)
 
 ---
@@ -90,6 +96,9 @@ class Robot {
     public:
         // Constructor
         Robot(const std::string& name);
+
+        // Constructor with additional parameters
+        Robot(const std::string& name, float weight, float speed, float max_speed);
         
         // [============== Pure Virtual Method ============]
         virtual void move(int dx, int dy, int dz) = 0;
@@ -154,7 +163,7 @@ float _temperature;
 ```
 ---
 
-### Constructor 
+### Constructors
 ```c++
 Robot::Robot(const std::string& name)
     : _name(name), _battery_level(100.0), _position({0,0,0}), _status(INACTIVE),
@@ -162,6 +171,15 @@ Robot::Robot(const std::string& name)
 {}
 ```
   - Initializes the robot with a given name and default values for attributes.
+---
+
+```c++
+Robot::Robot(const std::string& name, float weight, float speed, float max_speed)
+    : _name(name), _battery_level(100.0), _position({0,0,0}), _status(INACTIVE),
+      _speed(speed), _max_speed(max_speed), _weight(weight), _temperature(0.0)
+{}
+```
+  - Initializes the robot with given name, weight, speed and default values for other attributes.
 ---
 
 ### Pure Virtual Method

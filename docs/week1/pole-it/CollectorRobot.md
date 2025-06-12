@@ -4,6 +4,11 @@
 
 The `CollectorRobot` class inherits from `Robot` and models an autonomous robot designed to collect waste in an arena. It can move, detect and collect waste, map its environment by sorting waste positions by distance, and plan optimal paths using the A* algorithm.
 
+<div style="max-width:500px; margin:40px auto; border-radius:16px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.15); transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
+  <img src="/images/work_session_pole_it/patrice.jpeg" alt="Patrice DAGBE" style="width:100%; height:auto; display:block;">
+</div>
+
+
 ## Main Attributes
 
 ```c++
