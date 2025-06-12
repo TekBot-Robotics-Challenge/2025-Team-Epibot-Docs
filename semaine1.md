@@ -106,6 +106,23 @@ To further our study of the MPU-6050 sensor and to be able to test its functionn
 
 ### a. The Arduino code
 
+Download the Arduino IDE using this [link](https://www.arduino.cc/). Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+
+- The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
+  ```Arduino
+    #include <Wire.h>
+  ```
+- The **Adafruit SSD1306** library for managing our SSD1306 module
+  ```Arduino
+  #include <Adafruit_SSD1306.h>
+  #include <Adafruit_GFX.h>  // Required for graphics
+  ```
+- The **Adafruit MPU6050** library for managing
+  ```Arduino
+  #include <Adafruit_MPU6050.h>
+  #include <Adafruit_Sensor.h>  // Required for sensor data structures
+  ```
+
 #### Fetching data from the MPU-6050 sensor
 
 #### Outputting the readings onto the SSD1306 screen
