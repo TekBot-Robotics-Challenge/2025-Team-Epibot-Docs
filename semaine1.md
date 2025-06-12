@@ -152,11 +152,13 @@ Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 We then initialize the SSD1306 OLED module in the **setup()** function by doing:
 `display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)`. 
 
-Although optional, we decided to display our school's logo at the screen's startup. You can choose to also display an image at startup. For that, you will need to convert your image to a 1-bit format, since the SSD1306 OLED employs the monochrome theme. You can use this [tool](https://javl.github.io/image2cpp/) to generate a 1-bit map for your image. You will only need to upload your image file and adjust the image settings. You can then use `display.drawBitmap(0, 0, myLogo, 128, 64, WHITE); /` to draw your image from your generated 1-bit map to the screen.
+Although optional, we decided to display our school's logo at the screen's startup. You can choose to also display an image at startup. For that, you will need to convert your image to the 1-bit (monochrome) format employed by the SSD1306. You can use this [tool](https://javl.github.io/image2cpp/) to generate a 1-bit map for your image. You will only need to upload your image file and adjust the settings. You can then use `display.drawBitmap(0, 0, myLogo, 128, 64, WHITE);` to draw your image from your generated 1-bit map to the screen.
 
 To print the readings from our sensor to the screen, we use `splay.clearDisplay();` to first clear the screen buffer, then `display.print()` to write to the screen and finally `display.display();` to display everything.
 
 ### b. Joining the components
+
+The following images showcase the connections to be made between the SSD1306, the MPU-6050 and the Arduino UNO.
 
 #### Connecting the SSD1306 to the Arduino UNO
 
@@ -170,16 +172,52 @@ To print the readings from our sensor to the screen, we use `splay.clearDisplay(
     <img src="https://github.com/user-attachments/assets/24712601-d2ee-4b3e-91b5-27eb747b680c" width="600">
 </p>
 
+We then need to add our power source (9V electric battery) and our tension regulator (for the safety of all components). It should look like:
+
+```
++-------------------+        +-------------------+
+|    9V Battery     |        |  SSD1306 OLED     |
+|   +---------+     |        |   (I2C Module)    |
+|   |  +9V    |-----+--------| VCC   (to 5V)     |
+|   |  GND    |-----+--------| GND   (to GND)    |
++---------+---+     |        | SDA   (to Uno A4) |
+          |         |        | SCL   (to Uno A5) |
+          v         |        +-------------------+
++-------------------+
+| Tension Regulator |
+|   IN: 9V          |
+|  OUT: 5V ---------+--------+
+|  OUT: GND --------+---+    |
++-------------------+   |    |
+                        |    |
+                    +---+----+---+
+                    | Arduino Uno |
+                    |   5V  GND   |
+                    |   A4  A5    |
+                    +---+----+----+
+                        |    |
+            +-----------+    +--------+
+            |                        |
+    +-------------------+   +-------------------+
+    |   MPU-6050        |   |  SSD1306 OLED     |
+    |   (I2C Module)    |   |   (I2C Module)    |
+    | VCC (to 5V)       |   | VCC (to 5V)       |
+    | GND (to GND)      |   | GND (to GND)      |
+    | SDA (to Uno A4)   |   | SDA (to Uno A4)   |
+    | SCL (to Uno A5)   |   | SCL (to Uno A5)   |
+    +-------------------+   +-------------------+
+```
+After the wiring is done, we need to connect our Arduino UNO board to a computer through USB to program it using our Arduino Code.
+
 ## PART 3: Testing the project
 
-Check the wiring again first, then place the setup flat in the palm of your hand.
+Check the wiring again first, place the setup flat in the palm of your hand.
 
 - To test the pitch, tilt your hand up and down (like a head nod).
 - To test the roll, tilt your hand sideways (like moving your head left and right).
 - To test the yaw, spin your hand in place clockwise or counter-clockwise while keeping it level.
 
-#### Here's a demonstration video
-
+<!-- #### Here's a demonstration video -->
 <!-- <p align="center">
     <a href="the video" target="_blank">
         <img src="the thumbnail" width="600">
