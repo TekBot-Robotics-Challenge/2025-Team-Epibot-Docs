@@ -189,12 +189,9 @@ Check the wiring again first, place the setup flat in the palm of your hand.
 - To test the roll, tilt your hand sideways (like moving your head left and right).
 - To test the yaw, spin your hand in place clockwise or counter-clockwise while keeping it level.
 
-<!-- #### Here's a demonstration video -->
-<!-- <p align="center">
-    <a href="the video" target="_blank">
-        <img src="the thumbnail" width="600">
-    </a>
-</p> -->
+#### Here's a demonstration video
+
+Click [here](https://youtube.com/shorts/irwXI47fvx4?feature=share) to view !
 
 ## Helpful ressources you can consult
 
