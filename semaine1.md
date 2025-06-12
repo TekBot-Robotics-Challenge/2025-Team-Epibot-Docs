@@ -69,7 +69,7 @@ The [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) is a small electro
 
 ### d. Creating our custom power supply
 
-To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that we will use the **built-in tension regulator** from the Arduino UNO board and a **9V electric battery".
+To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that we will use the **built-in tension regulator** from the Arduino UNO board and a **9V electric battery**.
 
 #### Here's a synoptic diagram to better illustrate it all:
 
