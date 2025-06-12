@@ -191,7 +191,7 @@ Check the wiring again first, place the setup flat in the palm of your hand.
 
 #### Here's a demonstration video
 
-<iframe width="auto" height="315" src="https://youtube.com/embed/irwXI47fvx4?feature=share" frameborder="0" allowfullscreen></iframe> 
+<iframe width="auto" height="315" src="https://youtube.com/embed/SwCvNdGykKs?feature=share" frameborder="0" allowfullscreen></iframe> 
 
 ## Helpful ressources you can consult
 
