@@ -32,7 +32,7 @@ This effectively makes the MPU-6050 the world's first 6-axis motion processing u
 The MPU-6050 communicates with the [Microcontroller Unit](https://en.wikipedia.org/wiki/Microcontroller) (MCU) using the [Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C) (I2C) connection protocol through the Serial Clock Line (SCL) and Serial Data Line (SDA) wires, which lets the devices exchange information easily. This setup allows the MPU-6050 to measure the speed, the rotation and the orientation of an object, all of which help the robot understand how it's moving in space. 
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/4d858669-0e95-4ade-90b5-f548c9f1729f" width="500">
+    <img src="https://github.com/user-attachments/assets/4bf5947f-d250-4168-9c4e-4eb1d2022695" width="500">
 </p>
 
 The MPU-6050 works by using tiny sensors inside it to detect movement and rotation _in three directions_. It can also be connected to an external compass to provide even more detailed motion tracking.
@@ -54,7 +54,7 @@ The Digital Motion Processor in the MPU-6050 _processes_ the rotation data from 
 The **SSD1306** is a popular and compact OLED display module used in a variety of projects to display text or graphics. It communicates with the microcontroller via the _I2C communication protocol_ (just like the MPU-6050 sensor), making it easy to integrate.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/7cfd0c36-6237-4052-9faf-cabdfcbb0275" width="500">
+    <img src="https://github.com/user-attachments/assets/4d858669-0e95-4ade-90b5-f548c9f1729f" width="500">
 </p>
 
 The SSD1306 is **ideal** for viewing the pitch, roll and yaw readings from the MPU-6050 sensor, with a simple, yet pleasing interface or menu. It also allows for real-time motion updates.
