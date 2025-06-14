@@ -6,6 +6,15 @@ Part III, designed by `TEKBOT` as part of ***the TRC Urban Resilience*** project
 
 ![](/images/mechanic_images/week1/piece3/original_plan.png)
 
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece3_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
+
 Here is a step-by-step guide to making this piece: 
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Step One : Creating the Solid Base</span>
@@ -239,14 +248,5 @@ Follow these steps :
 - This is what this window looks like. In this window you will see the calculations made including the mass of the solid in our case the mass of the part is as follows **: Mass = 1181.60 grams** 
 
   ![](/images/mechanic_images/week1/piece3/mass_value.png)
-
----
-
-### <span style="color: #28B463;">**Short Demo**</span>
-
-<video width="320" height="240" controls>
-  <source src="/videos/mechanic_videos/week1/piece3_simulation.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
 
 ---
