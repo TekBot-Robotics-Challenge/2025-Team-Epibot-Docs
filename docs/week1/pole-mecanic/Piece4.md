@@ -30,141 +30,141 @@ Modeling in SolidWorks based on the tutorial steps, adapted to Piece IV.
 
 1. *New Part Creation: Start a new part file in SolidWorks.*
 
-![](/images/piece4/Piece_002.png)
+![](/images/mechanic_images/week1/piece4/new_file_icon.png)
 
-![](/images/piece4/Piece_003.png)
+![](/images/mechanic_images/week1/piece4/piece_icon.png)
 
-![](/images/piece4/Piece_004.png)
+![](/images/mechanic_images/week1/piece4/piece_icon_ok.png)
 
 1.  *Sketch Creation:*
 
-![](/images/piece4/Piece_005.png)
+![](/images/mechanic_images/week1/piece4/esquisse_icon.png)
 
 -  *Select the front plane:*
 
-![](/images/piece4/Piece_006.png)
+![](/images/mechanic_images/week1/piece4/face_plan.png)
 
 -  *Use the “Rectangle” tool to draw the rectangle from the center:*<
 
-![](/images/piece4/Piece_007.png)
+![](/images/mechanic_images/week1/piece4/rectangle_icon.png)
 
-![](/images/piece4/Piece_008.png)
+![](/images/mechanic_images/week1/piece4/rectangle_icon_2.png)
 
   *Still in the sketch, select `line` and draw two vertical bars separated by a small space on the left side:*
 
-![](/images/piece4/Piece_009.png)
+![](/images/mechanic_images/week1/piece4/line_icon.png)
 
 -The part that we want to build:
 
-![](/images/piece4/Piece_010.png)
+![](/images/mechanic_images/week1/piece4/part1.png)
 
-![](/images/piece4/Piece_011.jpeg)
+![](/images/mechanic_images/week1/piece4/part_1_lines_drawing.jpeg)
 
 - *Also in the sketch, select "line" and draw a horizontal bar at the top perpendicular to the last vertical line previously drawn* 
 
-![](/images/piece4/Piece_012.png)
+![](/images/mechanic_images/week1/piece4/line_icon_2.png)
 
 - *Also in the sketch, select "line" and draw a horizontal bar at the bottom perpendicular to the last vertical line previously drawn and another at the top perpendicular to the same vertical line:* 
 
 The part that we want to build:
 
-![](/images/piece4/Piece_013.png)
+![](/images/mechanic_images/week1/piece4/par2_to_draw.png)
 
-![](/images/piece4/Piece_014.jpeg)
+![](/images/mechanic_images/week1/piece4/part2_lines_drawing.jpeg)
 
 - *Still in the sketch, select "line" and draw a bar perpendicular to the bar perpendicular to the previous vertical and perpendicular to the lower length of the rectangle tracer*
 
 The part that we want to build:
 
-![](/images/piece4/Piece_015.png)
+![](/images/mechanic_images/week1/piece4/part3_to_draw.png)
 
-![](/images/piece4/Piece_016.jpeg)
+![](/images/mechanic_images/week1/piece4/part3_lines_drawing.jpeg)
 
 - *Still in the sketch, select "line" and draw a vertical bar separated by a small space on the right side* 
 
 The part that we want to build:
 
-![](/images/piece4/Piece_017.png)
+![](/images/mechanic_images/week1/piece4/part4_lines.png)
 
-![](/images/piece4/Piece_018.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_drawing.jpeg)
 
 - *select the circle option after leaving the line option and from the center, draw a circle that can stay in proportions.* 
 
 The part that we want to build:
 
-![](/images/piece4/Piece_019.png)
+![](/images/mechanic_images/week1/piece4/part5.png)
 
-![](/images/piece4/Piece_020.png)
+![](/images/mechanic_images/week1/piece4/part5_lines_drawing.png)
 
 *draw a circle within the circle previously drawn* 
 
-![](/images/piece4/Piece_021.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_drawing_2.jpeg)
 
 - *Choose the smart dimenssion option. Click on the desired dimension after choosing smart dimession and drag to the desired dimension. After that, enter the desired dimension (the one written on the pdf). Do this for a better quality- it allows a conformation, an adaptation of the dimensions (do the same for all the other sides)* 
 
 ![ref1]
 
-![](/images/piece4/Piece_022.png)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning.png)
 
-![](/images/piece4/Piece_023.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_2.jpeg)
 
-![](/images/piece4/Piece_024.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_3.jpeg)
 
 **NB.: do it for all sides until you have this result** 
 
-![](/images/piece4/Piece_025.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_4.jpeg)
 
 - *For the circle, do the same but by drawing from the center and entering the dimension. Click on the edge of the circle whose dimensions you want to adjust (create a slope) and then drag to the side you want. Enter the date on the panel that is displayed without specifying time and validate* 
 
-![](/images/piece4/Piece_026.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_5.jpeg)
 
-![](/images/piece4/Piece_027.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_6.jpeg)
 
 # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Here is the final result of the ribs</span>
 
-![](/images/piece4/Piece_028.jpeg)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_7.jpeg)
 
 - *Choose extrude and select the selected contours option and choose a region. Then, put the mouse on the part you want to extrude and click on it*
 
-![](/images/piece4/Piece_029.png)
+![](/images/mechanic_images/week1/piece4/part4_lines_dimentionning_8.png)
 
-![](/images/piece4/Piece_030.png)![](/images/piece4/Piece_031.png)
+![](/images/mechanic_images/week1/piece4/part1_extrusion.png)
 
 - *do the same chos until you get this result*
 
-![](/images/piece4/Piece_032.jpeg)
+![](/images/mechanic_images/week1/piece4/part2_extrusion.jpeg)
 
 *-for the highest part of the room, select the appropriate size and increase the height(45mm)* 
 
-![](/images/piece4/Piece_033.png)
+![](/images/mechanic_images/week1/piece4/part2_extrusion_2.png)
 
-![](/images/piece4/Piece_034.jpeg)
+![](/images/mechanic_images/week1/piece4/part2_extrusion_3.jpeg)
 
 - *for the circle, first click on the sketch to rev on your worktop and then click on the border of the larger circle after entering in extrude and bossage then put the size at 25mm and put that of sot at 20mm:* 
 
-![](/images/piece4/Piece_035.png)
+![](/images/mechanic_images/week1/piece4/part2_extrusion_4.png)
 
-![](/images/piece4/Piece_036.jpeg)
+![](/images/mechanic_images/week1/piece4/part2_extrusion_5.jpeg)
 
-![](/images/piece4/Piece_037.jpeg)
+![](/images/mechanic_images/week1/piece4/instant_3D_icon.jpeg)
 
 - *In the sketch, click on the 'fillet' and then select the sides to model* 
 
-![](/images/piece4/Piece_038.png)
+![](/images/mechanic_images/week1/piece4/instant_3D_icon_2.png)
 
-![](/images/piece4/Piece_039.jpeg)
+![](/images/mechanic_images/week1/piece4/fillet_model.jpeg)
 
-![](/images/piece4/Piece_040.jpeg)
+![](/images/mechanic_images/week1/piece4/fillet_model_2.jpeg)
 
-![](/images/piece4/Piece_041.jpeg)
+![](/images/mechanic_images/week1/piece4/chanfrein_setting.jpeg)
 
 - *Fillet and Chamfer: Add fillets (R2) to edges as per the drawing.* 
 
-![](/images/piece4/Piece_042.jpeg)
+![](/images/mechanic_images/week1/piece4/chanfer.jpeg)
 
 - *Validation: Ensure all sketches are fully constrained and dimensions match the drawing* 
 
-![](/images/piece4/Piece_043.jpeg)
+![](/images/mechanic_images/week1/piece4/chanfer_result.jpeg)
 
   # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**Calculation of mass**</span> 
 
@@ -172,22 +172,33 @@ The part that we want to build:
 
 - *go to the bar at the top and click on tools:* 
 
-![](/images/piece4/Piece_048.png)
+![](/images/mechanic_images/week1/piece4/Mass_determining_step1.png)
 
 - *after clicking on tools, go to the bottom of the strip that appears and click on the black arrow until the entire strip is scrolled* 
 
-![](/images/piece4/Piece_049.png)
+![](/images/mechanic_images/week1/piece4/Mass_determining_step_2.png)
 
 - *click on evaluate and then on mass property:* 
 
-![](/images/piece4/Piece_050.png)![](/images/piece4/Piece_051.png)
+![](/images/mechanic_images/week1/piece4/Mass_determining_step_2.png)
 
 - *the result is as follows:* 
 
-![](/images/piece4/Piece_052.jpeg)
+![](/images/mechanic_images/week1/piece4/Mass_determining_step_3.jpeg)
 
-![](/images/piece4/Piece_053.png)
+![](/images/mechanic_images/week1/piece4/Mass_determining_step_4.png)
 
-The mass is: Masse = 100.70 grammes 
+The mass is: Masse = 100.70 grammes
+---
 
-[ref1]: /images/piece4/Piece_001.jpeg
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece4_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
+
+
+[ref1]: /images/mechanic_images/week1/piece4/asked_plan.jpeg

@@ -1,6 +1,6 @@
 ﻿# <span style="color: #949CDF; font-size: 24px;">**Part I Construction Documentation**</span>
 
-![](/images/piece1/Pince_001.png)
+![](/images/mechanic_images/week1/piece1/piece1_plan.png)
 
 ---
 
@@ -11,32 +11,31 @@
 **Description**  
 This step involves creating the three main circles to establish the base structure (see following  screenshot) of the part: two lateral extensions and a central body.
 
-![](/images/piece1/Pince_002.png)
-![](/images/piece1/Pince_003.png)
+![](/images/mechanic_images/week1/piece1/circles_to_draw.png)
 
 **Actions**  
 1. Select the XY plane in SolidWorks.
-   ![](/images/piece1/plan_choisie.png)
+   ![](/images/mechanic_images/week1/piece1/plan_choisie.png)
 
 2. Draw the **central circle** with radius 75 mm at position (0, 0):
    
    - select circle icon at the top left corner
   
-   ![](/images/piece1/circle_icon.png)
+   ![](/images/mechanic_images/week1/piece1/circle_icon.png)
 
    - design your circle from choosen position
   
-   ![](/images/piece1/cercle.png)
+   ![](/images/mechanic_images/week1/piece1/cercle.png)
 
    - Use the smart cotation to set a raduis
   
-   ![](/images/piece1/cotation_intelligent.png)![](/images/piece1/cotation_result.png)
+   ![](/images/mechanic_images/week1/piece1/cotation_intelligent.png)![](/images/mechanic_images/week1/piece1/cotation_result.png)
 
 3. Draw the **left circle**:
    - Radius: 40 mm
    - Position: -150 mm from central circle center on X-axis
   
-   ![](/images/piece1/Leftimage.png)
+   ![](/images/mechanic_images/week1/piece1/Leftimage.png)
   
 4. Draw the **right circle**:
    - Radius: 40 mm
@@ -44,9 +43,9 @@ This step involves creating the three main circles to establish the base structu
 
 **Result**  
 Three circles positioned to form the dumbbell-shaped base geometry.  
- **Screenshot 1:**  
-![](/images/piece1/Pince_004.png)
-![](/images/piece1/Pince_005.png)
+ **Screenshot 1:**
+
+![](/images/mechanic_images/week1/piece1/Three_circles.png)
 
 ---
 
@@ -55,9 +54,7 @@ Three circles positioned to form the dumbbell-shaped base geometry.
 **Description**  
 Creation of additional circles to define transition zones and rounded shapes between main elements. The circles allow application of curvature radius in transition areas.
 
-![](/images/piece1/Pince_006.png)
-![](/images/piece1/Pince_007.png)
-![](/images/piece1/Pince_008.png)
+![](/images/mechanic_images/week1/piece1/transition_to_draw.png)
 
 **Actions**  
 1. Create new transition circles:
@@ -66,8 +63,7 @@ Creation of additional circles to define transition zones and rounded shapes bet
    - Strategic positioning for organic curves
 2. Apply tangent properties to circles
 
-![](/images/piece1/Pince_009.png)
-![](/images/piece1/Pince_010.jpeg)
+![](/images/mechanic_images/week1/piece1/transition_circles.jpeg)
 
 ---
 
@@ -79,8 +75,10 @@ Using additional circles to cut and recreate the part's characteristic rounded s
 **Actions**  
 1. **First series of cuts**:
    - Select circles to use as cutting tools
-   - Select "Fit Entities" tool 
-     ![](/images/piece1/Pince_011.png)
+   - Select "Fit Entities" tool
+
+     ![](/images/mechanic_images/week1/piece1/entity_ajusting_icon.png)
+
    - Remove excess circle material
   
 2. **Second series of cuts**:
@@ -91,13 +89,12 @@ Using additional circles to cut and recreate the part's characteristic rounded s
 **Result**  
 Dumbbell-shaped organic form with smooth curved transitions between central body and extensions.  
  **Screenshot 3:**  
-![](/images/piece1/Pince_012.png)
+![](/images/mechanic_images/week1/piece1/circle_fitting.png)
 
 ---
 
 ### <span style="color: rgb(6, 91, 249);  padding: 4px 8px; border-radius: 4px;">Fourth Step: Applying Symmetry Relative to Central Circle's (O,J) Axis</span>
 
-![](/images/piece1/Pince_013.png)
 
 **Description**  
 Mirroring the completed portion relative to the central circle's (O,J) axis to facilitate reproduction of transition curves.
@@ -106,10 +103,10 @@ Mirroring the completed portion relative to the central circle's (O,J) axis to f
 1. Select portions to mirror
 2. Select symmetry axis
 3. Apply "Mirror Entities" function to selected elements  
-   ![](/images/piece1/Pince_014.png)
+![](/images/mechanic_images/week1/piece1/symetrie_icon.png)
+
 
 **Result (See Screenshot 4)**  
-![](/images/piece1/Pince_015.png)
 
 ---
 
@@ -120,17 +117,22 @@ Transforming the obtained 2D part into a 3D component.
 
 **Actions**  
 1. Select the three sketched circles
-2. Use extrusion function  
-   ![](/images/piece1/Pince_016.png)
+2. Use extrusion function
+
+   ![](/images/mechanic_images/week1/piece1/extrusion_icon.png)
+
 3. Set extrusion height to 20.00 mm  
-   ![](/images/piece1/Pince_017.png)
+
+   ![](/images/mechanic_images/week1/piece1/extrusion_parameters.png)
+
 4. Extrude perpendicular to XY plane (along Z-axis)
 
-**Result**  
+**Result**
+
 Formation of extruded part.  
+
  **Screenshot 4**  
-![](/images/piece1/Pince_018.png)
-![](/images/piece1/Pince_019.jpeg)
+![](/images/mechanic_images/week1/piece1/screenshoot4.jpeg)
 
 ---
 
@@ -139,17 +141,20 @@ Formation of extruded part.
 **Description**  
 Drilling the large central circular hole that forms the part's main feature, creating the hollowed area at the central circle.
 
-![](/images/piece1/Pince_020.png)
+![](/images/mechanic_images/week1/piece1/central_circular_hole.png)
 
 **Actions**  
 1. Select top face of central portion
 2. Draw centered circle:
    - Diameter: Ø135.6 mm
    - Position: geometric center of central portion
-3. Use through-hole tool  
-   ![](/images/piece1/Pince_021.jpeg)
-4. Drill through entire thickness (10 mm)  
-   ![](/images/piece1/Pince_022.png)
+3. Use through-hole tool
+
+   ![](/images/mechanic_images/week1/piece1/removing_extrusion_icon.jpeg)
+
+4. Drill through entire thickness (10 mm)
+
+   ![](/images/mechanic_images/week1/piece1/removing_extrusion_parameters.png)
 
 **Measurements**  
 - Depth: 10 mm (through)
@@ -157,14 +162,13 @@ Drilling the large central circular hole that forms the part's main feature, cre
 **Result**  
 Central circular through-hole in main part portion.  
  **Screenshot 5 Location:**  
-![](/images/piece1/Pince_023.jpeg)
-![](/images/piece1/Pince_024.jpeg)
+![](/images/mechanic_images/week1/piece1/central_circular_hole.png)
+
+![](/images/mechanic_images/week1/piece1/central_circular_hole.png)
 
 ---
 
 ### <span style="color: rgb(6, 91, 249);  padding: 4px 8px; border-radius: 4px;">Seventh Step: Finishing and Material Properties</span>
-
-![](/images/piece1/Pince_025.png)
 
 **Description**  
 Applying final finishes, verifications, material property definition, and mass determination.
@@ -181,10 +185,22 @@ Applying final finishes, verifications, material property definition, and mass d
    - Final adjustments
 
  **Screenshots 6:**  
-![](/images/piece1/Pince_026.jpeg)
-![](/images/piece1/Pince_027.jpeg)
-![](/images/piece1/Pince_028.png)
+![](/images/mechanic_images/week1/piece1/material.jpeg)
+
+![](/images/mechanic_images/week1/piece1/finitions.jpeg)
+
+![](/images/mechanic_images/week1/piece1/mass_finding.png)
 
 **Final Measurements**  
 - **Material:** AISI 1020 Steel (density 0.0079 g/mm³)  
-- **Obtained mass:** 2834.97 grams  
+- **Obtained mass:** 2834.97 grams
+   ---
+
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece1_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---

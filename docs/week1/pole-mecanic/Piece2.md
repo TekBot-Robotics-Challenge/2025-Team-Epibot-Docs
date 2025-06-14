@@ -1,6 +1,6 @@
 # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">PIECE 2 REALIZATION</span>
 
-![Part Preview](/images/piece2/image1.png)
+![Part Preview](/images/mechanic_images/week1/piece2/Asked.png)
 
 ---
 
@@ -14,8 +14,8 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">INITIAL SETUP</span>
 
-![Setup Step 1](/images/piece2/image2.png)
-![Setup Step 2](/images/piece2/image3.png)
+![Setup Step 1](/images/mechanic_images/week1/piece2/piece_icon.png)
+![Setup Step 2](/images/mechanic_images/week1/piece2/cirles_to_draw.png)
 
 1. Click application icon → File → Part
 2. Select upper plane
@@ -24,12 +24,12 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">CREATING 6 CIRCLES & 2 ARCS</span>
 
-![Circle Creation](/images/piece2/image4.png)
-![Arc Creation](/images/piece2/image5.png)
-![Dimensioning](/images/piece2/image6.png)
-![Result Preview](/images/piece2/image7.png)
-![Tool Location](/images/piece2/image8.png)
-![Final Sketch](/images/piece2/image9.png)
+![Circle Creation](/images/mechanic_images/week1/piece2/how_to_draw_circle.png)
+![Arc Creation](/images/mechanic_images/week1/piece2/smart_dimention.png)
+![Dimensioning](/images/mechanic_images/week1/piece2/smart_dimention_2.png)
+![Result Preview](/images/mechanic_images/week1/piece2/smart_dimention_3.png)
+![Tool Location](/images/mechanic_images/week1/piece2/how_to_draw_arc.png)
+![Final Sketch](/images/mechanic_images/week1/piece2/arc_dimention.png)
 
 **Steps:**
 1. Select **Circle** tool
@@ -48,9 +48,9 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">2D TO 3D CONVERSION (CIRCLES)</span>
 
-![Extrusion Interface](/images/piece2/image10.png)
-![Selection](/images/piece2/image11.png)
-![Completion](/images/piece2/image12.png)
+![Extrusion Interface](/images/mechanic_images/week1/piece2/boss_to_extrude.png)
+![Selection](/images/mechanic_images/week1/piece2/boss_extruding_1.png)
+![Completion](/images/mechanic_images/week1/piece2/boss_extruding_2.png)
 
 1. Click **Extruded Boss**
 2. Set parameters per task requirements
@@ -63,8 +63,8 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">2D TO 3D CONVERSION (ARCS)</span>
 
-![Arc Extrusion](/images/piece2/image13.png)
-![Parameters](/images/piece2/image14.png)
+![Arc Extrusion](/images/mechanic_images/week1/piece2/boss_extruding_3.png)
+![Parameters](/images/mechanic_images/week1/piece2/boss_extruding_4.png)
 
 1. Click **Extruded Boss**
 2. Select arc centers
@@ -75,8 +75,8 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">CREATING CENTRAL VOID</span>
 
-![Cut Setup](/images/piece2/image15.png)
-![Cut Result](/images/piece2/image16.png)
+![Cut Setup](/images/mechanic_images/week1/piece2/hollow.png)
+![Cut Result](/images/mechanic_images/week1/piece2/cut_extruding.png)
 
 1. Select **Extruded Cut**
 2. Set direction: "Through both"
@@ -87,11 +87,11 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">43MM DIAMETER BOSS CREATION</span>
 
-![Boss Setup 1](/images/piece2/image17.png)
-![Boss Setup 2](/images/piece2/image18.png)
-![Selection](/images/piece2/image19.png)
-![Parameters](/images/piece2/image20.png)
-![Result](/images/piece2/image21.png)
+![Boss Setup 1](/images/mechanic_images/week1/piece2/boss_extruding_5.png)
+![Boss Setup 2](/images/mechanic_images/week1/piece2/boss_extruding_6.png)
+![Selection](/images/mechanic_images/week1/piece2/boss_extruding_7.png)
+![Parameters](/images/mechanic_images/week1/piece2/boss_extruding_8.png)
+![Result](/images/mechanic_images/week1/piece2/cut_extruding_2.png)
 
 1. Click **Extruded Boss**
   
@@ -107,10 +107,10 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">5MM RECESS CREATION</span>
 
-![Recess Setup 1](/images/piece2/image22.png)
-![Recess Setup 2](/images/piece2/image23.png)
-![Selection](/images/piece2/image24.png)
-![Result](/images/piece2/image25.png)
+![Recess Setup 1](/images/mechanic_images/week1/piece2/recress_to_dig.png)
+![Recess Setup 2](/images/mechanic_images/week1/piece2/cut_extruding_3.png)
+![Selection](/images/mechanic_images/week1/piece2/cut_extruding_4.png)
+![Result](/images/mechanic_images/week1/piece2/cut_extruding_5.png)
 
 1. Click **Extruded Cut**
 2. Select contours:
@@ -126,8 +126,8 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">MATERIAL ASSIGNMENT</span>
 
-![Material Selection](/images/piece2/image26.png)
-![Material Application](/images/piece2/image27.png)
+![Material Selection](/images/mechanic_images/week1/piece2/material_setting_step_1.png)
+![Material Application](/images/mechanic_images/week1/piece2/material_setting_step_2.png)
 
 1. Right-click "Material"
 2. Select "Edit Material"
@@ -139,10 +139,10 @@
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">FINAL RESULT</span>
 
 **Without Color:**  
-![Final Plain](/images/piece2/image28.png)
+![Final Plain](/images/mechanic_images/week1/piece2/material_setting_step_3.png)
 
 **With Color (Optional):**  
-![Final Colored](/images/piece2/image29.png)
+![Final Colored](/images/mechanic_images/week1/piece2/colors.png)
 
 > 🎨 To colorize: Right-click face → Select color sphere → Choose color → Confirm
 
@@ -150,10 +150,21 @@
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">MASS CALCULATION</span>
 
-![Mass Properties](/images/piece2/image30.png)
-![Mass Results](/images/piece2/image31.png)
+![Mass Properties](/images/mechanic_images/week1/piece2/mass_property.png)
+![Mass Results](/images/mechanic_images/week1/piece2/mass_determining.png)
 
 1. Click **Mass Properties**
 2. Read results (grams)
 3. Convert to kg: divide by 1000  
-   **Final Mass:** 0.28415 kg
+   **Final Mass:**  284.15g
+   
+   ---
+
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece2_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---

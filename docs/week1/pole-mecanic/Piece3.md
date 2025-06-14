@@ -1,20 +1,16 @@
-﻿## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">***Documentation of the Construction of Room III***</span>
+﻿## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">***Documentation of the Construction of piece III***</span>
 
-Part III, designed by `TEKBOT` as part of ***the TRC Urban Resilience*** project, is an AISI 1020 steel structure intended to serve as a support or connection in mechanical or architectural assemblies. Its geometry is based on an assembly of prismatic square-section profiles, designed to ensure rigidity and lightness. The different faces of the part—plan representation, isometric view, and section— allow a complete understanding of the shape and critical dimensions before manufacturing. 
-
-<div style="max-width:500px; margin:40px auto; border-radius:16px; overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.15); transition:transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-  <img src="/images/work_session_pole_meca/brouhane2.jpeg" alt="Patrice DAGBE" style="width:100%; height:auto; display:block;">
-</div>
+Part III, designed by `TEKBOT` as part of ***the TRC Urban Resilience*** project, is an AISI 1020 steel structure intended to serve as a support or connection in mechanical or architectural assemblies. Its geometry is based on an assembly of prismatic square-section profiles, designed to ensure rigidity and lightness. The different faces of the part—plan representation, isometric view, and section— allow a complete understanding of the shape and critical dimensions before manufacturing.
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**Piece to be made**</span> 
 
-![](/images/piece3/Piece3_001.png)
+![](/images/mechanic_images/week1/piece3/original_plan.png)
 
 Here is a step-by-step guide to making this piece: 
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Step One : Creating the Solid Base</span>
 
-![](/images/piece3/Piece3_002.png)
+![](/images/mechanic_images/week1/piece3/base.png)
 
 ### **`Description`**
 
@@ -24,7 +20,7 @@ This step shows an isosceles trapezoid and is the very first to be performed, en
 
 - Selection of the XY plane, particularly called Front Plane in SolidWorks. 
 
-![](/images/piece3/Piece3_003.png)
+![](/images/mechanic_images/week1/piece3/front_plane.png)
 
 - Drawing a 2D rectangle with the following dimensions : 
 - Length : **150,00 mm** 
@@ -35,21 +31,21 @@ Follow these steps:
 
 - Click on then in the window that opens choose the **line option** 
 
-![](/images/piece3/Piece3_004.png)
+![](/images/mechanic_images/week1/piece3/line_icon.png)
 
 - Position your cursor at the origin of your reference point then represent the 2D rectangle without taking into account the dimensions as follows : 
 
-![](/images/piece3/Piece3_005.png)
+![](/images/mechanic_images/week1/piece3/base_form_drawing.png)
 
 - After that we will assign the dimensions. To do this, click on Smart Dimension to automate the dimensions : 
 
-![](/images/piece3/Piece3_006.png)
+![](/images/mechanic_images/week1/piece3/smart_cotation.png)
 
 This function will allow you to automate the measurement of dimensions by modifying them yourself; you just need to click on the line you want to resize, hold the click in the desired direction. 
 
 ***Illustration*** 
 
-![](/images/piece3/Piece3_007.png) ![](/images/piece3/Piece3_008.png)![](/images/piece3/Piece3_009.png)
+![](/images/mechanic_images/week1/piece3/dimentioning.png) ![](/images/mechanic_images/week1/piece3/dimentioning_2.png)![](/images/mechanic_images/week1/piece3/dimentioning_3.png)
 
 - The dimensions therefore comply with the requirements.Mesures 
 - Trapezoid length : **150,00 mm** 
@@ -59,7 +55,7 @@ This function will allow you to automate the measurement of dimensions by modify
 
 A 2D rectangle with dimensions 150.00 mm × 70.00 mm is created, representing the base of the part. 
 
-![](/images/piece3/Piece3_010.png)
+![](/images/mechanic_images/week1/piece3/dimentioning_4.png)
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Step Two : Extruding the Base to Form a Prism</span> 
 
@@ -73,31 +69,31 @@ Actions
 
 - Selection of the current 2D trapezoid. 
 
-![](/images/piece3/Piece3_011.png)
+![](/images/mechanic_images/week1/piece3/trapezoid.png)
 
 - Using the Offset Entities tool to double your trapezoid. 
 
-![](/images/piece3/Piece3_012.png)
+![](/images/mechanic_images/week1/piece3/offset_entity_icon.png)
 
 - Set the extrusion height to 10.00 mm. 
 
-![](/images/piece3/Piece3_013.png)
+![](/images/mechanic_images/week1/piece3/offset_dimentionning.png)
 
 - Using the extrusion tool 
 
-![](/images/piece3/Piece3_014.png)
+![](/images/mechanic_images/week1/piece3/extruded_boss_icon.png)
 
 - Select the current figure then click on the function **Extruded Boss/Base**. You will get an interface like this : 
 
-  ![](/images/piece3/Piece3_015.jpeg)
+  ![](/images/mechanic_images/week1/piece3/extruded_boss.jpeg)
 
 - Change the value according to the requirements. In our case we must use 100.00 mm 
 
-![](/images/piece3/Piece3_016.png)
+![](/images/mechanic_images/week1/piece3/extruded_boss_dimentionning.png)
 
 - After this modification you will get a figure like this: 
 
-![](/images/piece3/Piece3_017.jpeg)
+![](/images/mechanic_images/week1/piece3/extruded_boss_dimentionning_view.jpeg)
 
 ### **`Measures`** 
 
@@ -109,11 +105,11 @@ Actions
 
 A  rectangular  prism  with  dimensions  150.00  mm  ×  70.00  mm  ×  100.00  mm  is  created, representing the initial gross volume of the part. 
 
-![](/images/piece3/Piece3_018.jpeg)
+![](/images/mechanic_images/week1/piece3/rectangular_prism.jpeg)
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Step Three : Triangular Cut on the Upper Face </span>
 
-![](/images/piece3/Piece3_019.png)
+![](/images/mechanic_images/week1/piece3/triangula_cut.png)
 
 ### **`Description`** 
 
@@ -123,7 +119,7 @@ At this stage, you need to add a triangular cutout on the upper face of the pris
 
 - In a Front Plane, select the top face of the prism (150.00 mm × 70.00 mm). In this illustration, the top face of the prism is the one in blue. 
 
-  ![](/images/piece3/Piece3_020.jpeg)
+  ![](/images/mechanic_images/week1/piece3/top_face.jpeg)
 
 - Drawing a 2D triangle on this face : 
 - Cutting length : **100,00 mm** 
@@ -134,36 +130,36 @@ At this stage, you need to add a triangular cutout on the upper face of the pris
 
 - First select the current figure : 
 
-![](/images/piece3/Piece3_021.jpeg)
+![](/images/mechanic_images/week1/piece3/current_figure.jpeg)
 
 - Select the line function to perform the drawing 
 - Draw the horizontal line (100.00 mm) 
 
-  ![](/images/piece3/Piece3_022.jpeg)
+  ![](/images/mechanic_images/week1/piece3/top_face_1.jpeg)
 
 - Draw the vertical line (20.00 mm) 
 
-  ![](/images/piece3/Piece3_023.jpeg)
+  ![](/images/mechanic_images/week1/piece3/top_face_2.jpeg)
 
 - Draw the second horizontal line in the image of the first We obtain the following : 
 
-  ![](/images/piece3/Piece3_024.jpeg)
+  ![](/images/mechanic_images/week1/piece3/top_face_3.jpeg)
 
 - Next, we'll apply the Cutout Depth: 20.00 mm 
 
   Use  SolidWorks'  Smart  Dimension  feature  once  again  to  automate  dimension measurement. 
 
-  ![](/images/piece3/Piece3_025.png)
+  ![](/images/mechanic_images/week1/piece3/top_face_4.png)
 
 Result 
 
 The prism has a triangular cutout on its upper face, leaving a 20.00 mm border on each side along the width. 
 
-![](/images/piece3/Piece3_026.jpeg)
+![](/images/mechanic_images/week1/piece3/top_face_5.jpeg)
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">Step Four : Central Rectangular Cutout</span>
 
-![](/images/piece3/Piece3_027.png)
+![](/images/mechanic_images/week1/piece3/central_rectangular_cutout.png)
 
 ### **`Description`**
 
@@ -175,20 +171,20 @@ Actions
 
 - Selection of the upper face of the prism, in the area defined by the triangular cutout. 
 
-![](/images/piece3/Piece3_028.jpeg)
+![](/images/mechanic_images/week1/piece3/central_rectangular_cutout_2.jpeg)
 
 - Using the extrusion cutting tool to remove this triangular shape to a depth of 100.00 mm. 
 - Selects the extrusion cutting functionality 
 
-![](/images/piece3/Piece3_029.png)
+![](/images/mechanic_images/week1/piece3/extruded_cut.png)
 
 - Changes the depth of this extrusion (100.00 mm) 
 
-![](/images/piece3/Piece3_030.png)
+![](/images/mechanic_images/week1/piece3/cotation_setting.png)
 
 You will get a figure like this: 
 
-![](/images/piece3/Piece3_031.jpeg)
+![](/images/mechanic_images/week1/piece3/extrusion_result_1.jpeg)
 
 After validating your extrusion you will obtain the final result. 
 
@@ -202,7 +198,7 @@ After validating your extrusion you will obtain the final result.
 
 A rectangular cutout of 100.00 mm × 60.00 mm × 20.00 mm is added to the center of the prism. 
 
-![](/images/piece3/Piece3_032.jpeg)
+![](/images/mechanic_images/week1/piece3/rectangular_cutout.jpeg)
 
 ### <span style="color: rgb(6, 91, 249); background: #E6F4EA; padding: 4px 8px; border-radius: 4px;">Step Five : Final Adjustments and Penrose Triangle Transformation</span>
 
@@ -212,7 +208,7 @@ This step is the final one, showing the solid in its final phase. The part is ma
 
 **Final result** 
 
-![](/images/piece3/Piece3_033.jpeg)
+![](/images/mechanic_images/week1/piece3/rectangular_cutout_result.jpeg)
 
 ## <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**How to change the appearance of the part to AISI 1020?** </span>
 
@@ -220,15 +216,15 @@ Follow these steps :
 
 - On the interface ***SolidWorks*** click on ***Material not specified***  then a window will open 
 
-![](/images/piece3/Piece3_034.png)
+![](/images/mechanic_images/week1/piece3/material_side.png)
 
 - This is what this window looks like, choose the option ***Edit Material***  then click on it and a window will open 
 
-![](/images/piece3/Piece3_035.png)
+![](/images/mechanic_images/week1/piece3/edit_material.png)
 
 - This is what this window looks like. In the list of materials, choose the one required in our case, it will be AISI 1020 
 
-![](/images/piece3/Piece3_036.png)
+![](/images/mechanic_images/week1/piece3/edit_material_2.png)
   
   In this case it is not necessary to modify the density ; it cannot be modified ; its value remains and remains at : 0.0079 g/mm³. 
 
@@ -238,8 +234,19 @@ Follow these steps :
 
 - On the SolidWorks interface click on the ***Mass Properties*** feature click on it and a window will open 
 
-![](/images/piece3/Piece3_037.png)
+![](/images/mechanic_images/week1/piece3/mass_properties.png)
 
 - This is what this window looks like. In this window you will see the calculations made including the mass of the solid in our case the mass of the part is as follows **: Mass = 1181.60 grams** 
 
-  ![](/images/piece3/Piece3_038.png)
+  ![](/images/mechanic_images/week1/piece3/mass_value.png)
+
+---
+
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece3_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
