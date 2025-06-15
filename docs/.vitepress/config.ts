@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Weeks', 
         items: [
           { text: 'Week 1', link: '/week1/pole-it' },
-          { text: 'Week 2', link: '/week2/pole-it' },
+          { text: 'Week 2', link: '/week2/Mechanic_pole/Part_1'},
           { text: 'Week 3', link: '/week3/pole-it' },
         ]
       },
@@ -69,6 +69,7 @@ export default defineConfig({
           // Pole Electronic
           { 
             text: 'Electronics Pole',
+            link: '/week2/Mechanic_pole/Part_1',
             collapsed: true,
             items: [
               { text: 'Overview', link: '/week1/pole-electronic/' },
@@ -103,7 +104,20 @@ export default defineConfig({
         items: [
           { text: 'IT Pole', link: '/week2/' },
           { text: 'Electronics Pole', link: '/week2/' },
-          { text: 'Mechanical Pole', link: '/week2/' },
+          {
+            text: 'Mechanical Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              {
+                link: '/week2/Mechanic_pole/Part_1',
+                collapsed: true,
+                items: [
+                  { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1' },
+                ]
+              },
+            ]
+          },
         ],
       },
       {
