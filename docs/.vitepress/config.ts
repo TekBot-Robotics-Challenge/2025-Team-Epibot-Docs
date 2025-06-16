@@ -113,7 +113,8 @@ export default defineConfig({
                 link: '/week2/Mechanic_pole/Part_1',
                 collapsed: true,
                 items: [
-                  { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1' },
+                  { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1'},
+                  { text: 'Part 2', link: '/week2/Mechanic_pole/Part_2'},
                 ]
               },
             ]

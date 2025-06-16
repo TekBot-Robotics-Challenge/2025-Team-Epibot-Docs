@@ -132,12 +132,11 @@ To calculate the mass of the part:
 
 - **Best Practices:**
   - Always double-check dimensions and tangency relations before extruding.
+ß
   - Ensure that you don't overlook any single quotation
+  
   - Always verify that you are using mmgs.
-  - Maintain proper syntax for global variables.
 
-- **Troubleshooting:**
-  - If the mass calculation seems incorrect, verify the material assignment and dimensions.
-  - Ensure all sketches are fully defined before proceeding to extrusion.
+  - Maintain proper syntax for global variables.
 
 ---
