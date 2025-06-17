@@ -30,7 +30,7 @@ This second test of the Tekbot Robotics Challenge introduces the design and impl
 
 ### a. The ATmega328P microcontroller
 
-The [ATmega328P](https://www.microchip.com/en-us/product/ATmega48PB) is an 8-bit [microcontroller](www.geeksforgeeks.org/digital-logic/microcontroller-and-its-types/) chip that serves as the **central processing unit** in many electronic devices. It is based on the [AVR architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers) and is designed for tasks that involve reading sensor data, controlling outputs like LEDs or motors, and communicating or exchanging information with other devices. It is the chip used in the popular [Arduino UNO board](https://docs.arduino.cc/hardware/uno-rev3/).
+The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48PB-88PB-168PB-DataSheet-DS40001909B.pdf) is an 8-bit [microcontroller](www.geeksforgeeks.org/digital-logic/microcontroller-and-its-types/) chip that serves as the **central processing unit** in many electronic devices. It is based on the [AVR architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers) and is designed for tasks that involve reading sensor data, controlling outputs like LEDs or motors, and communicating or exchanging information with other devices. It is the chip used in the popular [Arduino UNO board](https://docs.arduino.cc/hardware/uno-rev3/).
 
 #### KEY FEATURES
 
@@ -56,15 +56,17 @@ The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_displa
 
 The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type of semiconductor diode that is designed to allow current to flow in the reverse direction when the voltage across it reaches a specific value, called the Zener breakdown voltage. What this means is that a Zener diode can maintain a constant voltage in a circuit, even if the input voltage changes. When the voltage across the Zener diode exceeds its breakdown voltage, it starts conducting in reverse and keeps the voltage steady, making it very useful for voltage regulation and protecting sensitive electronic components from voltage spikes.
 
-### e. The Cube (black box)
+### e. The tension regulator
+
+### f. The Cube (black box)
 
 For this test, the black box will be represented by a **cube**. It will be mainly composed of the MPU-6050 sensor and the ATmega328P chip mounted on a Printed Circuit Board (PCB). The main functions of the cube will be the acquisition of movement data and the transmission of this data to the Control Station via an I2C bus.
 
-### f. The Control Station
+### g. The Control Station
 
 The Control Station's main tasks are the processing and displaying of the data it receives from **the cube**. It will be composed of another ATmega328P chip mounted on a dedicated PCB and the LCD screen.
 
-### g. Our custom power supply
+### h. Our custom power supply
 
 To power up our setup, we should build a power supply that is independent from the cube and that will provide safe and sufficient voltage to all the components. For that, we will use:
 
@@ -84,7 +86,7 @@ To power up our setup, we should build a power supply that is independent from t
 
 ## 4. Computer-Aided Manufacturing
 
-## 5. Embedded Software and Microcontroller Logic
+## 5. Microcontroller Logic on the I2C bus
 
 ### a. What is I2C ?
 
@@ -97,14 +99,13 @@ The microcontroller configuration is one of the core aspects of this test. It en
 In this project, two microcontrollers ATmega328P are used.
 
 - The **Cube microcontroller** is configured as the I2C master. It is responsible for collecting motion data from the MPU-6050 sensor (which acts as an I2C slave), processing this data, and sending it to the control station.
-
 - The **Control station microcontroller** is also configured as an I2C slave, listening for incoming data from the cube.
 
-Other devices, like the LCD, are directly connected to the **Control station microcontroller**, but if additional sensors or peripherals were added (such as memory chips or more sensors), they could also be configured as I2C slaves.
+The LCD screen is directly connected to the **Control station microcontroller**, and is therefore an I2c slave. If additional sensors or peripherals were to be added (perhaps more sensors), they could also be configured as I2C slaves.
 
 This master-slave structure is necessary because it guarantees that only one device (the master) controls the communication, avoiding conflicts and ensuring that messages are sent and received in an orderly and predictable way. In summary, the master-slave relationship organizes the roles and responsibilities of each device, making the system both scalable and reliable.
 
-### c. Sensor Data Acquisition and Processing
+### c. Sensor Data Acquisition and Processing through the I2C bus
 
 Accurate acquisition and processing of sensor data are essential for monitoring the motion and orientation of the cube. The sensor used in this project is a combined gyroscope and accelerometer: the MPU6050, which communicates with the cube’s microcontroller via the I2C bus.
 
