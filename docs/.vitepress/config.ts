@@ -102,7 +102,22 @@ export default defineConfig({
         text: 'Week 2 - Integration',
         collapsed: true,
         items: [
-          { text: 'IT Pole', link: '/week2/' },
+           // Pole IT
+          {
+            text: 'IT Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 2',
+                link: '/week2/pole-it/',
+                collapsed: true,
+                items: [
+                  { text: 'Download ROS2 Humble', link: '/week2/pole-it/Download_ROS2_Humble' },
+                ]
+              },
+            ]
+          },
           { text: 'Electronics Pole', link: '/week2/' },
           {
             text: 'Mechanical Pole',
