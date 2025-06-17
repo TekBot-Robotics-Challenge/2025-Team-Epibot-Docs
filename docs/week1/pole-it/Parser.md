@@ -1,4 +1,4 @@
-# Error Class
+# Parser Class
 
 The `Parser` class is responsible for reading and parsing the simulation environment from a file. It takes a file name (passed from the command line) and provides a method to extract and return its content as a list of strings.
 

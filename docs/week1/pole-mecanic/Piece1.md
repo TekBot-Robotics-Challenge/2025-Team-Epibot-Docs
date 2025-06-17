@@ -4,6 +4,16 @@
 
 ---
 
+
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece1_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
+
 ## <span style="color:rgb(229, 63, 99); border-left: 4px solid rgb(229, 63, 99); padding-left: 8px;">**Method Using Successive Circles and Cuts**</span>
 
 ### <span style="color: rgb(6, 91, 249);">First Step: Creating the Three Base Circles</span>
@@ -175,7 +185,7 @@ Applying final finishes, verifications, material property definition, and mass d
 
 **Actions**  
 1. **Geometric verification**:
-   - Dimension control per technical drawing
+   - Dimension control per technical drawing 
    - Check for geometric defects
    - Create part drawing
 2. **Material application**:
@@ -195,12 +205,3 @@ Applying final finishes, verifications, material property definition, and mass d
 - **Material:** AISI 1020 Steel (density 0.0079 g/mm³)  
 - **Obtained mass:** 2834.97 grams
    ---
-
-### <span style="color: #28B463;">**Short Demo**</span>
-
-<video width="320" height="240" controls>
-  <source src="/videos/mechanic_videos/week1/piece1_simulation.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
-
----
