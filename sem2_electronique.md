@@ -50,13 +50,25 @@ The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-gui
 
 ### c. The LCD screen
 
-The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_display) (LCD) is a type of screen found in many electronic devices, like calculators, clocks, and TVs. It works by using a thin layer of liquid crystals placed between two filters. These crystals can change how light passes through them when electricity is applied. The LCD itself does not create light. Instead, a light behind the screen (called a backlight) shines through the crystals. By controlling the crystals with electrical signals, the LCD can show different shapes, letters, or pictures in black and white or in color.
+The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_display) (LCD) is a type of screen found in many electronic devices, like calculators, clocks, and TVs. It works by using a thin layer of liquid crystals placed between two filters. These crystals can change how light passes through them when  electricity is applied. The LCD itself does not create light. Instead, a light behind the screen (called a backlight) shines through the crystals. By controlling the crystals with electrical signals, the LCD can show different shapes, letters, or pictures in black and white or in color.
 
 ### d. The Zener Diode
 
 The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type of semiconductor diode that is designed to allow current to flow in the reverse direction when the voltage across it reaches a specific value, called the Zener breakdown voltage. What this means is that a Zener diode can maintain a constant voltage in a circuit, even if the input voltage changes. When the voltage across the Zener diode exceeds its breakdown voltage, it starts conducting in reverse and keeps the voltage steady, making it very useful for voltage regulation and protecting sensitive electronic components from voltage spikes.
 
 ### e. The tension regulator
+
+<!--
+LM-1950 -- takes a gt 9v to output a 9v
+
+1N4733A diode zener -- stabilize the tension and brings it to 5V
+
+4 batteries lithium -- power up 14.8v
+
+mpu-6050 -- min 3.3v max 5v
+
+lcd screen -- min 3.3v max 5v
+-->
 
 ### f. The Cube (black box)
 
