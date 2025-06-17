@@ -14,7 +14,6 @@ cd docs/.vitepress/dist
 git init
 git add -A
 git commit -m 'deploy'
-git branch -M main
 
 # push to gh-pages branch
 git push -f git@github.com:TekBot-Robotics-Challenge/2025-Team-Epibot-Docs.git main:gh-pages
