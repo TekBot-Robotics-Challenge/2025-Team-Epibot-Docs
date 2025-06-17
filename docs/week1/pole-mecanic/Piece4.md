@@ -4,6 +4,15 @@ This document details the modeling process for Piece IV.
 
 ![ref1]
 
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece4_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
+
 # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**Preliminary studies**</span> 
 
 Analyzing functional needs and mechanical constraints based on the technical drawing. 
@@ -191,14 +200,6 @@ The part that we want to build:
 The mass is: Masse = 100.70 grammes
 ---
 
-### <span style="color: #28B463;">**Short Demo**</span>
-
-<video width="320" height="240" controls>
-  <source src="/videos/mechanic_videos/week1/piece4_simulation.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
-
----
 
 
 [ref1]: /images/mechanic_images/week1/piece4/asked_plan.jpeg

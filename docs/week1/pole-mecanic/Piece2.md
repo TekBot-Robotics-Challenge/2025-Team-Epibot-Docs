@@ -4,6 +4,15 @@
 
 ---
 
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/piece2_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+
+---
+
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">TOOLS USED AND THEIR ROLES</span>
 
 - **<span style="color: #34A853;">Extruded Boss/Base</span>**: Creates solid volume by extruding 2D sketches  
@@ -160,11 +169,3 @@
    
    ---
 
-### <span style="color: #28B463;">**Short Demo**</span>
-
-<video width="320" height="240" controls>
-  <source src="/videos/mechanic_videos/week1/piece2_simulation.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
-
----
