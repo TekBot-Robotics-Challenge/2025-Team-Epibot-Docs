@@ -115,11 +115,30 @@ export default defineConfig({
                 items: [
                   { text: 'Download ROS2 Humble', link: '/week2/pole-it/Download_ROS2_Humble' },
                   { text: 'Subscriber Node', link: '/week2/pole-it/Subscriber' },
+                  { text: 'Launch File Explaination', link: '/week2/pole-it/launch_file' },
                 ]
               },
             ]
           },
-          { text: 'Electronics Pole', link: '/week2/' },
+
+          // Electronics Pole
+          {
+            text: 'Electronics Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 2',
+                link: '/week2/pole-electronic/',
+                collapsed: true,
+                items: [
+                  { text: '', link: '/week2/pole-electronic/' },
+                ]
+              },
+            ]
+          },
+
+          // Mechanical Pole
           {
             text: 'Mechanical Pole',
             collapsed: true,
