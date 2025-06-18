@@ -13,6 +13,9 @@ This document details the modeling process for Piece IV.
 
 ---
 
+<span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week1/Pièce4_Challenge1.SLDPRT" download>**Piece IV**</a>
+
+
 # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**Preliminary studies**</span> 
 
 Analyzing functional needs and mechanical constraints based on the technical drawing. 

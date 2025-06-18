@@ -2,6 +2,17 @@
 
 ---
 
+### <span style="color: #28B463;">**Short Demo**</span>
+
+<video width="320" height="240" controls>
+  <source src="/videos/mechanic_videos/week1/gripper_simulation.mp4" type="video/mp4">
+  Votre navigateur ne supporte pas la balise vidéo.
+</video>
+---
+
+### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week1/assemblage_pince.SLDASM" download>**Link to Download Gripper**</a>
+
+
 ## <span style="color:rgb(231, 60, 137);">**Introduction**</span>
 
 The challenge is to assemble a mechanical gripper based on precise assembly plans while respecting dimensions and geometric constraints. The assembly consists of several separate parts, each playing a specific role in the overall operation of the gripper. These parts include:
@@ -217,17 +228,10 @@ The coordinates of the center of gravity are:
 
 ---
 
-### <span style="color: #28B463;">**Short Demo**</span>
-
-<video width="320" height="240" controls>
-  <source src="/videos/mechanic_videos/week1/gripper_simulation.mp4" type="video/mp4">
-  Votre navigateur ne supporte pas la balise vidéo.
-</video>
----
-
 ## <span style="color:rgb(231, 60, 137);">**Errors to Avoid During Assembly**</span>
 
-- **Incorrect orientation of parts** can lead to unexpected effects.  
+- **Incorrect orientation of parts** can lead to unexpected effects.
+
   ![](/images/mechanic_images/week1/pince/error_type_1.png)
 
   ![](/images/mechanic_images/week1/pince/error_type_2.jpeg)

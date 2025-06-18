@@ -150,6 +150,9 @@ export default defineConfig({
                 items: [
                   { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1'},
                   { text: 'Part 2', link: '/week2/Mechanic_pole/Part_2'},
+                  { text: 'Part 3', link: '/week2/Mechanic_pole/Part_3'},
+                  { text: 'Assembly', link: '/week2/Mechanic_pole/assembly'},
+
                 ]
               },
             ]
