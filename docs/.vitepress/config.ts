@@ -114,6 +114,8 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Download ROS2 Humble', link: '/week2/pole-it/Download_ROS2_Humble' },
+                  { text: 'Custom Message', link: '/week2/pole-it/custom_message' },
+                  { text: 'Publisher Node', link: '/week2/pole-it/publisher' },
                   { text: 'Subscriber Node', link: '/week2/pole-it/Subscriber' },
                   { text: 'Launch File Explaination', link: '/week2/pole-it/launch_file' },
                 ]
