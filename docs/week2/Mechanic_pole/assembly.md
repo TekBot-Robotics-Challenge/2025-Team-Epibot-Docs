@@ -59,7 +59,6 @@ This step is critical as the center of gravity will be determined relative to th
 
 <iframe src="https://player.vimeo.com/video/1094297116?h=a54fde4ad3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="coincide-origine"></iframe>
 
-
 > <span style="color: #CE6A6B;">**Explanation:** </span>
 > Proper alignment of the pin's base with the assembly origin ensures accurate calculations of the center of gravity later.
 

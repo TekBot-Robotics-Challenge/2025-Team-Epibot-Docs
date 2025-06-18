@@ -11,11 +11,15 @@ The goal of this task is to create a pocket (hollow) on the part of part II. To 
   -The "Shell" tool is used to hollow out a solid part to make it hollow with walls of constant thickness. It allows material to be removed from the inside of a solid while maintaining its external shape.
   -"Convert entities" is used to project or copy edges, faces, or sketch contours onto the current sketch plane. It saves time by allowing you to reuse existing geometry instead of redrawing it.
 
-## <span style="color: #08C5D1;">*How to start creation of the part?</span>
+## <span style="color: #08C5D1;">**How to start creation of the part?**</span>
 
+### <span style="color: #9AC8EB;">**Short Demo**</span>
+<iframe src="https://player.vimeo.com/video/1094425289?h=90981825ad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="demo-part3_gRd72YLi"></iframe>
+
+## <span style="color: #08C5D1;">**Implementation Steps**</span>
 To complete this task, the first thing to do is to download the part provided after completing part II. After downloading this piece you will need to click on it to open it.
 
-## <span style="color: #08C5D1;">*How to make the hollow on the face indicated in the image below?</span>
+## <span style="color: #08C5D1;">**How to make the hollow on the face indicated in the image below?**</span>
 
 ![Image](/images/mechanic_images/week2/part_3/image2.png)
 
@@ -48,7 +52,7 @@ The face on which the hollow must be made is indicated in the image below
 
 ![Image](/images/mechanic_images/week2/part_3/image9.png)
 
-##How to know the mass of the part?
+## <span style="color: #08C5D1;">How to know the mass of the part?</span>
 
 To know the mass you have to click on mass properties as shown in the image below. When you click on mass properties a list will appear and on this list there will be the mass indicated
 
@@ -56,7 +60,7 @@ To know the mass you have to click on mass properties as shown in the image belo
 
 ![Image](/images/mechanic_images/week2/part_3/image11.png)
 
-The mass of this part is: 432.58g
+The mass of this part is: `432.58g`
 
 ## <span style="color: #08C5D1;">Presentation of the final piece</span>
 
