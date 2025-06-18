@@ -56,7 +56,9 @@ The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_displa
 
 The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type of semiconductor diode that is designed to allow current to flow in the reverse direction when the voltage across it reaches a specific value, called the Zener breakdown voltage. What this means is that a Zener diode can maintain a constant voltage in a circuit, even if the input voltage changes. When the voltage across the Zener diode exceeds its breakdown voltage, it starts conducting in reverse and keeps the voltage steady, making it very useful for voltage regulation and protecting sensitive electronic components from voltage spikes.
 
-### e. The tension regulator
+### e. The LM-1950: a voltage regulator
+
+The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change. As an electronic component, it is built using integrated circuitry rather than mechanical parts. The LM-1950 is intended for regulating DC voltages, and can be used to supply a steady voltage to one or more DC-powered devices.
 
 <!--
 LM-1950 -- takes a gt 9v to output a 9v

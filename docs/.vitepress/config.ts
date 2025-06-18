@@ -72,7 +72,7 @@ export default defineConfig({
             link: '/week2/Mechanic_pole/Part_1',
             collapsed: true,
             items: [
-              { text: 'Overview', link: '/week1/pole-electronic/' },
+              { text: 'Test 1', link: '/week1/pole-electronic/' },
             ]
           },
 
@@ -114,13 +114,33 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Download ROS2 Humble', link: '/week2/pole-it/Download_ROS2_Humble' },
-                  { text: 'Subscriber Node', link: '/week2/pole-it/Subscriber' },
+                  { text: 'Custom Message', link: '/week2/pole-it/custom_message' },
                   { text: 'Publisher Node', link: '/week2/pole-it/publisher' },
+                  { text: 'Subscriber Node', link: '/week2/pole-it/Subscriber' },
+                  { text: 'Launch File Explaination', link: '/week2/pole-it/launch_file' },
                 ]
               },
             ]
           },
-          { text: 'Electronics Pole', link: '/week2/' },
+
+          // Electronics Pole
+          {
+            text: 'Electronics Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 2',
+                link: '/week2/pole-electronic/',
+                collapsed: true,
+                items: [
+                  { text: '', link: '/week2/pole-electronic/' },
+                ]
+              },
+            ]
+          },
+
+          // Mechanical Pole
           {
             text: 'Mechanical Pole',
             collapsed: true,
