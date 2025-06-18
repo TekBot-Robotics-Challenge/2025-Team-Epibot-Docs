@@ -72,7 +72,7 @@ export default defineConfig({
             link: '/week2/Mechanic_pole/Part_1',
             collapsed: true,
             items: [
-              { text: 'Overview', link: '/week1/pole-electronic/' },
+              { text: 'Test 1', link: '/week1/pole-electronic/' },
             ]
           },
 
