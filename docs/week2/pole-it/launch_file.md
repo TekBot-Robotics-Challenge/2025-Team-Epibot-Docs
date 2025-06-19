@@ -1,17 +1,16 @@
 # ROS 2 Launch File Documentation: `sensor_launch.py`
 
-This document provides a complete explanation of the `sensor_launch.py` file used to launch two ROS 2 nodes — a publisher and a subscriber — in the `sensor_data_evaluation` package.
+This page provides a complete explanation of the `sensor_launch.py` file used to launch two ROS 2 nodes a `publisher` and a `subscriber` in the `sensor_data_evaluation` package.
 
 ---
 
-## 📁 File Location
+## File Location
 
-This launch file is expected at:
+We placed the launch file at:
 
 ```Bash
 sensor_data_evaluation/launch/sensor_launch.py
 ```
-
 
 ---
 
@@ -35,17 +34,17 @@ Before using this launch file, ensure:
    - `publisher_node`
    - `subscriber_node`
   
-3. Your `CMakeLists.txt` includes this to install the `launch/` folder:
+3. The `CMakeLists.txt` includes this to install the `launch/` folder:
    ```Cmake
    install(DIRECTORY launch DESTINATION share/${PROJECT_NAME})
    ```
 
-4. You build the package with:
+4. To build the package:
     ```Bash
     colcon build --packages-select sensor_data_evaluation
     ```
 
-5. Then source your workspace:
+5. Then source the workspace with:
     ```Bash
     source install/setup.bash
     ```
@@ -114,7 +113,7 @@ ros2 run sensor_data_evaluation subscriber_node
 
 ## Clean and Rebuild
 
-If needed, clean and rebuild your workspace with:
+If needed, clean and rebuild the workspace:
 
 ```Bash
 rm -rf build/ install/ log/
@@ -124,7 +123,7 @@ source install/setup.bash
 
 ## Verification Checklist
 
-- Launch file is placed in launch/ inside your package. 
+- Launch file is placed in launch/ inside the package `sensor_data_evaluation`. 
   
 - It is installed via CMakeLists.txt.
   
