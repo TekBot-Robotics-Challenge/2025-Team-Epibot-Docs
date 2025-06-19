@@ -5,12 +5,11 @@ In this documentation:
 - [1. General Context](#1-general-context)
 - [2. Description of components](#2-description-of-components)
 - [3. Computer-Aided Design](#3-computer-aided-design)
-- [4. Computer-Aided Manufacturing](#4-computer-aided-manufacturing)
-- [5. Embedded Software and Microcontroller Logic](#5-embedded-software-and-microcontroller-logic)
-- [6. Programming the circuits](#6-programming-the-circuits)
-- [7. Assembly of components](#7-assembly-of-components)
-- [8. Testing the project](#8-testing-the-project)
-- [9. Helpful Ressources](#9-helpful-Ressources)
+- [4. Embedded Software and Microcontroller Logic](#5-embedded-software-and-microcontroller-logic)
+- [5. Programming the circuits](#6-programming-the-circuits)
+- [6. Assembly of components](#7-assembly-of-components)
+- [7. Testing the project](#8-testing-the-project)
+- [8. Helpful Ressources](#9-helpful-Ressources)
 
 ## 1. General Context
 
@@ -76,6 +75,10 @@ The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type o
 
 The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change. As an electronic component, it is built using integrated circuitry rather than mechanical parts. The LM-1950 is intended for regulating DC voltages, and can be used to supply a steady voltage to one or more DC-powered devices.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/27ee9377-598c-49ce-bd85-e65c67a19a62" width="500">
+</p>
+
 ### f. The Cube (black box)
 
 For this test, the black box will be represented by a **cube**. It will be mainly composed of the MPU-6050 sensor and the ATmega328P chip mounted on a Printed Circuit Board (PCB). The main functions of the cube will be the acquisition of movement data and the transmission of this data to the Control Station via an I2C bus.
@@ -87,6 +90,10 @@ The Control Station's main tasks are the processing and displaying of the data i
 ### h. Our custom power supply
 
 To power up our setup, we should build a power supply that is independent from the cube and that will provide safe and sufficient voltage to all the components. For that, we will use:
+
+- 4 lithium batteries to supply 14.8V
+- a zener diode to stabilize the voltage at 5V for the control station
+- a tension regulator to bring the voltage to 9V for the black box
 
 <!--
 LM-1950 -- takes a gt 9v to output a 9v
@@ -110,25 +117,37 @@ Below is the KiCad schematics diagram for this project:
 
 #### The black box
 
+![image](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
+
 #### The Control station
 
-### b. Printed Circuit Board (PCB) design
-<!-- quick explanation and video -- add 3D visu -->
+![image](https://github.com/user-attachments/assets/293dc6e6-418b-4cd1-a4d3-5b1472e13e56)
 
-We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the detailed PCB designs realized in KiCad:
+### b. Printed Circuit Board (PCB) design
+
+We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the finalized PCB images as designed in KiCad:
 
 #### The black box
 
+![image](https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d)
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/63a6d940-3927-44fc-a894-c0a368d5f875" width="500">
+</p>
+
 #### The Control station
+
+![image](https://github.com/user-attachments/assets/df219587-fc33-4f1d-80de-9f16135cf56e)
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/f61a21b9-9a01-428f-96a9-60c13011716b" width="500">
+</p>
 
 ### c. The Cube design
 
-For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.autodesk.com/products/fusion-360/download)_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/).
+For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.autodesk.com/products/fusion-360/download)_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/). Our cube has a side height of _7 centimeters_ with one face open to visualize the internal circuitry.
 
-<!-- quick explanation and video -- add 3D visu -->
-## 4. Computer-Aided Manufacturing
-
-## 5. Microcontroller Logic on the I2C bus
+## 4. Microcontroller Logic on the I2C bus
 
 ### a. What is I2C ?
 
@@ -167,24 +186,90 @@ This systematic approach to data acquisition and processing enables the system t
 
 <!-- +----------------------------------------------------------------------+ -->
 
-## 6. Programming the circuits
-<!-- - black box
-- station -->
+## 5. Programming the circuits
 
-## 7. Assembly of components
+After the wiring is done, we need to connect our Arduino UNO board to a computer through USB to program it using our Arduino Code.
+
+Download the Arduino IDE using this [link](https://www.arduino.cc/). It's a software that will allow you to run and upload your code to the MCU. Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+
+- The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
+
+  ```
+  #include <Wire.h>
+  ```
+- The **LiquidCrystal** library for managing our LCD screen
+
+  ```
+  #include <LiquidCrystal.h>
+  ```
+- The **MPU6050** library for managing the sensor
+
+  ```
+  #include <MPU6050.h>
+  ```
+
+### Fetching data from the MPU-6050 sensor in The Cube
+
+In the **setup()** function, we call `Serial.begin(9600);` to start the _serial monitor_ at 9600 [bauds](https://en.wikipedia.org/wiki/Baud), and `Wire.begin();` to start the I2C bus as master.
+
+We first need to initialize the MPU-6050 sensor. For that, in the **setup()** function, we call `mpu.initialize();`. 
+
+In the **loop()** function, we do this for reading raw data from our MPU-6050 sensor:
+
+```
+int16_t ax, ay, az;
+mpu.getAcceleration(&ax, &ay, &az);
+```
+We then need to send this fetched data to the slave (microcontroller in the Control Station):
+
+```
+  Wire.beginTransmission(slave_address);
+  Wire.write((byte)(aX >> 8));
+  Wire.write((byte)aX);
+  Wire.write((byte)(aY >> 8));
+  Wire.write((byte)aY);
+  Wire.write((byte)(aZ >> 8));
+  Wire.write((byte)aZ);
+  Wire.endTransmission();
+
+```
+
+### Outputting from Control Station
+
+We first need to declare our declare our LCD display.
+
+```
+// The LCD declaration with connected pin numbers as parameters
+LiquidCrystal lcd(18, 16, 23, 24, 25, 3);
+```
+
+We then initialize the LCD module in the **setup()** function by doing:
+`lcd.begin(16, 2);         // Initialize LCD`. 
+
+we then read from the I2C bus:
+
+```
+ ax = (buffer[0] << 8) | buffer[1];
+ ay = (buffer[2] << 8) | buffer[3];
+ az = (buffer[4] << 8) | buffer[5];
+
+```
+
+To print the readings from our sensor to the screen, we use `lcd.clear();` to first clear the screen buffer, then `lcd.setCursor()` to adjust the cursor's position on the screen, and finally `lcd.print();` to write to the screen.
+
+## 6. Assembly of components
 <!-- - wiring and connections
 - Integration of custom power supply
 - Main steps for assembly -->
 
-## 8. Testing and Validation
+## 7. Testing and Validation
 <!-- - Testing procedures
 - Demonstration video // vimeo -->
 
-## 9. helpful Ressources
+## 8. helpful Ressources
 
 - [Download KiCad](https://www.kicad.org/)
 - [Download Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360/download)
-<!-- - [Download the Arduino IDE](https://www.arduino.cc/) -->
 - https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP/?queryID=undefined
 - https://www.fs-pcba.com/fr/fabrication-dun-circuit-imprime-etape-par-etape/
 - https://youtu.be/uDUp4cLXFrY?si=2rA-MZsFL_sJVutS

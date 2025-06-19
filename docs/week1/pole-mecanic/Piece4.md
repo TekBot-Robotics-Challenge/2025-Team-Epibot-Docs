@@ -13,7 +13,7 @@ This document details the modeling process for Piece IV.
 
 ---
 
-### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week_1_pieces.zip" download>**Pieces**</a>
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_1_pieces.zip)
 
 # <span style="color: #949CDF; font-size: 28px; font-weight: bold;">**Preliminary studies**</span> 
 

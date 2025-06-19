@@ -15,6 +15,8 @@ The objective of this exercise is to modify the piece created in Part 1 ([link t
 
 ---
 
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_2_pieces.zip)
+
 ##  <span style="color: #08C5D1;"> **Implementation Steps** </span>
 
 ###  <span style="color: #9AC8EB;"> **Step 1: Second Cylindrical Drilling**</span>

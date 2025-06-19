@@ -13,7 +13,7 @@
 
 ---
 
-### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week_1_pieces.zip" download>**Pieces**</a>
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_1_pieces.zip)
 
 
 ## <span style="color: #949CDF; border-bottom: 2px solid #4285F4; padding-bottom: 4px;">TOOLS USED AND THEIR ROLES</span>

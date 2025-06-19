@@ -15,6 +15,8 @@ The goal is to apply different angle values (`A`, `B`, and `C`) at the rotationa
 ### <span style="color: #9AC8EB;">**Short Demo**</span>
 <iframe src="https://player.vimeo.com/video/1094296418?h=5769ac1ab9&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="demo-assembly-2"></iframe>
 
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_2_pieces.zip)
+
 ## <span style="color: #08C5D1;">**Implementation Steps**</span>
 
 ###  <span style="color: #9AC8EB;">**Step 0: Opening and Importing Parts**</span>
