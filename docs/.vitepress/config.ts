@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Weeks', 
         items: [
           { text: 'Week 1', link: '/week1/pole-it' },
-          { text: 'Week 2', link: '/week2/Mechanic_pole'},
+          { text: 'Week 2', link: '/week2/pole-mecanic/Part_1' },
           { text: 'Week 3', link: '/week3/pole-it' },
         ]
       },
