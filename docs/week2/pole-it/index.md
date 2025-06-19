@@ -26,6 +26,8 @@ Through this test, we learn how to :
 
 # Bonus: Multimachine Communication with ROS2 (Fast DDS)
 
+<iframe src="https://player.vimeo.com/video/1094755988?h=f0321cf5cd&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="Multi-machines communication"></iframe>
+
 ## Introduction
 
 As a bonus to this test, we explore **Multimachine communication using ROS2**, where ROS2 nodes can run on different physical machines and communicate with each other over a local network. This is made possible by **DDS (Data Distribution Service)**, which is the default middleware in ROS2 (Fast DDS). It allows **decentralized**, **serverless** communication through a **publish/subscribe model**.
@@ -107,6 +109,7 @@ Multimachine communication in ROS2 is straightforward when the following conditi
 - They share the same ROS_DOMAIN_ID.
 - ROS2 is installed and sourced correctly on each machine.
 - Firewall rules do not block DDS traffic.
+
 
 ### Useful link
 [https://roboticsbackend.com/ros2-multiple-machines-including-raspberry-pi/](https://roboticsbackend.com/ros2-multiple-machines-including-raspberry-pi/)
