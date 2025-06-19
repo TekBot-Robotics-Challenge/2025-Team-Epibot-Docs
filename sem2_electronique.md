@@ -33,7 +33,7 @@ This second test of the Tekbot Robotics Challenge introduces the design and impl
 The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf) is an 8-bit [microcontroller](www.geeksforgeeks.org/digital-logic/microcontroller-and-its-types/) chip that serves as the **central processing unit** in many electronic devices. It is based on the [AVR architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers) and is designed for tasks that involve reading sensor data, controlling outputs like LEDs or motors, and communicating or exchanging information with other devices. It is the chip used in the popular [Arduino UNO board](https://docs.arduino.cc/hardware/uno-rev3/).
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/403a51b1-f52f-4d34-8fca-dbdd6fee4f12" width="600">
+    <img src="https://github.com/user-attachments/assets/403a51b1-f52f-4d34-8fca-dbdd6fee4f12" width="500">
 </p>
 
 #### KEY FEATURES
@@ -53,7 +53,7 @@ The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU0
 The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-guide-to-setup%2Cconfiguration%2Cand-noise-management.html?srsltid=AfmBOooVL5CkBlAuw8WV0Yz7l7ZA2u8Ld6yBZFQf7kaTwiemNMmpUUey&utm_source=chatgpt.com#8.%20MPU-6050-Based%20Motion%20Trajectory%20Calculation) is a sensor module that combines a 3-axis gyroscope and a 3-axis accelerometer, enabling the detection of both rotational movement and linear acceleration in three dimensions. It features a Digital Motion Processor (DMP), which processes the raw sensor data using built-in algorithms to deliver reliable information on speed, rotation, and orientation. Communication with microcontrollers is accomplished via the I2C protocol, allowing for smooth integration into embedded systems. With its ability to provide real-time, accurate measurements while minimizing the processing load on the main system, the MPU-6050 is well suited for applications that require motion tracking and analysis.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/d76a29bc-0cd0-4bb3-a4a2-e1efaf1bdac3" width="600">
+    <img src="https://github.com/user-attachments/assets/d76a29bc-0cd0-4bb3-a4a2-e1efaf1bdac3" width="500">
 </p>
 
 ### c. The LCD screen
@@ -61,7 +61,7 @@ The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-gui
 The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_display) (LCD) is a type of screen found in many electronic devices, like calculators, clocks, and TVs. It works by using a thin layer of liquid crystals placed between two filters. These crystals can change how light passes through them when  electricity is applied. The LCD itself does not create light. Instead, a light behind the screen (called a backlight) shines through the crystals. By controlling the crystals with electrical signals, the LCD can show different shapes, letters, or pictures in black and white or in color.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/1718f74c-0200-4b8b-a0c6-0f37a9e90306" width="600">
+    <img src="https://github.com/user-attachments/assets/d16d5dc1-02c4-456c-839f-8a997d4395e6" width="500">
 </p>
 
 ### d. The Zener Diode
@@ -69,7 +69,7 @@ The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_displa
 The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type of semiconductor diode that is designed to allow current to flow in the reverse direction when the voltage across it reaches a specific value, called the Zener breakdown voltage. What this means is that a Zener diode can maintain a constant voltage in a circuit, even if the input voltage changes. When the voltage across the Zener diode exceeds its breakdown voltage, it starts conducting in reverse and keeps the voltage steady, making it very useful for voltage regulation and protecting sensitive electronic components from voltage spikes.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ff801b0f-7cb2-41a0-b1c1-73a898b3c432" width="600">
+    <img src="https://github.com/user-attachments/assets/ff801b0f-7cb2-41a0-b1c1-73a898b3c432" width="500">
 </p>
 
 ### e. The LM-1950: a voltage regulator
