@@ -91,6 +91,10 @@ The Control Station's main tasks are the processing and displaying of the data i
 
 To power up our setup, we should build a power supply that is independent from the cube and that will provide safe and sufficient voltage to all the components. For that, we will use:
 
+- 4 lithium batteries to supply 14.8V
+- a zener diode to stabilize the voltage at 5V for the control station
+- a tension regulator to bring the voltage to 9V for the black box
+
 <!--
 LM-1950 -- takes a gt 9v to output a 9v
 
@@ -113,7 +117,11 @@ Below is the KiCad schematics diagram for this project:
 
 #### The black box
 
+![image](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
+
 #### The Control station
+
+![image](https://github.com/user-attachments/assets/293dc6e6-418b-4cd1-a4d3-5b1472e13e56)
 
 ### b. Printed Circuit Board (PCB) design
 
@@ -121,11 +129,15 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
 
 #### The black box
 
+![image](https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d)
+
 <p align="center">
     <img src="https://github.com/user-attachments/assets/63a6d940-3927-44fc-a894-c0a368d5f875" width="500">
 </p>
 
 #### The Control station
+
+![image](https://github.com/user-attachments/assets/df219587-fc33-4f1d-80de-9f16135cf56e)
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f61a21b9-9a01-428f-96a9-60c13011716b" width="500">
@@ -231,11 +243,19 @@ We first need to declare our declare our LCD display.
 LiquidCrystal lcd(18, 16, 23, 24, 25, 3);
 ```
 
-We then initialize the  OLED module in the **setup()** function by doing:
+We then initialize the LCD module in the **setup()** function by doing:
 `lcd.begin(16, 2);         // Initialize LCD`. 
 
-To print the readings from our sensor to the screen, we use `lcd.clear();` to first clear the screen buffer, then `lcd.setCursor()` to adjust the cursor's position on the screen, and finally `lcd.print();` to write to the screen.
+we then read from the I2C bus:
 
+```
+ ax = (buffer[0] << 8) | buffer[1];
+ ay = (buffer[2] << 8) | buffer[3];
+ az = (buffer[4] << 8) | buffer[5];
+
+```
+
+To print the readings from our sensor to the screen, we use `lcd.clear();` to first clear the screen buffer, then `lcd.setCursor()` to adjust the cursor's position on the screen, and finally `lcd.print();` to write to the screen.
 
 ## 6. Assembly of components
 <!-- - wiring and connections
