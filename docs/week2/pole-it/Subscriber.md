@@ -2,7 +2,7 @@
 
 ## Overview
 
-This ROS2 C++ node subscribes to the `sensor_data` topic and evaluates incoming sensor data (temperature, humidity, and pressure) using a custom ROS2 message type: `custom_interfaces::msg::DataCollect`. It prints a color-coded summary to the terminal, indicating whether each value is within the given range.
+The `_subscriber` node subscribes to the `sensor_data` topic and evaluates incoming sensor data (temperature, humidity, and pressure) using a custom ROS2 message type: `custom_interfaces::msg::DataCollect`. It prints a color-coded summary to the terminal, indicating whether each value is within the given range.
 
 ---
 
@@ -124,6 +124,6 @@ The output will be:
 - Humidity "50" is included between [30, 70]
 - Pressure "1000" is included between [950, 1050]
 
-Each line is color-coded in the terminal for clarity.
+Each line is color-coded in the terminal for clarity (green when no error and red when values are'nt in the correct ranges).
 
 ---
