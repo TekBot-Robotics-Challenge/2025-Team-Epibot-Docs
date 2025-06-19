@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This test project was designed as an introduction to the ROS2 (Robot Operating System 2) framework. The objective was to get hands-on experience with ROS2's core communication concepts, including **nodes**, **topics**, and the **publish/subscribe** model. The test consists of implementing a ROS2 package with two main components: a *publisher node* and a *subscriber node*, using both **C++** and **Python**.
+This test of the second week is an introduction to the ROS2 framework. The objective is to get hands-on experience with ROS2's core communication concepts, including **nodes**, **topics**, and the **publish/subscribe** model. The test consists of implementing a ROS2 package with two main components: a *publisher node* and a *subscriber node*, using both **C++** or **Python**.
 
 ## Objectives of the Test
 
@@ -16,22 +16,21 @@ The primary goal was to create a ROS2 package named `sensor_data_evaluation` tha
 Additionally, a **launch file** was required to run both nodes simultaneously.
 
 ## Skills and Concepts Learned
-Through this test, I gained practical experience in the following areas:
+Through this test, we learn how to :
 
-- Creating and organizing a ROS2 package.
-- Writing ROS2 nodes in both C++ and Python.
-- Publishing and subscribing to topics.
-- Working with custom data structures and message types.
-- Using launch files to manage and execute multiple nodes.
-- Logging and validating data in real-time within a ROS2 system.
+- Creat and organize a ROS2 package.
+- Write ROS2 nodes in C++.
+- Publish and subscribe to topics.
+- Work with custom data structures and message types.
+- Use a launch files to manage and execute multiple nodes.
 
 # Bonus: Multimachine Communication with ROS2 (Fast DDS)
 
 ## Introduction
 
-As a bonus to this project, I explored **Multimachine communication using ROS2**, where ROS2 nodes can run on different physical machines and communicate with each other over a local network. This is made possible by **DDS (Data Distribution Service)**, which is the default middleware in ROS2 (Fast DDS). It allows **decentralized**, **serverless** communication through a **publish/subscribe model**.
+As a bonus to this test, we explore **Multimachine communication using ROS2**, where ROS2 nodes can run on different physical machines and communicate with each other over a local network. This is made possible by **DDS (Data Distribution Service)**, which is the default middleware in ROS2 (Fast DDS). It allows **decentralized**, **serverless** communication through a **publish/subscribe model**.
 
-## Key Concepts of DDS in ROS2
+## Concepts of DDS in ROS2
 
 - **Automatic Discovery**: Nodes automatically detect each other on the network. There is no need for a central master or `roscore`.
 - **Direct Communication**: Messages are sent directly from the publisher to the subscriber.
@@ -109,4 +108,5 @@ Multimachine communication in ROS2 is straightforward when the following conditi
 - ROS2 is installed and sourced correctly on each machine.
 - Firewall rules do not block DDS traffic.
 
-[Check this link if you want to know about  this topic](https://roboticsbackend.com/ros2-multiple-machines-including-raspberry-pi/)
+### Useful link
+[https://roboticsbackend.com/ros2-multiple-machines-including-raspberry-pi/](https://roboticsbackend.com/ros2-multiple-machines-including-raspberry-pi/)
