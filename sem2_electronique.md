@@ -104,7 +104,7 @@ lcd screen -- min 3.3v max 5v
 
 ### a. KiCad schematic diagrams
 <!-- quick explanation, adding image -->
-We used the KiCad EDA (_download [here]()_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
+We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
 
 Below is the KiCad schematics diagram for this project:
 
@@ -123,7 +123,7 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
 
 ### c. The Cube design
 
-For the cube design, we used Autodesk Fusion 360 (_download [here]()_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/).
+For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.autodesk.com/products/fusion-360/download)_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/).
 
 <!-- quick explanation and video -- add 3D visu -->
 ## 4. Computer-Aided Manufacturing
@@ -182,6 +182,9 @@ This systematic approach to data acquisition and processing enables the system t
 
 ## 9. helpful Ressources
 
+- [Download KiCad](https://www.kicad.org/)
+- [Download Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360/download)
+<!-- - [Download the Arduino IDE](https://www.arduino.cc/) -->
 - https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP/?queryID=undefined
 - https://www.fs-pcba.com/fr/fabrication-dun-circuit-imprime-etape-par-etape/
 - https://youtu.be/uDUp4cLXFrY?si=2rA-MZsFL_sJVutS
