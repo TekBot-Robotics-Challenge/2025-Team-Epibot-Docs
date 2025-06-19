@@ -7,7 +7,7 @@ In this documentation:
 - [3. Computer-Aided Design](#3-computer-aided-design)
 - [4. Computer-Aided Manufacturing](#4-computer-aided-manufacturing)
 - [5. Embedded Software and Microcontroller Logic](#5-embedded-software-and-microcontroller-logic)
-- [6. The arduino code](#6-the-arduino-code)
+- [6. Programming the circuits](#6-programming-the-circuits)
 - [7. Assembly of components](#7-assembly-of-components)
 - [8. Testing the project](#8-testing-the-project)
 - [9. Helpful Ressources](#9-helpful-Ressources)
@@ -16,7 +16,7 @@ In this documentation:
 
 Black boxes are critical devices commonly used in fields such as aviation, automotive, and rail transport to record and monitor key operational data from equipment. By continuously collecting information like speed, position, and orientation, these systems help in understanding how machines behave and can provide useful insights in case of incidents or for performance improvement. The goal here is to develop a compact black box capable of capturing motion data, including speed and position, using a gyroscope and accelerometer sensor.
 
-This second test of the Tekbot Robotics Challenge introduces the design and implementation of a simple embedded black box system. The goal here is to develop a compact black box capable of capturing motion data, including speed and position, using a gyroscope and accelerometer sensor. The collected data should be sent in real-time to a control station, where it can be displayed and analyzed. The project provides hands-on experience with embedded systems, data transmission, and hardware-software integration.
+This second test of the Tekbot Robotics Challenge introduces the design and implementation of a simple embedded black box system. The goal here is to develop a compact black box capable of capturing motion data, including speed and posit+ion, using a gyroscope and accelerometer sensor. The collected data should be sent in real-time to a control station, where it can be displayed and analyzed. The project provides hands-on experience with embedded systems, data transmission, and hardware-software integration.
 
 ### Objectives of the test
 
@@ -91,13 +91,28 @@ To power up our setup, we should build a power supply that is independent from t
 
 ### a. KiCad schematic diagrams
 <!-- quick explanation, adding image -->
+We used the KiCad EDA (_download [here]()_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
+
+Below is the KiCad schematics diagram for this project:
+
+#### The black box
+
+#### The Control station
 
 ### b. Printed Circuit Board (PCB) design
 <!-- quick explanation and video -- add 3D visu -->
 
-### c. The Cube design
-<!-- quick explanation and video -- add 3D visu -->
+We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the detailed PCB designs realized in KiCad:
 
+#### The black box
+
+#### The Control station
+
+### c. The Cube design
+
+For the cube design, we used Autodesk Fusion 360 (_download [here]()_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/).
+
+<!-- quick explanation and video -- add 3D visu -->
 ## 4. Computer-Aided Manufacturing
 
 ## 5. Microcontroller Logic on the I2C bus
@@ -132,14 +147,14 @@ Accurate acquisition and processing of sensor data are essential for monitoring 
 #### Processing Steps:
 
 - The raw sensor readings are converted into meaningful physical units (e.g., acceleration in g’s or m/s², angular velocity in °/s).
-- Processing algorithms, such as filtering (e.g., moving average or complementary filter), are applied to reduce noise _(small, unwanted variations or disturbances in the sensor data that do not represent the actual movement of the cube)_ and improve data stability.
+- Processing algorithms, such as filtering (e.g., moving average or complementary filter), are applied to reduce noise (_small, unwanted variations or disturbances in the sensor data that do not represent the actual movement of the cube_) and improve data stability.
 - The processed sensor data is then formatted for transmission to the control station over the I2C bus and for display on the LCD.
 
 This systematic approach to data acquisition and processing enables the system to provide real-time, accurate feedback on the cube’s speed and position, which is crucial for the core functionality of the project.
 
 <!-- +----------------------------------------------------------------------+ -->
 
-## 6. The arduino code
+## 6. Programming the circuits
 <!-- - black box
 - station -->
 
