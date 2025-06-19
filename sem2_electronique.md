@@ -7,7 +7,7 @@ In this documentation:
 - [3. Computer-Aided Design](#3-computer-aided-design)
 - [4. Computer-Aided Manufacturing](#4-computer-aided-manufacturing)
 - [5. Embedded Software and Microcontroller Logic](#5-embedded-software-and-microcontroller-logic)
-- [6. The arduino code](#6-the-arduino-code)
+- [6. Programming the circuits](#6-programming-the-circuits)
 - [7. Assembly of components](#7-assembly-of-components)
 - [8. Testing the project](#8-testing-the-project)
 - [9. Helpful Ressources](#9-helpful-Ressources)
@@ -16,7 +16,7 @@ In this documentation:
 
 Black boxes are critical devices commonly used in fields such as aviation, automotive, and rail transport to record and monitor key operational data from equipment. By continuously collecting information like speed, position, and orientation, these systems help in understanding how machines behave and can provide useful insights in case of incidents or for performance improvement. The goal here is to develop a compact black box capable of capturing motion data, including speed and position, using a gyroscope and accelerometer sensor.
 
-This second test of the Tekbot Robotics Challenge introduces the design and implementation of a simple embedded black box system. The goal here is to develop a compact black box capable of capturing motion data, including speed and position, using a gyroscope and accelerometer sensor. The collected data should be sent in real-time to a control station, where it can be displayed and analyzed. The project provides hands-on experience with embedded systems, data transmission, and hardware-software integration.
+This second test of the Tekbot Robotics Challenge introduces the design and implementation of a simple embedded black box system. The goal here is to develop a compact black box capable of capturing motion data, including speed and posit+ion, using a gyroscope and accelerometer sensor. The collected data should be sent in real-time to a control station, where it can be displayed and analyzed. The project provides hands-on experience with embedded systems, data transmission, and hardware-software integration.
 
 ### Objectives of the test
 
@@ -31,6 +31,10 @@ This second test of the Tekbot Robotics Challenge introduces the design and impl
 ### a. The ATmega328P microcontroller
 
 The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/ATmega48A-PA-88A-PA-168A-PA-328-P-DS-DS40002061B.pdf) is an 8-bit [microcontroller](www.geeksforgeeks.org/digital-logic/microcontroller-and-its-types/) chip that serves as the **central processing unit** in many electronic devices. It is based on the [AVR architecture](https://en.wikipedia.org/wiki/AVR_microcontrollers) and is designed for tasks that involve reading sensor data, controlling outputs like LEDs or motors, and communicating or exchanging information with other devices. It is the chip used in the popular [Arduino UNO board](https://docs.arduino.cc/hardware/uno-rev3/).
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/403a51b1-f52f-4d34-8fca-dbdd6fee4f12" width="500">
+</p>
 
 #### KEY FEATURES
 
@@ -48,27 +52,29 @@ The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU0
 
 The [MPU-6050](https://www.allelcoelec.com/blog/mpu-6050-in-action-practical-guide-to-setup%2Cconfiguration%2Cand-noise-management.html?srsltid=AfmBOooVL5CkBlAuw8WV0Yz7l7ZA2u8Ld6yBZFQf7kaTwiemNMmpUUey&utm_source=chatgpt.com#8.%20MPU-6050-Based%20Motion%20Trajectory%20Calculation) is a sensor module that combines a 3-axis gyroscope and a 3-axis accelerometer, enabling the detection of both rotational movement and linear acceleration in three dimensions. It features a Digital Motion Processor (DMP), which processes the raw sensor data using built-in algorithms to deliver reliable information on speed, rotation, and orientation. Communication with microcontrollers is accomplished via the I2C protocol, allowing for smooth integration into embedded systems. With its ability to provide real-time, accurate measurements while minimizing the processing load on the main system, the MPU-6050 is well suited for applications that require motion tracking and analysis.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d76a29bc-0cd0-4bb3-a4a2-e1efaf1bdac3" width="500">
+</p>
+
 ### c. The LCD screen
 
 The [Liquid-Crystal Display](https://en.wikipedia.org/wiki/Liquid-crystal_display) (LCD) is a type of screen found in many electronic devices, like calculators, clocks, and TVs. It works by using a thin layer of liquid crystals placed between two filters. These crystals can change how light passes through them when  electricity is applied. The LCD itself does not create light. Instead, a light behind the screen (called a backlight) shines through the crystals. By controlling the crystals with electrical signals, the LCD can show different shapes, letters, or pictures in black and white or in color.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/d16d5dc1-02c4-456c-839f-8a997d4395e6" width="500">
+</p>
 
 ### d. The Zener Diode
 
 The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type of semiconductor diode that is designed to allow current to flow in the reverse direction when the voltage across it reaches a specific value, called the Zener breakdown voltage. What this means is that a Zener diode can maintain a constant voltage in a circuit, even if the input voltage changes. When the voltage across the Zener diode exceeds its breakdown voltage, it starts conducting in reverse and keeps the voltage steady, making it very useful for voltage regulation and protecting sensitive electronic components from voltage spikes.
 
-### e. The tension regulator
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ff801b0f-7cb2-41a0-b1c1-73a898b3c432" width="500">
+</p>
 
-<!--
-LM-1950 -- takes a gt 9v to output a 9v
+### e. The LM-1950: a voltage regulator
 
-1N4733A diode zener -- stabilize the tension and brings it to 5V
-
-4 batteries lithium -- power up 14.8v
-
-mpu-6050 -- min 3.3v max 5v
-
-lcd screen -- min 3.3v max 5v
--->
+The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change. As an electronic component, it is built using integrated circuitry rather than mechanical parts. The LM-1950 is intended for regulating DC voltages, and can be used to supply a steady voltage to one or more DC-powered devices.
 
 ### f. The Cube (black box)
 
@@ -82,20 +88,44 @@ The Control Station's main tasks are the processing and displaying of the data i
 
 To power up our setup, we should build a power supply that is independent from the cube and that will provide safe and sufficient voltage to all the components. For that, we will use:
 
-<!-- list it all here -->
+<!--
+LM-1950 -- takes a gt 9v to output a 9v
+
+1N4733A diode zener -- stabilize the tension and brings it to 5V
+
+4 batteries lithium -- power up 14.8v
+
+mpu-6050 -- min 3.3v max 5v
+
+lcd screen -- min 3.3v max 5v
+-->
 
 ## 3. Computer-Aided Design
-<!-- Setting up with KiCad -- installation, finding components, adding them -->
 
 ### a. KiCad schematic diagrams
 <!-- quick explanation, adding image -->
+We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
+
+Below is the KiCad schematics diagram for this project:
+
+#### The black box
+
+#### The Control station
 
 ### b. Printed Circuit Board (PCB) design
 <!-- quick explanation and video -- add 3D visu -->
 
-### c. The Cube design
-<!-- quick explanation and video -- add 3D visu -->
+We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the detailed PCB designs realized in KiCad:
 
+#### The black box
+
+#### The Control station
+
+### c. The Cube design
+
+For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.autodesk.com/products/fusion-360/download)_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/).
+
+<!-- quick explanation and video -- add 3D visu -->
 ## 4. Computer-Aided Manufacturing
 
 ## 5. Microcontroller Logic on the I2C bus
@@ -130,14 +160,14 @@ Accurate acquisition and processing of sensor data are essential for monitoring 
 #### Processing Steps:
 
 - The raw sensor readings are converted into meaningful physical units (e.g., acceleration in g’s or m/s², angular velocity in °/s).
-- Processing algorithms, such as filtering (e.g., moving average or complementary filter), are applied to reduce noise _(small, unwanted variations or disturbances in the sensor data that do not represent the actual movement of the cube)_ and improve data stability.
+- Processing algorithms, such as filtering (e.g., moving average or complementary filter), are applied to reduce noise (_small, unwanted variations or disturbances in the sensor data that do not represent the actual movement of the cube_) and improve data stability.
 - The processed sensor data is then formatted for transmission to the control station over the I2C bus and for display on the LCD.
 
 This systematic approach to data acquisition and processing enables the system to provide real-time, accurate feedback on the cube’s speed and position, which is crucial for the core functionality of the project.
 
 <!-- +----------------------------------------------------------------------+ -->
 
-## 6. The arduino code
+## 6. Programming the circuits
 <!-- - black box
 - station -->
 
@@ -152,6 +182,9 @@ This systematic approach to data acquisition and processing enables the system t
 
 ## 9. helpful Ressources
 
+- [Download KiCad](https://www.kicad.org/)
+- [Download Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360/download)
+<!-- - [Download the Arduino IDE](https://www.arduino.cc/) -->
 - https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP/?queryID=undefined
 - https://www.fs-pcba.com/fr/fabrication-dun-circuit-imprime-etape-par-etape/
 - https://youtu.be/uDUp4cLXFrY?si=2rA-MZsFL_sJVutS

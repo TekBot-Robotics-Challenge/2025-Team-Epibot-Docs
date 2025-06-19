@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Weeks', 
         items: [
           { text: 'Week 1', link: '/week1/pole-it' },
-          { text: 'Week 2', link: '/week2/Mechanic_pole/Part_1'},
+          { text: 'Week 2', link: '/week2/Mechanic_pole'},
           { text: 'Week 3', link: '/week3/pole-it' },
         ]
       },
@@ -114,6 +114,8 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Download ROS2 Humble', link: '/week2/pole-it/Download_ROS2_Humble' },
+                  { text: 'Custom Message', link: '/week2/pole-it/custom_message' },
+                  { text: 'Publisher Node', link: '/week2/pole-it/publisher' },
                   { text: 'Subscriber Node', link: '/week2/pole-it/Subscriber' },
                   { text: 'Launch File Explaination', link: '/week2/pole-it/launch_file' },
                 ]
@@ -144,15 +146,15 @@ export default defineConfig({
             collapsed: true,
             items: [
               // { text: 'Test 1', link: '/week1/pole-it' },
-              {
-                link: '/week2/Mechanic_pole/Part_1',
+              { 
+                text: 'Test 2',
+                link: '/week2/pole-mecanic/',
                 collapsed: true,
                 items: [
-                  { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1'},
-                  { text: 'Part 2', link: '/week2/Mechanic_pole/Part_2'},
-                  { text: 'Part 3', link: '/week2/Mechanic_pole/Part_3'},
-                  { text: 'Assembly', link: '/week2/Mechanic_pole/assembly'},
-
+                  { text: 'Part 1', link: '/week2/pole-mecanic/Part_1'},
+                  { text: 'Part 2', link: '/week2/pole-mecanic/Part_2'},
+                  { text: 'Part 3', link: '/week2/pole-mecanic/Part_3'},
+                  { text: 'Assembly', link: '/week2/pole-mecanic/assembly'},
                 ]
               },
             ]
