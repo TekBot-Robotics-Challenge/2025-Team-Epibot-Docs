@@ -2,7 +2,7 @@
 
 ## <span style="color: #08C5D1;">**Challenge Overview**</span>
 
-The objective of this exercise is to modify the piece created in Part 1 ([link to Part 1](/week2/Mechanic_pole/Part_1)) by applying precise material removal at strategic points while respecting dimensions, tangency constraints, and other specifications.
+The objective of this exercise is to modify the piece created in Part 1 ([link to Part 1](/week2/pole-mecanic/Part_1)) by applying precise material removal at strategic points while respecting dimensions, tangency constraints, and other specifications.
 
 ![Label Screenshot](/images/mechanic_images/week2/label_2.png)
 
