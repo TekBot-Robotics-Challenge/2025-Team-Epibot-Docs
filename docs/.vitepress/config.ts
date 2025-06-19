@@ -23,7 +23,7 @@ export default defineConfig({
         text: 'Weeks', 
         items: [
           { text: 'Week 1', link: '/week1/pole-it' },
-          { text: 'Week 2', link: '/week2/Mechanic_pole/Part_1'},
+          { text: 'Week 2', link: '/week2/pole-mecanic/Part_1' },
           { text: 'Week 3', link: '/week3/pole-it' },
         ]
       },
@@ -146,11 +146,15 @@ export default defineConfig({
             collapsed: true,
             items: [
               // { text: 'Test 1', link: '/week1/pole-it' },
-              {
-                link: '/week2/Mechanic_pole/Part_1',
+              { 
+                text: 'Test 2',
+                link: '/week2/pole-mecanic/Part_1',
                 collapsed: true,
                 items: [
-                  { text: 'Part 1', link: '/week2/Mechanic_pole/Part_1' },
+                  {text: 'Part 1', link: '/week2/pole-mecanic/Part_1'},
+                  {text: 'Part 2', link: '/week2/pole-mecanic/Part_2'},
+                  {text: 'Part 3', link: '/week2/pole-mecanic/Part_3'},
+                  {text: 'Assembly', link: '/week2/pole-mecanic/assembly'},
                 ]
               },
             ]

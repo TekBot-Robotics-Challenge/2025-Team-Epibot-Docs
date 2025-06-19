@@ -67,9 +67,9 @@ Sketch all the edges of the figure, including the circle specified in the diagra
 #### <span style="color: #DB6A8F; padding-left: 8px;">**Apply Dimensions**</span>
 Use the **`Smart Dimension`** tool to apply the required dimensions. Select the edges or features you want to dimension and input the corresponding values.
 
-![Dimension Process]()
-
 <span style="color: #08C5D1;">**Demo of a proocess**</span>
+
+<iframe src="https://player.vimeo.com/video/1094296429?h=81ba851189&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="width:100%;height:300px;" title="cotations_part_1"></iframe>
 
 ---
 
@@ -132,12 +132,11 @@ To calculate the mass of the part:
 
 - **Best Practices:**
   - Always double-check dimensions and tangency relations before extruding.
+ß
   - Ensure that you don't overlook any single quotation
+  
   - Always verify that you are using mmgs.
-  - Maintain proper syntax for global variables.
 
-- **Troubleshooting:**
-  - If the mass calculation seems incorrect, verify the material assignment and dimensions.
-  - Ensure all sketches are fully defined before proceeding to extrusion.
+  - Maintain proper syntax for global variables.
 
 ---
