@@ -12,7 +12,6 @@ This launch file is expected at:
 sensor_data_evaluation/launch/sensor_launch.py
 ```
 
-
 ---
 
 ## Purpose
