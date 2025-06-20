@@ -95,41 +95,38 @@ To power up our setup, we should build a power supply that is independent from t
 - a zener diode to stabilize the voltage at 5V for the control station
 - a tension regulator to bring the voltage to 9V for the black box
 
-<!--
-LM-1950 -- takes a gt 9v to output a 9v
-
-1N4733A diode zener -- stabilize the tension and brings it to 5V
-
-4 batteries lithium -- power up 14.8v
-
-mpu-6050 -- min 3.3v max 5v
-
-lcd screen -- min 3.3v max 5v
--->
-
 ## 3. Computer-Aided Design
 
 ### a. KiCad schematic diagrams
-<!-- quick explanation, adding image -->
+
 We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
 
-Below is the KiCad schematics diagram for this project:
+Find below , the KiCad schematics diagram for this project. They provide clear illustrations of how the components are connected to each other in The Cube and in The Control Station.
 
-#### The black box
+#### The Cube (black box)
 
-![image](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
+![The cube](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
 
 #### The Control station
 
-![image](https://github.com/user-attachments/assets/293dc6e6-418b-4cd1-a4d3-5b1472e13e56)
+![The control station](https://github.com/user-attachments/assets/293dc6e6-418b-4cd1-a4d3-5b1472e13e56)
 
 ### b. Printed Circuit Board (PCB) design
 
 We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the finalized PCB images as designed in KiCad:
 
-#### The black box
+#### The Cube (black box)
 
-![image](https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d)
+- PCB overview in the KiCad PCB editor
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d" width="500">
+</p>
+
+- PCB Interactive 3D view
+
+
+- Real-life realisation of The Cube's PCB
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/63a6d940-3927-44fc-a894-c0a368d5f875" width="500">
@@ -137,7 +134,16 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
 
 #### The Control station
 
-![image](https://github.com/user-attachments/assets/df219587-fc33-4f1d-80de-9f16135cf56e)
+- PCB overview in the KiCad PCB editor
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/df219587-fc33-4f1d-80de-9f16135cf56e" width="500">
+</p>
+
+- PCB Interactive 3D view
+
+
+- Real-life realisation of the Control Station's PCB
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f61a21b9-9a01-428f-96a9-60c13011716b" width="500">
@@ -153,7 +159,7 @@ For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.a
 
 The [Inter-Integrated Circuit](https://en.wikipedia.org/wiki/I%C2%B2C) (I2C), is a communication protocol that allows multiple electronic components, like sensors and microcontrollers, to talk to each other using just two wires: one for data (SDA) and one for the clock signal (SCL). With I2C, a single device acts as the controller (or master) that manages the communication, while other devices act as followers (or slaves). Each device on the I2C bus has a unique address, so the controller can talk to each one individually, even though they share the same wires. This makes I2C a simple and efficient way to connect many devices together in a circuit, saving wiring and making communication between parts much easier.
 
-### b. Microcontroller configuration <!-- and sensor data acquisition/processing -->
+### b. Microcontroller configuration
 
 The microcontroller configuration is one of the core aspects of this test. It ensures seamless communication between components, accurate data collection from sensors, and reliable transmission of information to the control station, forming the foundation of the system’s functionality.
 
@@ -184,15 +190,13 @@ Accurate acquisition and processing of sensor data are essential for monitoring 
 
 This systematic approach to data acquisition and processing enables the system to provide real-time, accurate feedback on the cube’s speed and position, which is crucial for the core functionality of the project.
 
-<!-- +----------------------------------------------------------------------+ -->
-
 ## 5. Programming the circuits
 
-After the wiring is done, we need to connect our Arduino UNO board to a computer through USB to program it using our Arduino Code.
+After the wiring is done, we need to program both the ATmega328P chips from the Cube and The control station.
 
-Download the Arduino IDE using this [link](https://www.arduino.cc/). It's a software that will allow you to run and upload your code to the MCU. Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+Download the Arduino IDE using this [link](https://www.arduino.cc/). It's a software that will allow you to run and upload your code to the MCUs. Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
 
-- The **Wire** library for I2C communication (required for the MPU-6050 and the SSD1306)
+- The **Wire** library for I2C communication
 
   ```
   #include <Wire.h>
@@ -220,7 +224,7 @@ In the **loop()** function, we do this for reading raw data from our MPU-6050 se
 int16_t ax, ay, az;
 mpu.getAcceleration(&ax, &ay, &az);
 ```
-We then need to send this fetched data to the slave (microcontroller in the Control Station):
+We then need to send this fetched data to the slave (microcontroller in the Control Station) through the I2C bus:
 
 ```
   Wire.beginTransmission(slave_address);
