@@ -5,11 +5,11 @@ In this documentation:
 - [1. General Context](#1-general-context)
 - [2. Description of components](#2-description-of-components)
 - [3. Computer-Aided Design](#3-computer-aided-design)
-- [4. Embedded Software and Microcontroller Logic](#5-embedded-software-and-microcontroller-logic)
-- [5. Programming the circuits](#6-programming-the-circuits)
-- [6. Assembly of components](#7-assembly-of-components)
-- [7. Testing the project](#8-testing-the-project)
-- [8. Helpful Ressources](#9-helpful-Ressources)
+- [4. Embedded Software and Microcontroller Logic](#4-embedded-software-and-microcontroller-logic)
+- [5. Programming the circuits](#5-programming-the-circuits)
+- [6. Assembly of components](#6-assembly-of-components)
+- [7. Testing the project](#7-testing-the-project)
+- [8. Helpful Ressources](#8-helpful-ressources)
 
 ## 1. General Context
 
