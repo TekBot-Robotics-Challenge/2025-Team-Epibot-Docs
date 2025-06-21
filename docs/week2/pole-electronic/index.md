@@ -25,7 +25,7 @@ This second test of the Tekbot Robotics Challenge introduces the design and impl
 - **Demonstrate system reliability and robustness:** Show that the system works smoothly and provides dependable results during testing.
 - **Encourage hands-on integration of skills:** Offer an opportunity to integrate knowledge of embedded systems, sensor data handling, and system integration through a hands-on project.
 
-## 2. Description of components <!-- add real images -->
+## 2. Description of components
 
 ### a. The ATmega328P microcontroller
 
@@ -101,7 +101,7 @@ To power up our setup, we should build a power supply that is independent from t
 
 We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
 
-Find below , the KiCad schematics diagram for this project. They provide clear illustrations of how the components are connected to each other in The Cube and in The Control Station.
+Find below, the KiCad schematics diagram for this project. They provide clear illustrations of how the components are connected to each other in The Cube and in The Control Station.
 
 #### The Cube (black box)
 
@@ -132,6 +132,8 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
     <img src="https://github.com/user-attachments/assets/63a6d940-3927-44fc-a894-c0a368d5f875" width="500">
 </p>
 
+_You can download the Cube's KiCad files [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_.
+
 #### The Control station
 
 - PCB overview in the KiCad PCB editor
@@ -148,6 +150,8 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/f61a21b9-9a01-428f-96a9-60c13011716b" width="500">
 </p>
+
+_You can download the Control station's KiCad files [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/control_station_schematics.zip)_.
 
 ### c. The Cube design
 
@@ -238,6 +242,8 @@ We then need to send this fetched data to the slave (microcontroller in the Cont
 
 ```
 
+_Download the full code for the black box [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/code/the_cube_box.ino)_.
+
 ### Outputting from Control Station
 
 We first need to declare our declare our LCD display.
@@ -260,6 +266,8 @@ we then read from the I2C bus:
 ```
 
 To print the readings from our sensor to the screen, we use `lcd.clear();` to first clear the screen buffer, then `lcd.setCursor()` to adjust the cursor's position on the screen, and finally `lcd.print();` to write to the screen.
+
+_Download the full code for the black box [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/code/the_control_station.ino)_.
 
 ## 6. Assembly of components
 <!-- - wiring and connections
