@@ -24,7 +24,7 @@ export default defineConfig({
         items: [
           { text: 'Week 1', link: '/week1/pole-it' },
           { text: 'Week 2', link: '/week2/pole-it' },
-          { text: 'Week 3', link: '/week3/pole-it' },
+          { text: 'Week 3', link: '/week3/pole-mecanic/advanced_mechanical_challenge'}, // To change after
         ]
       },
     ],
@@ -162,12 +162,52 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Week 3 - Finalization',
+        text: 'Week 3 - Realisation',
         collapsed: true,
         items: [
-          { text: 'IT Pole', link: '/week3/' },
-          { text: 'Electronics Pole', link: '/week3/' },
-          { text: 'Mechanical Pole', link: '/week3/' },
+           // Pole IT
+          {
+            text: 'IT Pole',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-it/',
+                collapsed: true,
+                items: []
+              },
+            ]
+          },
+          {
+            text: 'Electronics Pole',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-electronic/',
+                collapsed: true,
+                items: [
+                ]
+              },
+            ]
+          },
+
+          // Mechanical Pole
+          {
+            text: 'Mechanical Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-mecanic/advanced_mechanical_challenge',
+                collapsed: true,
+                items: [
+                  {text: 'advanced challenge', link: '/week3/pole-mecanic/advanced_mechanical_challenge'},
+                ]
+              },
+            ]
+          },
         ],
       },
     ],
