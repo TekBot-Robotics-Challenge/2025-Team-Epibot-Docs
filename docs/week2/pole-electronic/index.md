@@ -132,7 +132,7 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
     <img src="https://github.com/user-attachments/assets/63a6d940-3927-44fc-a894-c0a368d5f875" width="500">
 </p>
 
-_You can download the Cube's KiCad files [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_.
+_You can download the Cube's KiCad files [here](blob:https://github.com/a0f9adef-b726-4e29-bfd9-cae28497cddc)_.
 
 #### The Control station
 
@@ -151,7 +151,7 @@ _You can download the Cube's KiCad files [here](https://github.com/kkbroxane/202
     <img src="https://github.com/user-attachments/assets/f61a21b9-9a01-428f-96a9-60c13011716b" width="500">
 </p>
 
-_You can download the Control station's KiCad files [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/control_station_schematics.zip)_.
+_You can download the Control station's KiCad files [here](blob:https://github.com/66a798a7-6b17-4b6e-b255-88a3b9d76dbe)_.
 
 ### c. The Cube design
 
