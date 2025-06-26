@@ -182,6 +182,7 @@ export default defineConfig({
                   { text: 'MotionController Node', link: '/week3/pole-it/MotionControllerNode' },
                   { text: 'Astar Algorithm', link: '/week3/pole-it/AStar' },
                   { text: 'Gazebo', link: '/week3/pole-it/Gazebo' },
+                  { text: 'Rviz2', link: '/week3/pole-it/Rviz_documentation' },
                 ]
               },
             ]
