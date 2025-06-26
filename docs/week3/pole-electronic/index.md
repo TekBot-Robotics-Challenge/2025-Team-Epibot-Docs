@@ -41,7 +41,7 @@ The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU0
 A [servomotor](https://en.wikipedia.org/wiki/Servomotor) is a small device used to precisely control the position of objects, commonly found in robotics, model airplanes, and remote-controlled cars. It consists of a motor, a position sensor, and a control circuit, allowing it to rotate or move to a specific angle when given an electronic signal. Servo motors are popular in projects that require accurate and repeatable movements, such as animating displays or actuating robotic arms.
 
 <p align="center">
-    <img src="" width="500">
+    <img src="https://github.com/user-attachments/assets/11e9d2ee-cf7a-445c-ac55-56d09904517d" width="500">
 </p>
 
 ### c. The PCA-9685: servomotor controller
@@ -49,7 +49,7 @@ A [servomotor](https://en.wikipedia.org/wiki/Servomotor) is a small device used 
 The [PCA-9685](https://cdn-shop.adafruit.com/datasheets/PCA9685.pdf) is an integrated circuit (IC) used as a 16-channel [Pulse Width Modulation](https://en.wikipedia.org/wiki/Pulse-width_modulation) (PWM) driver, often controlled via the I2C communication protocol. It allows you to control up to sixteen servos or LEDs independently from just two microcontroller pins. The PCA9685 is widely used in robotics and automation projects to expand the number of devices you can control, especially useful when you need to manage many servos or LEDs at the same time.  
 
 <p align="center">
-    <img src="" width="500">
+    <img src="https://github.com/user-attachments/assets/a77edaf7-42a2-4912-9f70-08218d011634" width="500">
 </p>
 
 ### d. The Zener Diode
@@ -73,7 +73,7 @@ The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.
 A 16MHz [quartz crystal](https://en.wikipedia.org/wiki/Crystal_oscillator) is an electronic component used to provide a precise clock signal for microcontrollers and other digital circuits. By vibrating at a stable frequency of 16,000,000 cycles per second, it ensures accurate timing for operations such as processing instructions and generating communication signals.
 
 <p align="center">
-    <img src="" width="500">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
 </p>
 
 ### g. Our custom power supply
