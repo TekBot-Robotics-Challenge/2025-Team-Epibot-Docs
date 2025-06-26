@@ -178,7 +178,7 @@ export default defineConfig({
                 link: '/week3/pole-it/',
                 collapsed: true,
                 items: [
-                  { text: 'Overview', link: '/week3/pole-it/' },
+                  { text: 'Autonomous Mapping (SLAM Toolbox)', link: '/week3/pole-it/slam_toolbox' },
                 ]
               },
             ]
