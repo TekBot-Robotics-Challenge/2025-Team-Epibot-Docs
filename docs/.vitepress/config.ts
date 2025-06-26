@@ -5,7 +5,7 @@ export default defineConfig({
   lang: 'en-US',
   title: 'Epibot Docs - TRC 2k25',
   base: process.env.NODE_ENV === 'production' ? '/2025-Team-Epibot-Docs/' : '/',
-  description: 'Documentation of our 3-week technical competition with 3 robotics expertise poles.',
+  description: 'Documentation of our 5-week technical competition with 3 robotics expertise poles.',
   
   head: [
     ['link', { rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
@@ -161,13 +161,62 @@ export default defineConfig({
           },
         ],
       },
+
+      // WEEK 3
+
       {
         text: 'Week 3 - Finalization',
         collapsed: true,
         items: [
-          { text: 'IT Pole', link: '/week3/' },
-          { text: 'Electronics Pole', link: '/week3/' },
-          { text: 'Mechanical Pole', link: '/week3/' },
+           // Pole IT
+          {
+            text: 'IT Pole',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-it/',
+                collapsed: true,
+                items: [
+                  { text: 'Overview', link: '/week3/pole-it/' },
+                ]
+              },
+            ]
+          },
+
+          // Electronics Pole
+          {
+            text: 'Electronics Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-electronic/',
+                collapsed: true,
+                items: [
+                  { text: '', link: '/week3/pole-electronic/' },
+                ]
+              },
+            ]
+          },
+
+          // Mechanical Pole
+          {
+            text: 'Mechanical Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-mecanic/',
+                collapsed: true,
+                items: [
+                  {text: '', link: '/week3/pole-mecanic/'},
+                ]
+              },
+            ]
+          },
         ],
       },
     ],
