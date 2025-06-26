@@ -178,9 +178,10 @@ export default defineConfig({
                 link: '/week3/pole-it/',
                 collapsed: true,
                 items: [
-                  { text: 'PathPlanner Node', link: '/week3/pole-it/PathPlannerNode.md' },
-                  { text: 'MotionController Node', link: '/week3/pole-it/MotionControllerNode.md' },
-                  { text: 'Astar Algorithm', link: '/week3/pole-it/AStar.md' }
+                  { text: 'PathPlanner Node', link: '/week3/pole-it/PathPlannerNode' },
+                  { text: 'MotionController Node', link: '/week3/pole-it/MotionControllerNode' },
+                  { text: 'Astar Algorithm', link: '/week3/pole-it/AStar' },
+                  { text: 'Gazebo', link: '/week3/pole-it/Gazebo' },
                 ]
               },
             ]
