@@ -179,6 +179,12 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: 'Autonomous Mapping (SLAM Toolbox)', link: '/week3/pole-it/slam_toolbox' },
+                  { text: 'PathPlanner Node', link: '/week3/pole-it/PathPlannerNode' },
+                  { text: 'MotionController Node', link: '/week3/pole-it/MotionControllerNode' },
+                  { text: 'Astar Algorithm', link: '/week3/pole-it/AStar' },
+                  { text: 'Gazebo', link: '/week3/pole-it/Gazebo' },
+                  { text: 'Build', link: '/week3/pole-it/Build' },
+                  { text: 'Rviz2', link: '/week3/pole-it/Rviz_documentation' },
                 ]
               },
             ]
