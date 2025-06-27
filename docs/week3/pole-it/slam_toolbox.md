@@ -187,6 +187,12 @@ The `map_server` failed to load the `.yaml` map file
 
 ---
 
+## Final map
+
+<img src="/week3/images/IT/tekbot_map.png" alt="Tekbot Map" style="width: 50%; height: auto;">
+
+---
+
 ## Summary
 
 We successfully created a map using:
