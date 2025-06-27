@@ -28,8 +28,8 @@ Before we started, we made sure to have:
 We created a workspace where we would build and organize all the packages:
 
 ```bash
-mkdir -p ~/tekbot_ws/src
-cd ~/tekbot_ws
+mkdir -p ~/2025-Team-Epibot-Code/week3/IT_pole/tekbot_ws/src
+cd ~/2025-Team-Epibot-Code/week3/IT_pole/tekbot_ws
 colcon build
 source install/setup.bash
 ```
@@ -116,7 +116,7 @@ This automatically:
 Make sure tekbot_description is built and sourced before running this:
 
 ```bash
-cd ~/tekbot_ws
+cd ~/2025-Team-Epibot-Code/week3/IT_pole/tekbot_ws
 colcon build
 source install/setup.bash
 ```
@@ -138,7 +138,7 @@ If something wasn't showing, we just clicked `"Add"`, selected the appropriate d
 Once we were happy with the map, we saved it with:
 
 ```bash
-ros2 run nav2_map_server map_saver_cli -f ~/maps/tekbot_map
+ros2 run nav2_map_server map_saver_cli -f ~/2025-Team-Epibot-Code/week3/IT_pole/tekbot_ws/src/map_provider/maps/tekbot_map
 ```
 
 This created two files:
