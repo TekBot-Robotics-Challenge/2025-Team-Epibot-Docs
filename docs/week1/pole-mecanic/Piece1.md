@@ -14,7 +14,7 @@
 
 ---
 
-### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week1/Pièce1_Challenge1_trc.SLDPRT" download>**Piece I**</a>
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_1_pieces.zip)
 
 
 ## <span style="color:rgb(229, 63, 99); border-left: 4px solid rgb(229, 63, 99); padding-left: 8px;">**Method Using Successive Circles and Cuts**</span>

@@ -18,6 +18,8 @@ This challenge involves creating the part shown below using SolidWorks, adhering
 
 ---
 
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_2_pieces.zip)
+
 ## <span style="color: #08C5D1;">**Design Steps**</span>
 
 ### <span style="color: #9AC8EB;">**Step 1: Creating the Base Sketch**</span>

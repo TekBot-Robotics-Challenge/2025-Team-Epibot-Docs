@@ -201,7 +201,8 @@ export default defineConfig({
                 link: '/week3/pole-electronic/',
                 collapsed: true,
                 items: [
-                  { text: '', link: '/week3/pole-electronic/' },
+                  { text: 'Diagram conception', link: '/week3/pole-electronic/' },
+                  { text: 'Body conception', link: '/week3/pole-electronic/seven_digit_doc'},
                 ]
               },
             ]
@@ -215,10 +216,11 @@ export default defineConfig({
               // { text: 'Test 1', link: '/week1/pole-it' },
               { 
                 text: 'Test 3',
-                link: '/week3/pole-mecanic/',
+                link: '/week3/pole-mecanic/advanced_mechanical_challenge',
                 collapsed: true,
                 items: [
-                  {text: '', link: '/week3/pole-mecanic/'},
+                  {text: 'Last piece', link: '/week3/pole-mecanic/advanced_mechanical_challenge'},
+                  {text: 'BONUS ⭐⭐', link: '/week3/pole-mecanic/bonus'},
                 ]
               },
             ]
@@ -226,7 +228,6 @@ export default defineConfig({
         ],
       },
     ],
-
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TekBot-Robotics-Challenge' }
     ],

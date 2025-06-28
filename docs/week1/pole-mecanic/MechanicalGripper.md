@@ -10,8 +10,7 @@
 </video>
 ---
 
-### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week1/assemblage_pince.SLDASM" download>**Link to Download Gripper**</a>
-
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_1_pieces.zip)
 
 ## <span style="color:rgb(231, 60, 137);">**Introduction**</span>
 

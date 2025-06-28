@@ -16,6 +16,8 @@ The goal of this task is to create a pocket (hollow) on the part of part II. To 
 ### <span style="color: #9AC8EB;">**Short Demo**</span>
 <iframe src="https://player.vimeo.com/video/1094425289?h=90981825ad&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="demo-part3_gRd72YLi"></iframe>
 
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_2_pieces.zip)
+
 ## <span style="color: #08C5D1;">**Implementation Steps**</span>
 To complete this task, the first thing to do is to download the part provided after completing part II. After downloading this piece you will need to click on it to open it.
 

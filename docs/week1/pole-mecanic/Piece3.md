@@ -15,7 +15,7 @@ Part III, designed by `TEKBOT` as part of ***the TRC Urban Resilience*** project
 
 ---
 
-### <span style="color: #28B463;">**Link to Download**</span>: <a href="/pieces/week1/Pièce3_Challenge1_trc.SLDPRT" download>**Piece III**</a>
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_1_pieces.zip)
 
 
 Here is a step-by-step guide to making this piece: 
