@@ -81,36 +81,52 @@ A 16MHz [quartz crystal](https://en.wikipedia.org/wiki/Crystal_oscillator) is an
 To power up our setup, we should build a power supply that will provide safe and sufficient voltage to all the components. For that, we will use:
 
 - 3.7V lithium batteries
-- a zener diode to stabilize the voltage at 5V
+- a zener diode for 5V logic regulation
 - a LM-1950 tension regulator to bring the voltage to 9V
 - 22 uF and 5V/9V capacitors
 
 ## 3. Computer-Aided Design
 
-### a. KiCad schematic diagrams
+We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the schematic as well as the PCB for this project. Find its official documentation [here](https://docs.kicad.org/).
 
-We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design and document the schematic for this project. KiCad is a powerful, open-source Electronic Design Automation (EDA) suite that enables users to create professional-quality schematics and printed circuit boards. It offers a comprehensive set of tools for circuit design, simulation, and layout, making it ideal for both hobbyists and professionals. For more detailed information about using KiCad and its features, you can refer to the [official documentation](https://docs.kicad.org/).
+To design the individual segments and model the housing that encloses all the circuitry, we used Solidworks (_download [here](https://www.solidworks.com/sw/support/downloads.htm)_). Learn more about this software [here](https://help.solidworks.com/).
 
-Find below, the KiCad schematic diagram for this project. It provides clear illustrations of how the components are connected to each other.
+### a. KiCad schematic diagram
 
-![The cube](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
+The schematic is divided into two main blocks:
+
+1. **Custom Arduino-compatible microcontroller circuit**
+  - The ATmega328P is powered by a regulated 5V supply, generated via:
+    - The LM-7809 which receives an external 14.8V and outputs 9V
+    - The Zener diode which stabilizes voltage down to 5V for logic
+  - Two voltage outputs:
+    - 9V (red LED monitored)
+    - 5V (green LED monitored)
+  - 16 MHz quartz for clock, 22 µF capacitors for stability
+  - A button for manual reset
+
+2. **PCA-9685 PWM driver with the 7 servos**
+  - The PCA-9685 generates PWM for the 7 servos
+  - Connections:
+    - GND: system ground
+    - VCC: 5V logic supply
+    - V++: 9V servo supply
+    - SDA: connected to ATmega328P A4
+    - SCL: connected to ATmega328P A5
+  - Servos: PWM signal from PCA9685, powered via V++ (9V) and GND
+
+![The Schematic](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
 
 ### b. Printed Circuit Board (PCB) design
-
-We also used the KiCad EDA to design and layout the printed circuit board (PCB) for this project. Below, you will find the PCB images as designed in KiCad:
 
 - PCB overview in the KiCad PCB editor
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d" width="500">
 </p>
-
-<!-- - PCB Interactive 3D view -->
-<!-- _You can download the Cube's KiCad files [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
-
-### c. Design of the 7 segments
-
-For the cube design, we used Autodesk Fusion 360 (_download [here](https://www.autodesk.com/products/fusion-360/download)_) to design and model the components for this project. Fusion 360 is a comprehensive, cloud-based platform that integrates design, engineering, and manufacturing into a single tool. It offers powerful features for parametric modeling, assembly creation, simulation, and detailed rendering, making it ideal for both prototyping and final product development. To learn more about this tool, refer to its [official documentation](https://help.autodesk.com/view/fusion360/ENU/). Our cube has a side height of _7 centimeters_ with one face open to visualize the internal circuitry.
+<!-- - PCB 3D visualization -->
+<!-- _You can download the full KiCad project [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
+<!-- ### c. Segments and housing design -->
 
 ## 4. 7-Segment Servo Display Logic
 
@@ -170,7 +186,7 @@ const bool digitPositions[10][7] =
   {1, 1, 1, 1, 1, 1, 0}, // digit 0
   {0, 1, 1, 0, 0, 0, 0}, // digit 1
   {1, 1, 0, 1, 1, 0, 1}, // digit 2
-  {1, 1, 1, 1, 0, 0, 0}, // digit 3
+  {1, 1, 1, 1, 0, 0, 1}, // digit 3
   {0, 1, 1, 0, 0, 1, 1}, // digit 4
   {1, 0, 1, 1, 0, 1, 1}, // digit 5
   {1, 0, 1, 1, 1, 1, 1}, // digit 6
@@ -241,38 +257,75 @@ void displayDigit(const bool array[7])
 ```
 unsigned long currentMillis = millis(); // Get elapsed time
 // control digit order: if false, go from 0 to 9, else, go from 9 to 0
-bool rewind = false; // display
+static bool rewind = false; // display
 ```
 - Digit displaying logic
 
 ```
-  // ensure 1 second delay
-  if (currentMillis - previousMillis >= interval)
+  if (currentMillis - previousMillis >= interval) // ensure 1 second delay
   {
     previousMillis = currentMillis; // Save current time
-    if (currentDigit > 9)
-      rewind = true; // display digits backwards
-    if (!rewind)
-      currentDigit++; // increment if not yet reached 9
-    else
-      currentDigit--; // decrement if already reached 9
+    // print to the serial monitor for debugging
+    Serial.print("==="); Serial.print(currentDigit); Serial.println("===");
+    // display the current digit
     displayDigit(digitPositions[currentDigit]);
+
+    if (currentDigit >= 9)
+      rewind = true; // start counting backwards
+    if (!rewind)
+      currentDigit++;
+    if (rewind && currentDigit > 0)
+      currentDigit--;
+    if (rewind && !currentDigit)
+      rewind = false; // start counting from zero again
   }
 ```
 
+_The full code is available to download [here]()_.
+
 ## 6. Assembly of components
-<!-- - wiring and connections
-- Integration of custom power supply
-- Main steps for assembly -->
+
+The assembly process was carried out on a veroboard instead of a custom PCB, allowing for easy and flexible adjustments during construction. 
+
+### Component Placement
+
+We start by planning where each component will go on the veroboard. We then place the ATmega328P microcontroller, PCA9685 PWM module, voltage regulator (LM7809 or LM-1950), zener diode, capacitors, and LEDs in order to minimize wire crossings and make the layout neat and logical. Finally, we insert the header pins for easy connection of servomotors and for accessing the microcontroller’s I/O pins for testing or expansion.
+
+### Integrating the power supply
+
+- Connect your 3.7V lithium batteries to the input side of the power regulation circuit.
+- Mount the LM-7809  on the veroboard and add the zener diode plus capacitors around it for filtering and stability.
+- Set up two separate power rails on the veroboard: one for 5V (logic, microcontroller, PCA9685) and one for 9V (servomotors).
+- Solder red and green LEDs to your rails as power indicators, so you can easily see when each voltage is present.
+
+### Wiring and soldering
+
+- Use a small drill bit or a sharp knife to carefully break copper traces on the veroboard where necessary, preventing unwanted connections.
+- Solder wires to link the I2C lines (SDA and SCL) from the ATmega328P to the corresponding pins on the PCA9685.
+- Connect each servomotor’s control wire to its dedicated PWM channel on the PCA9685, and hook up their power (to the 9V rail) and ground lines.
+- Double-check all connections for accuracy before soldering to ensure everything matches your schematic.
+
+### Mounting everything in the housing
+
+- Place the finished veroboard and all connected modules into the housing.
+- Secure the servomotors so that each one lines up with the correct segment of the display and can move freely.
+- Route the servo wires and any additional connectors to be accessible from outside the housing.
 
 ## 7. Testing and Validation
-<!-- - Testing procedures
-- Demonstration video // vimeo -->
+
+Before uploading the Arduino program, you need to do some final checks:
+
+- Visually inspect and check all connections to prevent short circuits.
+- Apply power gradually while monitoring the LEDs and voltage rails.
+
+After performing these steps, upload [The Arduino Code](#5-the-arduino-code), and observe.
+
+<!-- Find below a demonstration video of our own setup: -->
 
 ## 8. helpful Ressources
 
 - [Download KiCad](https://www.kicad.org/)
-- [Download Autodesk Fusion 360](https://www.autodesk.com/products/fusion-360/download)
+- [Download SolidWorks](https://www.solidworks.com/sw/support/downloads.htm)
 - https://www.circuits-diy.com/12v-to-9v-converter-circuit-using-lm7809-regulator-ic/
 - https://www.ic-components.fr/blog/zener-diode-circuit-design,techniques-and-tips.jsp
 - https://fr.hwlibre.com/Guide-complet-du-contr%C3%B4leur-PCA9685-avec-Arduino-et-plus/
