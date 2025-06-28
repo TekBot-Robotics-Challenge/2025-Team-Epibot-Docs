@@ -122,7 +122,7 @@ The schematic is divided into two main blocks:
 - PCB overview in the KiCad PCB editor
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="500">
+    <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="700">
 </p>
 <!-- - PCB 3D visualization -->
 <!-- _You can download the full KiCad project [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
