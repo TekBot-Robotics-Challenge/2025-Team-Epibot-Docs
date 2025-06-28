@@ -1,74 +1,4 @@
-# ROS 2 Humble – Sensor Data Publisher
-
-## Project Overview
-
-This ROS 2 Humble project implements a **publisher node** that simulates sensor data by generating **random temperature, humidity, and pressure values** and publishes them periodically to a topic named `/sensor_data` using a custom message interface.
-
----
-
-## Objectives
-
-* Generate random sensor values (temperature, humidity, pressure)
-* Publish this data every 500 milliseconds on a custom topic
-* Use a custom message definition
-
----
-
-## Project Structure
-
-```
-sensor_data_evaluation
-├── custom_interfaces
-│   ├── CMakeLists.txt
-│   ├── msg
-│   │   └── DataCollect.msg
-│   └── package.xml
-└── sensor_data_evaluation
-    ├── build
-    │   ├── CMakeCache.txt
-    │   └── CMakeFiles
-    │       ├── 3.30.5
-    │       │   ├── CMakeCCompiler.cmake
-    │       │   ├── CMakeCXXCompiler.cmake
-    │       │   ├── CMakeDetermineCompilerABI_C.bin
-    │       │   ├── CMakeDetermineCompilerABI_CXX.bin
-    │       │   ├── CMakeSystem.cmake
-    │       │   ├── CompilerIdC
-    │       │   │   ├── a.out
-    │       │   │   └── CMakeCCompilerId.c
-    │       │   └── CompilerIdCXX
-    │       │       ├── a.out
-    │       │       └── CMakeCXXCompilerId.cpp
-    │       ├── cmake.check_cache
-    │       └── CMakeConfigureLog.yaml
-    ├── CMakeLists.txt
-    ├── include
-    │   └── sensor_data_evaluation
-    │       ├── publisher.hpp
-    │       └── subscriber.hpp
-    ├── launch
-    │   └── sensor_launch.py
-    ├── package.xml
-    └── src
-        ├── publisher.cpp
-        └── subscriber.cpp
-```
-
----
-
-## Custom Message Interface
-
-The project uses a custom message defined in:
-
-**`custom_interfaces/msg/DataCollect.msg`**
-
-```msg
-int32 temperature
-int32 humidity
-int32 pressure
-```
-
----
+# ROS2-Humble – Sensor Data Publisher
 
 ## Project Behavior
 
@@ -89,7 +19,7 @@ Every 500 milliseconds:
 
 ---
 
-## Project Architecture
+## Node Architecture
 
 The project follows an object-oriented architecture with two main classes:
 1. **Publisher**: Inherits from `rclcpp::Node` and handles ROS2 publishing
@@ -287,64 +217,3 @@ int main(int argc, char * argv[])
 * Initializes the ROS 2 system
 * Spins the node
 * Shuts down gracefully
-
----
-
-## Build Instructions
-
-### 1. Add Dependencies in `CMakeLists.txt`
-
-Ensure these lines are present:
-
-```cmake
-find_package(rclcpp REQUIRED)
-find_package(custom_interfaces REQUIRED)
-
-add_executable(publisher_node src/publisher.cpp)
-ament_target_dependencies(publisher_node rclcpp custom_interfaces)
-
-install(TARGETS
-  publisher_node
-  DESTINATION lib/${PROJECT_NAME})
-```
-
-### 2. Add Dependencies in `package.xml`
-
-```xml
-<depend>rclcpp</depend>
-<depend>custom_interfaces</depend>
-```
-
----
-
-## How to Run
-
-### 1. Build the Workspace
-
-```bash
-colcon build --packages-select sensor_data_evaluation
-source install/setup.bash
-```
-
-### 2. Run the Node
-
-```bash
-ros2 run sensor_data_evaluation publisher_node
-```
-
-### 3. Echo the Topic
-
-```bash
-ros2 topic echo /sensor_data
-```
-
-#### Sample Output:
-
-```
-temperature: 78
-humidity: 41
-pressure: 1032
----
-```
-
----
