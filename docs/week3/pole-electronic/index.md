@@ -122,7 +122,7 @@ The schematic is divided into two main blocks:
 - PCB overview in the KiCad PCB editor
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="700">
+    <img src="https://github.com/user-attachments/assets/ccb6f15d-f534-4f7a-a610-9e45856a440b" width="1000">
 </p>
 <!-- - PCB 3D visualization -->
 <!-- ### c. Segments and housing design -->
