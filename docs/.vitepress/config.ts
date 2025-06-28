@@ -201,7 +201,8 @@ export default defineConfig({
                 link: '/week3/pole-electronic/',
                 collapsed: true,
                 items: [
-                  { text: '', link: '/week3/pole-electronic/' },
+                  { text: 'Diagram conception', link: '/week3/pole-electronic/' },
+                  { text: 'Body conception', link: '/week3/pole-electronic/seven_digit_doc'},
                 ]
               },
             ]
