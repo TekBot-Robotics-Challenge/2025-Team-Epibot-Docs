@@ -125,8 +125,9 @@ The schematic is divided into two main blocks:
     <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="700">
 </p>
 <!-- - PCB 3D visualization -->
-<!-- _You can download the full KiCad project [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
 <!-- ### c. Segments and housing design -->
+
+_You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week3/pole-electronic/designs/servo_display_kicad.zip)_.
 
 ## 4. 7-Segment Servo Display Logic
 
@@ -281,7 +282,7 @@ static bool rewind = false; // display
   }
 ```
 
-_The full code is available to download [here]()_.
+_The full code is available to download [here](https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/refs/heads/main/docs/week3/pole-electronic/code/servo_displayer.ino)_.
 
 ## 6. Assembly of components
 
