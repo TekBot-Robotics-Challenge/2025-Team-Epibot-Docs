@@ -125,8 +125,9 @@ The schematic is divided into two main blocks:
     <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="700">
 </p>
 <!-- - PCB 3D visualization -->
-<!-- _You can download the full KiCad project [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
 <!-- ### c. Segments and housing design -->
+
+_You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week3/pole-electronic/designs/servo_display_kicad.zip)_.
 
 ## 4. 7-Segment Servo Display Logic
 
@@ -281,7 +282,7 @@ static bool rewind = false; // display
   }
 ```
 
-_The full code is available to download [here]()_.
+_The full code is available to download [here](https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/refs/heads/main/docs/week3/pole-electronic/code/servo_displayer.ino)_.
 
 ## 6. Assembly of components
 
@@ -290,6 +291,14 @@ The assembly process was carried out on a veroboard instead of a custom PCB, all
 ### Component Placement
 
 We start by planning where each component will go on the veroboard. We then place the ATmega328P microcontroller, PCA9685 PWM module, voltage regulator (LM7809 or LM-1950), zener diode, capacitors, and LEDs in order to minimize wire crossings and make the layout neat and logical. Finally, we insert the header pins for easy connection of servomotors and for accessing the microcontroller’s I/O pins for testing or expansion.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/8b286820-e45b-4a66-9b73-79a8bac15383" width="700">
+</p>
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/e60e12ca-4fa4-49f6-a9a0-062af97f446b" width="700">
+</p>
 
 ### Integrating the power supply
 
@@ -305,11 +314,19 @@ We start by planning where each component will go on the veroboard. We then plac
 - Connect each servomotor’s control wire to its dedicated PWM channel on the PCA9685, and hook up their power (to the 9V rail) and ground lines.
 - Double-check all connections for accuracy before soldering to ensure everything matches your schematic.
 
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/a6d4fd28-c999-4ff7-93c3-465c833948e5" width="700">
+</p>
+
 ### Mounting everything in the housing
 
 - Place the finished veroboard and all connected modules into the housing.
 - Secure the servomotors so that each one lines up with the correct segment of the display and can move freely.
 - Route the servo wires and any additional connectors to be accessible from outside the housing.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/4069ba01-519f-4f74-99c8-fc26eac6b152" width="700">
+</p>
 
 ## 7. Testing and Validation
 

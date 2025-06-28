@@ -192,7 +192,7 @@ export default defineConfig({
 
           // Electronics Pole
           {
-            text: 'Electronics Pole',
+            text: 'Electronic Pole',
             collapsed: true,
             items: [
               // { text: 'Test 1', link: '/week1/pole-it' },
