@@ -41,7 +41,7 @@ The [ATmega328P](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU0
 A [servomotor](https://en.wikipedia.org/wiki/Servomotor) is a small device used to precisely control the position of objects, commonly found in robotics, model airplanes, and remote-controlled cars. It consists of a motor, a position sensor, and a control circuit, allowing it to rotate or move to a specific angle when given an electronic signal. Servo motors are popular in projects that require accurate and repeatable movements, such as animating displays or actuating robotic arms.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/11e9d2ee-cf7a-445c-ac55-56d09904517d" width="500">
+    <img src="https://github.com/user-attachments/assets/4577bfe3-11f7-4e74-b1ea-8e482174593a" width="500">
 </p>
 
 ### c. The PCA-9685: servomotor controller
@@ -60,12 +60,12 @@ The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type o
     <img src="https://github.com/user-attachments/assets/ff801b0f-7cb2-41a0-b1c1-73a898b3c432" width="500">
 </p>
 
-### e. The LM-1950: a voltage regulator
+### e. The LM-7908: a voltage regulator
 
-The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change. As an electronic component, it is built using integrated circuitry rather than mechanical parts. The LM-1950 is intended for regulating DC voltages, and can be used to supply a steady voltage to one or more DC-powered devices.
+The [LM-7908](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/27ee9377-598c-49ce-bd85-e65c67a19a62" width="500">
+    <img src="https://github.com/user-attachments/assets/20bb4d2a-3de9-4176-aa23-6ea9f7a78bbe" width="500">
 </p>
 
 ### f. A 16Mhz Quartz Crystal
@@ -82,7 +82,7 @@ To power up our setup, we should build a power supply that will provide safe and
 
 - 3.7V lithium batteries
 - a zener diode for 5V logic regulation
-- a LM-1950 tension regulator to bring the voltage to 9V
+- a LM-7908 tension regulator to bring the voltage to 9V
 - 22 uF and 5V/9V capacitors
 
 ## 3. Computer-Aided Design
@@ -115,14 +115,14 @@ The schematic is divided into two main blocks:
     - SCL: connected to ATmega328P A5
   - Servos: PWM signal from PCA9685, powered via V++ (9V) and GND
 
-![The Schematic](https://github.com/user-attachments/assets/5b2bef66-c82e-46cd-beb2-565d138a38dd)
+![The Schematic](https://github.com/user-attachments/assets/465c3744-cb84-4d03-b9ab-aaabe32dcd35)
 
 ### b. Printed Circuit Board (PCB) design
 
 - PCB overview in the KiCad PCB editor
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d" width="500">
+    <img src="https://github.com/user-attachments/assets/93f0245d-49ef-4dda-88de-4c7fb8671d1c" width="500">
 </p>
 <!-- - PCB 3D visualization -->
 <!-- _You can download the full KiCad project [here](https://github.com/kkbroxane/2025-Team-Epibot-Docs/raw/main/docs/week2/pole-electronic/schematics/black_box_cube_schematics.zip)_. -->
