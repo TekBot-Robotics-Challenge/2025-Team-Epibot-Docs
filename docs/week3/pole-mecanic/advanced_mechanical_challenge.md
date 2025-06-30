@@ -12,6 +12,8 @@ This documentation focuses on the **`Mechanical Design Challenge`**, specificall
 
 ---
 
+### <span style="color: #28B463;">**Link to Download**</span>: [Link to download](/pieces/week_3_pieces.zip)
+
 ## <span style="color: #08C5D1;">**Implementation Steps**</span>
 
 ### <span style="color: #9AC8EB;">**Step 1: Opening SolidWorks and Setting Up Global Variables**</span>

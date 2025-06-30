@@ -129,6 +129,10 @@ The schematic is divided into two main blocks:
 
 _You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week3/pole-electronic/designs/servo_display_kicad.zip)_.
 
+### b. Body design
+
+#### **Click ([Here](/week3/pole-electronic/seven_digit_doc)) to access to it.**
+
 ## 4. 7-Segment Servo Display Logic
 
 A 7-segment servo display consists of seven individual segments labeled from **A** through **G** (_held each by a servo_), arranged to form the numbers 0 through 9 by selectively rising or laying down specific segments.
