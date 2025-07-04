@@ -15,14 +15,14 @@ In the following sections, we document the entire process, including analysis, d
 ## **<span style="color: #2E86C1;">Step 1: Analysis</span>**
 
 ### **<span style="color: #FF69B4;">Innovative Design Choices</span>**
-The first challenge we set for ourselves was to mount the display in a **`vertical format`**, deviating from the traditional horrizontal layout. This decision was driven by our desire for a compact and visually appealing design.
+The first challenge we set for ourselves was to mount the display in a **`vertical format`**, deviating from the illustrating horrizontal layout. This decision was driven by our desire for a compact and visually appealing design and make differently.
 
 **Illustrating version**
 ![Final Design vs Original Example](/images/electro/their_exemple.png)
 
 ![](/images/electro/Face_and_segments_after_montage.jpg)
 
-Additionally, we wanted to avoid sharp edges, opting instead for **`rounded borders`** to give the display a sleek and modern appearance.
+Additionally, we wanted to avoid sharp edges, opting instead for **`rounded borders`** to give the display a sleek and recpecting the subject.
 
 ![Rounded Borders vs Original](/images/electro/rounded_border.png)
 
@@ -31,15 +31,18 @@ For the internal mechanism, we drew inspiration from the open-source project [Ki
 
 ![Mechanism Inspiration](/images/electro/mechanismes_inspiration.png)
 
-The core idea is to use **`servo motors`** to drive gears, converting rotational motion into linear motion for each segment. Below is a screenshot of a segment in motion:
+The core idea is to use **`servo motors`** to drive gears, converting rotational motion into linear motion for each segment. At the end we would to have something like this:
+
+![simulating video of what we mant](/images/electro/what_we_want_to_have.png)
 
 ---
 
-### **<span style="color: #FF69B4;">Etapes d'assemblage</span>**
+### **<span style="color: #FF69B4;">Creation steps</span>**
 
-## **<span style="color: #2E86C1;">Step 2: Component Design</span>**
+To get started, we first designed and tried to represent the models and plans. The software
 
-Using **`SolidWorks`**, **`Fusion 360`**, and **`PrusaSlicer`**, we modeled and fabricated each component of the display. Below are the details of the key parts:
+Using **`SolidWorks`**, **`Fusion 360`**, and **`PrusaSlicer`**, we modeled and fabricated each component of the display. You could download theses here [Download here](/images/electro/resorces.zip)
+Below are the details of the key parts:
 
 ### **<span style="color: #FF69B4;">1. Bracket Assembly</span>**
 The bracket serves as the backbone of the mechanism:
@@ -58,25 +61,45 @@ The segment is the visible part of the display and consists of two parts:
 
 ---
 
-## **<span style="color: #2E86C1;">Step 3: Fabrication</span>**
+### **<span style="color: #FF69B4;">1. Back face </span>**
+we have choice to conserve the back face of https://www.instructables.com/Kinetic-Digital-Clock-Arduino-3D-Print/ this link to avoid measurement errors.
+
+![Back face image](/images/electro/back-face.png)
+
+### **<span style="color: #FF69B4;">. Front face and Box area</span>**
+We have design our front face and box parts using **`illustrator`** model designer. This step was verry challenging and we have repeat the process many times. Same case when segments designing. We opted for a multi-stage configuration. One is reserved for the motor system (servos, gears, support), the second is to house the circuit and the third is to contain the rear of the power supply system. We therefore have 10cm in total for the 3 stages. The design files are provide on zipped file side. 
+
 
 ### **<span style="color: #FF69B4;">3D Printing</span>**
-Once the design was complete, we proceeded to fabricate the components using **3D printing**. Below are the steps involved:
+Once the design was complete, we proceeded to fabricate the components using **`3D printing`**. Below are the steps involved:
 
 1. **<span style="color: #FF69B4;">Slicing the Models</span>**
    - We used **PrusaSlicer** to prepare the models for 3D printing.
    - Settings included a layer height of 0.2 mm, 20% infill, and support structures where necessary.
 
    ![Slicing Process](/images/electro/slicing_1.png)
+
    ![Slicing Process](/images/electro/slicing_2.png)
-   
+
 2. **<span style="color: #FF69B4;">Printing</span>**
    - The components were printed using PLA filament for its ease of use and durability.
    - Total printing time for all parts was approximately **7 hours**.
-  
----
 
-## **<span style="color: #2E86C1;">Step 4: Assembly</span>**
+   ![Impression In action ](/images/electro/Impression_3D.jpg)
+
+### **<span style="color: #FF69B4;">Laser cutter</span>**
+we have choose to have our box in wood and use a lazer cutter to have shaped our illustrator design. We have been inspired by box models available in box.py tools, a free and open source librairies of box models for laser cutting. This enable to us to have a very great and custom design and coast less time
+
+![Laser cutter in action](/images/electro/laser_cutting.jpg);
+
+---
+### **At the End**
+
+![Materials](/images/electro/materials.jpg)
+
+![Materials](/images/electro/materials_2.jpg)
+
+## **<span style="color: #2E86C1;">Assembly</span>**
 
 ### **<span style="color: #FF69B4;">Process Overview</span>**
 The assembly process involved combining all the fabricated components into a fully functional display. Below are the key steps:
@@ -84,33 +107,24 @@ The assembly process involved combining all the fabricated components into a ful
 1. **<span style="color: #FF69B4;">Attaching Segments to Gears</span>**
    - Each segment was attached to its respective gear using the toothed body. This connection ensures precise control over the segment's movement.
 
+<iframe src="https://player.vimeo.com/video/1097439176?h=1dec9cefd6&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px%;" title="segments-to-gear_moving"></iframe>
+
 2. **<span style="color: #FF69B4;">Mounting Servos to the Frame</span>**
-   - The servos were mounted onto the bracket assembly using screws or adhesive mounts. Proper alignment was critical to ensure smooth operation.
-  
-   
-   [Slicing Process](/images/electro/Step_1_assembly.mp4)
+   The servos were mounted onto the bracket assembly using screws or adhesive mounts. Proper alignment was critical to ensure smooth operation.
 
    ![Slicing Process](/images/electro/Step_2_assembly.jpg)
 
-   ![Slicing Process](/images/electro/laser_cutting.jpg)
+3. Assemble and mount the box compartments
+   ![Slicing Process](/images/electro/materials_2.jpg)
 
-   ![Slicing Process](/images/electro/laser_cutting_2.jpg)
+4. Integrate the necessary circuits
 
----
+   ![Motors](/images/electro/motors.jpg)
+ ----
 
-## **<span style="color: #2E86C1;">Step 5: Enclosure Design</span>**
+ 
+## **<span style="color: #FF69B4;">Final Result</span>**
 
-### **<span style="color: #FF69B4;">Vision</span>**
-Our vision for the enclosure was to create a **two-tiered container**:
-- **Top Tier**: Houses the servo motors.
-- **Bottom Tier**: Contains the electronic circuitry.
-
-### **<span style="color: #FF69B4;">Front Face</span>**
-The front face contains hollow cavities shaped like the number "8," through which the segments slide to display digits. This part is critical for ensuring proper alignment and visibility of the segments.
-
-![Front Face Design](/images/electro/face_avant.png)
-
----
 
 ## **<span style="color: #2E86C1;">Conclusion</span>**
 
