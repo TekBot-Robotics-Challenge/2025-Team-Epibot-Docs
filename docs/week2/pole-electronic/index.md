@@ -71,12 +71,12 @@ The [Zener Diode](https://en.wikipedia.org/wiki/Zener_diode) is a special type o
     <img src="https://github.com/user-attachments/assets/ff801b0f-7cb2-41a0-b1c1-73a898b3c432" width="500">
 </p>
 
-### e. The LM-1950: a voltage regulator
+### e. The LM-7908: a voltage regulator
 
-The [LM-1950](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change. As an electronic component, it is built using integrated circuitry rather than mechanical parts. The LM-1950 is intended for regulating DC voltages, and can be used to supply a steady voltage to one or more DC-powered devices.
+The [LM-7908](https://www.alldatasheet.com/datasheet-pdf/view/125278/NSC/LM1950.html) is a [voltage regulator](https://en.wikipedia.org/wiki/Voltage_regulator). Its purpose to keep the voltage at a constant level. It uses a negative feedback system to monitor and adjust the output, ensuring stable voltage even when the input voltage or load conditions change.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/27ee9377-598c-49ce-bd85-e65c67a19a62" width="500">
+    <img src="https://github.com/user-attachments/assets/20bb4d2a-3de9-4176-aa23-6ea9f7a78bbe" width="500">
 </p>
 
 ### f. The Cube (black box)
@@ -93,7 +93,7 @@ To power up our setup, we should build a power supply that is independent from t
 
 - 4 lithium batteries to supply 14.8V
 - a zener diode to stabilize the voltage at 5V for the control station
-- a tension regulator to bring the voltage to 9V for the black box
+- a LM-7809 to bring the voltage to 9V for the black box
 
 ## 3. Computer-Aided Design
 
@@ -123,7 +123,7 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
     <img src="https://github.com/user-attachments/assets/beb9c3ef-64f3-4b76-a476-d52fb612c29d" width="500">
 </p>
 
-- PCB Interactive 3D view
+- PCB 3D view
 
 
 - Real-life realisation of The Cube's PCB
@@ -142,7 +142,7 @@ _You can download the Cube's KiCad files [here](https://github.com/kkbroxane/202
     <img src="https://github.com/user-attachments/assets/df219587-fc33-4f1d-80de-9f16135cf56e" width="500">
 </p>
 
-- PCB Interactive 3D view
+- PCB 3D view
 
 
 - Real-life realisation of the Control Station's PCB
@@ -228,17 +228,19 @@ In the **loop()** function, we do this for reading raw data from our MPU-6050 se
 int16_t ax, ay, az;
 mpu.getAcceleration(&ax, &ay, &az);
 ```
+
 We then need to send this fetched data to the slave (microcontroller in the Control Station) through the I2C bus:
 
 ```
-  Wire.beginTransmission(slave_address);
+  Wire.beginTransmission(slave_address); // start i2c data transfer
+  // ====== Write the data to the i2c bus ======
   Wire.write((byte)(aX >> 8));
   Wire.write((byte)aX);
   Wire.write((byte)(aY >> 8));
   Wire.write((byte)aY);
   Wire.write((byte)(aZ >> 8));
   Wire.write((byte)aZ);
-  Wire.endTransmission();
+  Wire.endTransmission(); // stop data transfer
 
 ```
 
@@ -256,13 +258,23 @@ LiquidCrystal lcd(18, 16, 23, 24, 25, 3);
 We then initialize the LCD module in the **setup()** function by doing:
 `lcd.begin(16, 2);         // Initialize LCD`. 
 
-we then read from the I2C bus:
+
+`Wire.onReceive(receiveEvent);` enables us to read data as it becomes available on the i2c bus using a custom function **receiveEvent**:
 
 ```
- ax = (buffer[0] << 8) | buffer[1];
- ay = (buffer[2] << 8) | buffer[3];
- az = (buffer[4] << 8) | buffer[5];
+  index = 0; // Global variable to track number of bytes read (volatile uint8_t index = 0)
 
+  // start reading and storing data as soon as it is sent
+  while (Wire.available() && index < 6)
+  {
+    buffer[index++] = Wire.read(); // read bytes from the i2c bus
+  }
+  //  
+  if (index == 6) {
+    ax = (buffer[0] << 8) | buffer[1];
+    ay = (buffer[2] << 8) | buffer[3];
+    az = (buffer[4] << 8) | buffer[5];
+  }
 ```
 
 To print the readings from our sensor to the screen, we use `lcd.clear();` to first clear the screen buffer, then `lcd.setCursor()` to adjust the cursor's position on the screen, and finally `lcd.print();` to write to the screen.

@@ -124,10 +124,14 @@ The schematic is divided into two main blocks:
 <p align="center">
     <img src="https://github.com/user-attachments/assets/ccb6f15d-f534-4f7a-a610-9e45856a440b" width="1000">
 </p>
-<!-- - PCB 3D visualization -->
-<!-- ### c. Segments and housing design -->
 
 _You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week3/pole-electronic/designs/servo_display_kicad.zip)_.
+
+### c. Segments and housing design
+
+This part of the project involved a collaboration between our mechanical pole and our electronics pole. Therefore, it has been documented separately for readability purposes.
+
+_Access this separate documentation [here]()_.
 
 ## 4. 7-Segment Servo Display Logic
 

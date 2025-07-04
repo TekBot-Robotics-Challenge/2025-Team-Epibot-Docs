@@ -71,7 +71,7 @@ The [Arduino UNO](https://docs.arduino.cc/hardware/uno-rev3/) is a small electro
 
 To further our study of the MPU-6050 sensor and to be able to test its functionning, we should build a small custom power supply that provides safe and stable voltage to all components. For that we will use the **built-in tension regulator** from the Arduino UNO board and a **9V electric battery**.
 
-#### Here's a synoptic diagram to better illustrate it all:
+#### Here's a synoptic diagram to illustrate voltage transformations for components:
 
 ```
                         +-----------------+
@@ -106,6 +106,8 @@ For illustration purposes and to get a deeper overview of the connection made in
 <p align="center">
     <img src="https://github.com/user-attachments/assets/43aaf30d-b976-4e55-bf47-786b4c8feff7" width="800">
 </p>
+
+_Download our KiCad project [here](https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/refs/heads/main/docs/week1/pole-electronic/designs/designs.zip)_.
 
 All components are connected using the **I2C bus**, a synchronous serial communication protocol. The **MPU6050** sensor and the **OLED screen (SSD1306)** are both placed on a breadboard, which serves as a convenient platform for making electrical connections without soldering. Both devices are wired **in parallel** to the same SDA and SCL pins of the Arduino, meaning their respective SDA and SCL pins are linked together on the [breadboard](https://en.wikipedia.org/wiki/Breadboard) and then connected to the Arduino’s SDA (A4) and SCL (A5) pins. The I2C protocol allows these devices to **share the same communication lines** by assigning each a **unique address** (typically 0x3C for the SSD1306 and 0x68 for the MPU-6050), enabling the Arduino to communicate with each device individually over the shared bus. This whole setup is powered by a **9V electric battery** connected to the Jack port of the Arduino UNO board, port through which the Arduino UNO, thanks to it's built-in tension regulator, is able to receive and reduce the tension to 5V to respect each module's minimal requirement of 3.3 V and maximum tension of 5V.
 
@@ -160,6 +162,47 @@ mpu.getAcceleration(&ax, &ay, &az);
 
 This fetched data represents the object's acceleration following the X, Y and Z axes. We will then need to perform a conversion of this data to **m/s²**. From that, we can then estimate the **total acceleration** and **rotation** by using some trigonometrical formulas.
 
+```
+  // Calculate tilt angles in degrees (trigonometric formulas)
+  pitch = atan2(axf_g, sqrt(ayf_g * ayf_g + azf_g * azf_g)) * 180.0 / PI; // Forward/backward tilt
+  roll  = atan2(ayf_g, sqrt(axf_g * axf_g + azf_g * azf_g)) * 180.0 / PI; // Left/right tilt
+
+  // Calculate total acceleration (magnitude of vector a) in m/s²
+  float a_total = sqrt(axf_ms2 * axf_ms2 + ayf_ms2 * ayf_ms2 + azf_ms2 * azf_ms2);
+```
+
+To determine the orientation, we compare the obtained values to some constants. It allows us to know the direction in which the sensor is.
+
+```
+  String orientation = [&]() {
+    if (pitch > 30)
+    {
+      return "Front";     // Tilted forward
+    }
+    if (pitch < -30)
+    {
+      return "Back";     // Tilted backward
+    }
+    if (roll > 30)
+    {
+      return "Right";      // Tilted to the right
+    }
+    if (roll < -30)
+    {
+      return "Left";      // Tilted to the left
+    }
+    if (azf_g > 0.85)
+    {
+      return "Up";      // Palm up
+    }
+    if (azf_g < -0.85)
+    {
+      return "Down";   // Palm down
+    }
+    return "Stable";   // No significant movement
+  }();
+```
+
 ### Outputting the readings onto the SSD1306 screen
 
 We first need to declare our SSD1306 display.
@@ -179,7 +222,9 @@ We then initialize the SSD1306 OLED module in the **setup()** function by doing:
 
 Although optional, we decided to display our school's logo at the screen's startup. You can choose to also display an image at startup. For that, you will need to convert your image to the 1-bit (monochrome) format employed by the SSD1306. You can use this [tool](https://javl.github.io/image2cpp/) to generate a 1-bit map for your image. You will only need to upload your image file and adjust the settings. You can then use `display.drawBitmap(0, 0, myLogo, 128, 64, WHITE);` to draw your image from your generated 1-bit map to the screen.
 
-To print the readings from our sensor to the screen, we use `display.clearDisplay();` to first clear the screen buffer, then `display.print()` to write to the screen and finally `display.display();` to display everything.
+To print the readings from our sensor to the screen, we use `display.clearDisplay();` to first clear the screen buffer, we set the cursor position with `display.setCursor(0, 0);`, then `display.print()` to write to the screen and finally `display.display();` to display everything.
+
+_Download the code source files [here](https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/refs/heads/main/docs/week1/pole-electronic/code/test1.zip)_.
 
 ## PART 4: Testing the project
 
@@ -189,7 +234,7 @@ Check the wiring again first, place the setup flat in the palm of your hand.
 - To test the roll, tilt your hand sideways (like moving your head left and right).
 - To test the yaw, spin your hand in place clockwise or counter-clockwise while keeping it level.
 
-#### Here's a demonstration video
+**Here's a demonstration video**
 
 <iframe width="auto" height="315" src="https://youtube.com/embed/SwCvNdGykKs?feature=share" frameborder="0" allowfullscreen></iframe> 
 
