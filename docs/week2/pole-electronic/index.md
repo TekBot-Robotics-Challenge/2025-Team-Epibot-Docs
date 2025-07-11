@@ -126,7 +126,7 @@ We also used the KiCad EDA to design and layout the printed circuit board (PCB) 
 - PCB 3D view
 
 <video controls width="600">
-  <source src="docs/public/dfdf0305-766f-461d-9131-07c088fe10e5.mov" type="video/quicktime" />
+  <source src="/dfdf0305-766f-461d-9131-07c088fe10e5.mov" type="video/quicktime" />
 </video>
 
 - Real-life realisation of The Cube's PCB
@@ -148,7 +148,7 @@ _You can download the Cube's KiCad files [here](https://github.com/kkbroxane/202
 - PCB 3D view
 
 <video controls width="600">
-  <source src="docs/public/d9c111a0-b154-4005-a398-85a80e1b9c70.mov" type="video/quicktime" />
+  <source src="/d9c111a0-b154-4005-a398-85a80e1b9c70.mov" type="video/quicktime" />
 </video>
 
 - Real-life realisation of the Control Station's PCB
