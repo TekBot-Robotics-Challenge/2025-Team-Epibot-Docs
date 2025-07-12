@@ -257,6 +257,7 @@ export default defineConfig({
                     ]
                   },
                   { text: 'ROS Part', link: '/week4/pole-it/' },
+                  { text: 'ROS bridge', link: '/week4/pole-it/Libserial_bridge' },
                 ]
               },
             ]
