@@ -84,7 +84,7 @@ We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the 
 
 ### KiCad schematic diagram
 
-<img width="1080" height="607" alt="The Schematic" src="https://github.com/user-attachments/assets/86714b74-c157-4370-9024-7de918aece36" />
+<img width="1080" height="607" alt="The Schematic" src="https://github.com/user-attachments/assets/a9ec8b74-3040-4ff7-befc-33c808cfbcb3" />
 
 ## 4. Conveyor System Logic
 
