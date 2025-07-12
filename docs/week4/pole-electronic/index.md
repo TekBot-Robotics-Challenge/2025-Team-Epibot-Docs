@@ -67,10 +67,7 @@ The [TCS34725](https://cdn-shop.adafruit.com/datasheets/TCS34725.pdf) is a digit
 
 ### g. Our custom power supply
 
-To power up our setup, we should build a power supply that will provide safe and sufficient voltage to all the components. For that, we will use:
-
-- Four 3.7V lithium batteries to supply 14.8V
-
+To power up our setup, we should build a power supply that will provide safe and sufficient voltage to all the components. For that, we will use a pack of four 3.7V lithium batteries to supply a voltage of 14.8V.
 <!-- ATTENTION ! -->
 
 ## 3. Computer-Aided Design
@@ -211,7 +208,7 @@ bool confirm_connect()
 {
   String msg = read_from_ros(); // read from ros through serial
 
-  // if connection with ROS is successful, send confirmation message to ros 
+  // if connection with ROS is successful, send confirmation message to ros
   if (msg == "ROS CONNECTED\r\n")
   {
     // print to the serial monitor for arduino to ros communication
@@ -320,47 +317,47 @@ _The full code is available to download [here](https://raw.githubusercontent.com
 
 ## 6. Assembly of components
 
-<!-- The assembly process was carried out on a veroboard instead of a custom PCB, allowing for easy and flexible adjustments during construction.
-
-### Component Placement
-
-We start by planning where each component will go on the veroboard. We then place the ATmega328P microcontroller, PCA9685 PWM module, voltage regulator (LM7809 or LM-1950), zener diode, capacitors, and LEDs in order to minimize wire crossings and make the layout neat and logical. Finally, we insert the header pins for easy connection of servomotors and for accessing the microcontroller’s I/O pins for testing or expansion.
-
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/8b286820-e45b-4a66-9b73-79a8bac15383" width="700">
-</p>
-
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/e60e12ca-4fa4-49f6-a9a0-062af97f446b" width="700">
-</p>
+This section outlines the assembly steps of all components for this project:
 
 ### Integrating the power supply
 
-- Connect your 3.7V lithium batteries to the input side of the power regulation circuit.
-- Mount the LM-7809  on the veroboard and add the zener diode plus capacitors around it for filtering and stability.
-- Set up two separate power rails on the veroboard: one for 5V (logic, microcontroller, PCA9685) and one for 9V (servomotors).
-- Solder red and green LEDs to your rails as power indicators, so you can easily see when each voltage is present.
+- Connect the four 3.7V lithium batteries in series to form a 14.8V pack.
+- Use a voltage regulator to step down the voltage for the Arduino Nano (recommended: 7-12V).
+- Distribute power: connect the battery pack to the A4988 Vmot/GND for the motor, and to the Arduino and sensors.
+- Double-check battery polarity and connections to prevent damage.
+
+<!-- image -->
 
 ### Wiring and soldering
 
-- Use a small drill bit or a sharp knife to carefully break copper traces on the veroboard where necessary, preventing unwanted connections.
-- Solder wires to link the I2C lines (SDA and SCL) from the ATmega328P to the corresponding pins on the PCA9685.
-- Connect each servomotor’s control wire to its dedicated PWM channel on the PCA9685, and hook up their power (to the 9V rail) and ground lines.
-- Double-check all connections for accuracy before soldering to ensure everything matches your schematic.
+- Plan the layout and cut wires to length needed for permanent installation.
+- Solder the NEMA 17 stepper motor wires to the Pololu A4988 driver pins according to the datasheet.
+- Connect the A4988 STEP and DIR pins to two digital pins on the Arduino Nano (in our case D3 and D4). Solder these connections directly.
+- Wire the A4988 driver's logic power (VDD, GND) to the Arduino Nano's 5V and GND.
+- Solder the KY-008 laser’s VCC and GND to the Arduino’s 5V and GND; if control is needed, connect its signal pin to a digital output.
+- Mount and solder wires from the photoresistor to an analog input (in our case A0) and to GND and 5V as needed.
+- Connect the TCS34725 color sensor’s SDA and SCL to the Arduino Nano’s I2C pins (A4, A5). Solder power and ground connections.
+- Insulate all solder joints with heat-shrink tubing or electrical tape to prevent shorts.
 
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/a6d4fd28-c999-4ff7-93c3-465c833948e5" width="700">
-</p>
+<!-- image -->
 
 ### Mounting everything in the housing
 
-- Place the finished veroboard and all connected modules into the housing.
-- Secure the servomotors so that each one lines up with the correct segment of the display and can move freely.
-- Route the servo wires and any additional connectors to be accessible from outside the housing.
+- Secure all components to the housing using screws, standoffs, adhesive pads, or custom mounts as needed.
+- Route and fix wires neatly along the housing, using cable ties, clips, or hot glue to prevent movement and interference with moving parts.
+- Confirm all modules are firmly fixed and wires are clear of the conveyor mechanism.
 
-<p align="center">
-    <img src="https://github.com/user-attachments/assets/4069ba01-519f-4f74-99c8-fc26eac6b152" width="700">
-</p> -->
+<!-- image -->
+
+### Component Placement
+
+- Fix the NEMA 17 stepper motor securely to drive the conveyor belt.
+- Position the Arduino Nano, Pololu A4988 driver, and voltage regulator inside the housing, ensuring accessibility for programming and maintenance.
+- Mount the KY-008 laser so its beam crosses the conveyor belt, aligned with the photoresistor opposite for object detection.
+- Place the TCS34725 color sensor above the conveyor belt, oriented to scan passing items.
+- Ensure all components are spaced to avoid interference and allow for cooling and wire routing.
+
+<!-- image -->
 
 ## 7. Testing and Validation
 
@@ -380,3 +377,4 @@ After performing these steps, upload [The Arduino Code](#5-the-arduino-code), an
 - https://www.youtube.com/watch?v=9qZUjEsVWts
 - https://www.youtube.com/watch?v=WLVfZXxpHYI
 - https://www.youtube.com/watch?v=lkyUqMVJBQ0
+- https://docs.arduino.cc/learn/electronics/stepper-motors/
