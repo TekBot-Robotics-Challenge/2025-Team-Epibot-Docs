@@ -353,9 +353,7 @@ This section outlines the assembly steps of all components for this project:
 - Route and fix wires neatly along the housing, using cable ties, clips, or hot glue to prevent movement and interference with moving parts.
 - Confirm all modules are firmly fixed and wires are clear of the conveyor mechanism.
 
-<video controls width="600">
-  <source src="/demo2.mp4" type="video/mp4" />
-</video>
+<video controls src="/demo1.mp4" title="Title" ccontrols autoplay muted></video>
 
 ## 7. Testing and Validation
 
