@@ -2,11 +2,17 @@
 
 The goal of this test is to implement an intelligent and reliable embedded system with real-time web visualization.
 
-<video controls src="/week4/videos/sorting_white.mp4" title="Title" ccontrols autoplay muted></video>
+<video src="/week4/videos/sorting_white.mp4" controls autoplay muted style="width: 100%; max-width: 800px; height: auto;">
+  Your browser does not support the video tag.
+</video>
 
-<video controls src="/week4/videos/sorting_blue.mp4 " title="Title" ccontrols autoplay muted></video>
+<video src="/week4/videos/sorting_blue.mp4 " controls autoplay muted style="width: 100%; max-width: 800px; height: auto;">
+  Your browser does not support the video tag.
+</video>
 
-<video controls src="/week4/videos/demo_it.webm" title="Title" ccontrols autoplay muted></video>
+<video src="/week4/videos/demo_it.webm" controls autoplay muted style="width: 100%; max-width: 800px; height: auto;">
+  Your browser does not support the video tag.
+</video>
 
 ## 1. Intelligent Detection 
 - Integrate a color sensor capable of detecting 4 waste types: **Red**, **Blue**, **Green**, **Yellow**
