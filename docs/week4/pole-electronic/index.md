@@ -19,11 +19,19 @@ This test introduces us to a fun and innovative way to make a **7-segment displa
 
 ### a. Arduino Nano
 
-The Arduino Nano is a compact microcontroller board based on the ATmega328, suitable for embedded applications due to its small size and full
+The [Arduino Nano]() is a compact microcontroller board based on the ATmega328P, suitable for embedded applications and easy prototyping. It features 14 digital input/output pins (of which 6 can be used as PWM outputs), 8 analog inputs, a mini USB port for programming and power, and supports a voltage range of 7-12V input. Its small size (approximately 1.8 x 0.7 inches) and compatibility with the Arduino IDE make it ideal for DIY electronics, robotics, and IoT applications where space is limited and reliable performance is needed.
+
+<img width="1000" height="750" alt="image" src="https://github.com/user-attachments/assets/82b01225-74db-4d1b-94b2-5a4e325868f8" />
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
 
 ### b. Stepper Motor Nema 17
 
 A [NEMA 17]() stepper motor is a type of electric motor characterized by its physical dimensions and electrical specifications. It is favored for its precision and torque.
+
+<img width="1200" height="1475" alt="image" src="https://github.com/user-attachments/assets/356a3fde-e761-4c15-8893-f511b532941b" />
 
 <p align="center">
     <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
