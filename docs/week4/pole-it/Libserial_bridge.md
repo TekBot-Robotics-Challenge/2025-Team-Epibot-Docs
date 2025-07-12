@@ -96,6 +96,13 @@ The node uses a **simple string-based protocol** to communicate with the Arduino
 
 ```cpp
 
+/*
+** EPIBOT PROJECT, 2025
+** 2025-Team-Epibot-Code
+** File description:
+** serial_publisher
+*/
+
 #ifndef BRIDGE_HPP
     #define BRIDGE_HPP
     #include <rclcpp/rclcpp.hpp>
@@ -118,8 +125,8 @@ class ArduinoBridge : public rclcpp::Node {
         std::thread _serial_thread; /* threads to communicate with both the serial
         port and the subscriber that updates the website*/
         std::atomic<bool> _running{true}; // if the program is running or not
-        void ArduinoBridge::setup_port(std::string port); // to set up the port;
-        void ArduinoBridge::serial_communication(std::string line,
+        void setup_port(std::string port); // to set up the port;
+        void serial_communication(std::string line,
             std::vector <std::string> colors, std::string color_cmd); // to etablish the communication with the serial port
 };
 #endif
@@ -131,17 +138,29 @@ class ArduinoBridge : public rclcpp::Node {
 #### serial_publisher.cpp
 
 ```cpp
-#include "../include/arduino_button_pkg/serial_publisher.hpp"
+
+/*
+** EPIBOT PROJECT, 2025
+** 2025-Team-Epibot-Code
+** File description:
+** serial_publisher
+*/
+
+#include "../include/serial_publisher.hpp"
+
 bool verif = false;
 
 ArduinoBridge::ArduinoBridge() : Node("arduino_bridge")
 {
     _publisher = this->create_publisher<std_msgs::msg::String>("button_topic", 10);
     setup_serial();
+    if (_serial_port && _serial_port->IsOpen()) {
+        _serial_port->Write("ROS CONNECTED\n");
+    }
     _serial_thread = std::thread(&ArduinoBridge::read_serial, this);
     RCLCPP_INFO(this->get_logger(), "Arduino Bridge started");
 }
-    
+
 ArduinoBridge::~ArduinoBridge()
 {
     _running = false;
@@ -176,7 +195,6 @@ void ArduinoBridge::setup_serial()
             setup_port(port);
             if (_serial_port->IsOpen()) {
                 RCLCPP_INFO(this->get_logger(), "Connected on port %s", port.c_str());
-                _serial_port->Write("ROS CONNECTED\n");
                 std::this_thread::sleep_for(std::chrono::seconds(2));
                 return;
             }
@@ -197,23 +215,27 @@ void ArduinoBridge::setup_serial()
 
 void ArduinoBridge::serial_communication(std::string line, std::vector <std::string> colors, std::string color_cmd)
 {
-    if (line == "ARDUINOs CONNECTED") {
+    if (line == "ARDUINO CONNECTED") {
         verif = true;
+        RCLCPP_INFO(this->get_logger(), "ARDUINO CONNECTED");
         return;
     }
     if (verif) {
         color_cmd = line.c_str() + 8;
-        if (strncmp(line, "GARBAGE ", 8) == 0 &&
+        if (strncmp(line.c_str(), "GARBAGE ", 8) == 0 &&
         std::find(colors.begin(), colors.end(), color_cmd) != colors.end()) {
-            _serial_port->Write("MOTOR ON\n");
+            _serial_port->Write("MOTOR ON");
+            RCLCPP_INFO(this->get_logger(), "MOTOR ON");
             auto msg = std_msgs::msg::String();
             msg.data = line;
             _publisher->publish(msg);
             RCLCPP_INFO(this->get_logger(), "Message sent: %s", line.c_str());
         }else if (line == "NONE") {
-            _serial_port->Write("MOTOR OFF\n");
+            _serial_port->Write("MOTOR OFF");
+            RCLCPP_INFO(this->get_logger(), "MOTOR OFF");
         } else {
-            _serial_port->Write("ko\n");
+            _serial_port->Write("ko");
+            RCLCPP_INFO(this->get_logger(), "ko");
         }
     }
 }
@@ -230,9 +252,10 @@ void ArduinoBridge::read_serial()
                 _serial_port->ReadLine(line, '\n', 100);
                 line.erase(std::remove(line.begin(), line.end(), '\r'), line.end());
                 line.erase(std::remove(line.begin(), line.end(), '\n'), line.end());
-                
-                if (!line.empty())
+              
+                if (!line.empty()) {
                     serial_communication(line, colors, color_cmd);
+                }
             }
         } catch (const std::exception& e) {
             RCLCPP_ERROR(this->get_logger(), "Error while serial reading %s", e.what());
@@ -327,6 +350,10 @@ colcon build
 source install/setup.bash
 ros2 run arduino_button_pkg arduino_bridge
 ```
+
+<video src="/week4/videos/test_bridge.mp4" controls autoplay muted style="width: 100%; max-width: 800px; height: auto;">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
