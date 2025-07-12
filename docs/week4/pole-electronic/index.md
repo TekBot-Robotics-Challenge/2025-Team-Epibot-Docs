@@ -19,30 +19,34 @@ This test introduces us to a fun and innovative way to make a **7-segment displa
 
 ### a. Arduino Nano
 
-The Arduino Nano is a compact microcontroller board based on the ATmega328, suitable for embedded applications due to its small size and full
+The [Arduino Nano](https://docs.arduino.cc/hardware/nano/) is a compact microcontroller board based on the ATmega328P, suitable for embedded applications and easy prototyping. It features 14 digital input/output pins (of which 6 can be used as PWM outputs), 8 analog inputs, a mini USB port for programming and power, and supports a voltage range of 7-12V input. Its small size (approximately 1.8 x 0.7 inches) and compatibility with the Arduino IDE make it ideal for DIY electronics, robotics, and IoT applications where space is limited and reliable performance is needed.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/82b01225-74db-4d1b-94b2-5a4e325868f8" width="500">
+</p>
 
 ### b. Stepper Motor Nema 17
 
-A [NEMA 17]() stepper motor is a type of electric motor characterized by its physical dimensions and electrical specifications. It is favored for its precision and torque.
+The [NEMA 17](https://pages.pbclinear.com/rs/909-BFY-775/images/Data-Sheet-Stepper-Motor-Support.pdf) stepper motor is a compact and commonly used motor in devices like 3D printers and CNC machines. It has a standard size, delivers precise movement, and is reliable for projects that need controlled motion. Its popularity comes from its balance of size, power, and ease of integration with various electronics.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+    <img src="https://github.com/user-attachments/assets/2af4bb93-6dbb-43fc-8ede-ca9ad9acb88e" width="500">
 </p>
 
 ### c. Pololu A4988 Stepper Motor Driver
 
-The [Pololu A4988]() is a microstepping driver for controlling bipolar stepper motors. It enables the Arduino to send signals for step and direction, translating them into precise motor motion. It features adjustable current control, over-temperature and over-current protection and also supports full, half, quarter, eighth, and sixteenth step modes.
+The [Pololu A4988](https://www.pololu.com/file/0j450/a4988_dmos_microstepping_driver_with_translator.pdf) is a microstepping driver for controlling bipolar stepper motors. It enables the Arduino to send signals for step and direction, translating them into precise motor motion. It features adjustable current control, over-temperature and over-current protection and also supports full, half, quarter, eighth, and sixteenth step modes.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+    <img src="https://github.com/user-attachments/assets/7ba5f45a-55bd-456e-ae1c-5ccd178bf0c3" width="500">
 </p>
 
 ### d. KY-008 Laser Transmitter
 
-The [KY-008]() is a small laser emitter module used for creating a focused light beam. Combined with a photoresistor, it can detect when an object passes through the beam (used as a tripwire sensor).
+The [KY-008](https://eclass.uth.gr/modules/document/file.php/E-CE_U_269/Sensors/Sensors_%20Datasheets/KY-008-AZ-Delivery.pdf) is a small laser emitter module used for creating a focused light beam. It features a 650nm red [laser diode](https://en.wikipedia.org/wiki/Laser_diode) that emits a focused beam, making it suitable for applications such as simple laser pointers, line detection, and light communication. Combined with a photoresistor, it can detect when an object passes through the beam (used as a tripwire sensor).
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+    <img src="https://github.com/user-attachments/assets/0ccaf429-2387-4a03-8d5d-050d3f23fe32" width="500">
 </p>
 
 ### e. Photoresistor
@@ -50,15 +54,15 @@ The [KY-008]() is a small laser emitter module used for creating a focused light
 A [photoresistor](https://en.wikipedia.org/wiki/Photoresistor), or Light Dependent Resistor (LDR), changes its resistance based on light intensity. It’s used for detecting the presence or absence of objects, or measuring ambient light. It is typically use to detect when an object interrupts a light beam.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+    <img src="https://github.com/user-attachments/assets/9f7ca8d1-7d1e-4e5c-b276-5910bf914244" width="500">
 </p>
 
 ### f. TCS34725 Color Sensor
 
-The [TCS34725]() is a digital color sensor that can detect RGB and clear light values. It’s used to identify the color of objects passing in front of it. It features onboard IR blocking filter, I2C interface and high sensitivity which enables for better precision.
+The [TCS34725](https://cdn-shop.adafruit.com/datasheets/TCS34725.pdf) is a digital color sensor that can detect RGB and clear light values. It’s used to identify the color of objects passing in front of it. It features onboard IR blocking filter, I2C interface and high sensitivity which enables for better precision.
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+    <img src="https://github.com/user-attachments/assets/c4f0b689-3a66-4d25-8279-fc30652a6c73" width="500">
 </p>
 
 ### g. Our custom power supply
@@ -79,14 +83,14 @@ To design the individual segments and model the housing that encloses all the ci
 
 The schematic is divided into two main blocks:
 
-![The Schematic](https://github.com/user-attachments/assets/465c3744-cb84-4d03-b9ab-aaabe32dcd35)
+![The Schematic]()
 
 ### b. Printed Circuit Board (PCB) design
 
 - PCB overview in the KiCad PCB editor
 
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/ccb6f15d-f534-4f7a-a610-9e45856a440b" width="1000">
+    <img src="" width="1000">
 </p>
 
 <!-- _You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week4/pole-electronic/designs/servo_display_kicad.zip)_. -->

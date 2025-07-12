@@ -226,6 +226,78 @@ export default defineConfig({
           },
         ],
       },
+
+      // WEEK 4 - 5
+
+      {
+        text: 'Week 4-5 - Final Test',
+        collapsed: true,
+        items: [
+           // Pole IT
+          {
+            text: 'IT Pole',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Test 4-5',
+                link: '/week4/pole-it/',
+                collapsed: true,
+                items: [
+                  {
+                    text: 'Conveyor Site Docs',
+                    collapsed: true,
+                    items: [
+                      { text: 'Introduction', link: '/week4/pole-it/conveyor-site-docs/introduction' },
+                      { text: 'Setup', link: '/week4/pole-it/conveyor-site-docs/setup' },
+                      { text: 'Architecture', link: '/week4/pole-it/conveyor-site-docs/architecture' },
+                      { text: 'API', link: '/week4/pole-it/conveyor-site-docs/api' },
+                      { text: 'Components', link: '/week4/pole-it/conveyor-site-docs/components' },
+                      { text: 'Deployment', link: '/week4/pole-it/conveyor-site-docs/deployment' },
+                      { text: 'Troubleshooting', link: '/week4/pole-it/conveyor-site-docs/troubleshooting' },
+                    ]
+                  },
+                  { text: 'ROS Part', link: '/week4/pole-it/' },
+                ]
+              },
+            ]
+          },
+
+          // Electronics Pole
+          {
+            text: 'Electronic Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-electronic/',
+                collapsed: true,
+                items: [
+                  { text: '', link: '/week3/pole-electronic/' },
+                ]
+              },
+            ]
+          },
+
+          // Mechanical Pole
+          {
+            text: 'Mechanical Pole',
+            collapsed: true,
+            items: [
+              // { text: 'Test 1', link: '/week1/pole-it' },
+              { 
+                text: 'Test 3',
+                link: '/week3/pole-mecanic/advanced_mechanical_challenge',
+                collapsed: true,
+                items: [
+                  {text: 'Last piece', link: '/week3/pole-mecanic/advanced_mechanical_challenge'},
+                  {text: 'BONUS ⭐⭐', link: '/week3/pole-mecanic/bonus'},
+                ]
+              },
+            ]
+          },
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TekBot-Robotics-Challenge' }
