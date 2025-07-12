@@ -25,6 +25,7 @@ export default defineConfig({
           { text: 'Week 1', link: '/week1/pole-it' },
           { text: 'Week 2', link: '/week2/pole-it' },
           { text: 'Week 3', link: '/week3/pole-it' },
+          { text: 'Week 4-5', link: '/week4/pole-it' },
         ]
       },
     ],
@@ -256,8 +257,8 @@ export default defineConfig({
                       { text: 'Troubleshooting', link: '/week4/pole-it/conveyor-site-docs/troubleshooting' },
                     ]
                   },
-                  { text: 'ROS Part', link: '/week4/pole-it/' },
                   { text: 'ROS bridge', link: '/week4/pole-it/Libserial_bridge' },
+                  { text: 'Color Sending to website', link: '/week4/pole-it/Send_color' },
                 ]
               },
             ]
