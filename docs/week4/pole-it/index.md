@@ -6,6 +6,8 @@ The goal of this test is to implement an intelligent and reliable embedded syste
 
 <video controls src="/week4/videos/sorting_blue.mp4 " title="Title" ccontrols autoplay muted></video>
 
+<video controls src="/week4/videos/demo_it.webm" title="Title" ccontrols autoplay muted></video>
+
 ## 1. Intelligent Detection 
 - Integrate a color sensor capable of detecting 4 waste types: **Red**, **Blue**, **Green**, **Yellow**
 - Implement reliable object detection using
