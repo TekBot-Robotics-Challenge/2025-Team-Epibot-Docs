@@ -11,7 +11,7 @@ This challenge involves creating the part shown below using SolidWorks, adhering
 
 ### <span style="color: #9AC8EB;">**Short Demo**</span>
 
-<video width="450" height="350" ccontrols autoplay muted>
+<video width="450" height="350" controls autoplay muted>
   <source src="/videos/mechanic_videos/week2/piece_demo.mp4" type="video/mp4">
   Votre navigateur ne supporte pas la balise vidéo.
 </video>
