@@ -2,6 +2,9 @@
 
 The goal of this test is to implement an intelligent and reliable embedded system with real-time web visualization.
 
+<video controls src="/week4/videos/sorting_white.mp4" title="Title"></video>
+
+<video controls src="/week4/videos/sorting_blue.mp4" title="Title"></video>
 
 ## 1. Intelligent Detection 
 - Integrate a color sensor capable of detecting 4 waste types: **Red**, **Blue**, **Green**, **Yellow**

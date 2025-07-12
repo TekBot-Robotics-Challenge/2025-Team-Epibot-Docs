@@ -288,12 +288,11 @@ export default defineConfig({
             items: [
               // { text: 'Test 1', link: '/week1/pole-it' },
               { 
-                text: 'Test 3',
-                link: '/week3/pole-mecanic/advanced_mechanical_challenge',
+                text: 'Test 4',
+                link: '/week4/pole-mecanic/Mechanic',
                 collapsed: true,
                 items: [
-                  {text: 'Last piece', link: '/week3/pole-mecanic/advanced_mechanical_challenge'},
-                  {text: 'BONUS ⭐⭐', link: '/week3/pole-mecanic/bonus'},
+                  {text: 'Mechanic conception', link: '/week4/pole-mecanic/Mechanic'},
                 ]
               },
             ]
