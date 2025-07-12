@@ -326,7 +326,9 @@ This section outlines the assembly steps of all components for this project:
 - Distribute power: connect the battery pack to the A4988 Vmot/GND for the motor, and to the Arduino and sensors.
 - Double-check battery polarity and connections to prevent damage.
 
-<!-- image -->
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/7fee4788-ca95-403d-85a5-5d567107520a" width="500">
+</p>
 
 ### Wiring and soldering
 
@@ -339,15 +341,9 @@ This section outlines the assembly steps of all components for this project:
 - Connect the TCS34725 color sensor’s SDA and SCL to the Arduino Nano’s I2C pins (A4, A5). Solder power and ground connections.
 - Insulate all solder joints with heat-shrink tubing or electrical tape to prevent shorts.
 
-<!-- image -->
-
-### Mounting everything in the housing
-
-- Secure all components to the housing using screws, standoffs, adhesive pads, or custom mounts as needed.
-- Route and fix wires neatly along the housing, using cable ties, clips, or hot glue to prevent movement and interference with moving parts.
-- Confirm all modules are firmly fixed and wires are clear of the conveyor mechanism.
-
-<!-- image -->
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/73e15dc2-9bbb-4cc0-9936-69c57a6d249d" width="500">
+</p>
 
 ### Component Placement
 
@@ -357,7 +353,15 @@ This section outlines the assembly steps of all components for this project:
 - Place the TCS34725 color sensor above the conveyor belt, oriented to scan passing items.
 - Ensure all components are spaced to avoid interference and allow for cooling and wire routing.
 
-<!-- image -->
+### Mounting everything in the housing
+
+- Secure all components to the housing using screws, standoffs, adhesive pads, or custom mounts as needed.
+- Route and fix wires neatly along the housing, using cable ties, clips, or hot glue to prevent movement and interference with moving parts.
+- Confirm all modules are firmly fixed and wires are clear of the conveyor mechanism.
+
+<video controls width="600">
+  <source src="/demo.mp4" type="video/mp4" />
+</video>
 
 ## 7. Testing and Validation
 
@@ -367,8 +371,6 @@ Before uploading the Arduino program, you need to do some final checks:
 - Apply power gradually while monitoring the LEDs and voltage rails.
 
 After performing these steps, upload [The Arduino Code](#5-the-arduino-code), and observe.
-
-<!-- Find below a demonstration video of our own setup: -->
 
 ## 8. helpful Ressources
 
