@@ -1,0 +1,383 @@
+# FINAL TEST - THE CONVEYOR: Documentation
+
+In this documentation:
+
+- [1. General Context](#1-general-context)
+- [2. Description of components](#2-description-of-components)
+- [3. Computer-Aided Design](#3-computer-aided-design)
+- [4. Conveyor System Logic](#4-conveyor-system-logic)
+- [5. The Arduino Code](#5-the-arduino-code)
+- [6. Assembly of components](#6-assembly-of-components)
+- [7. Testing the project](#7-testing-the-project)
+- [8. Helpful Ressources](#8-helpful-ressources)
+
+## 1. General Context
+
+This test introduces us to a fun and innovative way to make a **7-segment display** using **servo motors** instead of lights (LEDs). Each segment (the bars that make up each digit) is moved by a small servo motor. The display shows the numbers from 0 to 9, then from 9 to 0, changing every second.
+
+## 2. Description of components
+
+### a. Arduino Nano
+
+The Arduino Nano is a compact microcontroller board based on the ATmega328, suitable for embedded applications due to its small size and full
+
+### b. Stepper Motor Nema 17
+
+A [NEMA 17]() stepper motor is a type of electric motor characterized by its physical dimensions and electrical specifications. It is favored for its precision and torque.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
+
+### c. Pololu A4988 Stepper Motor Driver
+
+The [Pololu A4988]() is a microstepping driver for controlling bipolar stepper motors. It enables the Arduino to send signals for step and direction, translating them into precise motor motion. It features adjustable current control, over-temperature and over-current protection and also supports full, half, quarter, eighth, and sixteenth step modes.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
+
+### d. KY-008 Laser Transmitter
+
+The [KY-008]() is a small laser emitter module used for creating a focused light beam. Combined with a photoresistor, it can detect when an object passes through the beam (used as a tripwire sensor).
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
+
+### e. Photoresistor
+
+A [photoresistor](https://en.wikipedia.org/wiki/Photoresistor), or Light Dependent Resistor (LDR), changes its resistance based on light intensity. It’s used for detecting the presence or absence of objects, or measuring ambient light. It is typically use to detect when an object interrupts a light beam.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
+
+### f. TCS34725 Color Sensor
+
+The [TCS34725]() is a digital color sensor that can detect RGB and clear light values. It’s used to identify the color of objects passing in front of it. It features onboard IR blocking filter, I2C interface and high sensitivity which enables for better precision.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/6bd9e058-17b3-477a-9b86-afcf6be05a07" width="500">
+</p>
+
+### g. Our custom power supply
+
+To power up our setup, we should build a power supply that will provide safe and sufficient voltage to all the components. For that, we will use:
+
+- Four 3.7V lithium batteries to supply 14.8V
+
+<!-- ATTENTION ! -->
+
+## 3. Computer-Aided Design
+
+We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the schematic as well as the PCB for this project. Find its official documentation [here](https://docs.kicad.org/).
+
+To design the individual segments and model the housing that encloses all the circuitry, we used Solidworks (_download [here](https://www.solidworks.com/sw/support/downloads.htm)_). Learn more about this software [here](https://help.solidworks.com/).
+
+### a. KiCad schematic diagram
+
+The schematic is divided into two main blocks:
+
+![The Schematic](https://github.com/user-attachments/assets/465c3744-cb84-4d03-b9ab-aaabe32dcd35)
+
+### b. Printed Circuit Board (PCB) design
+
+- PCB overview in the KiCad PCB editor
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/ccb6f15d-f534-4f7a-a610-9e45856a440b" width="1000">
+</p>
+
+<!-- _You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week4/pole-electronic/designs/servo_display_kicad.zip)_. -->
+
+## 4. Conveyor System Logic
+
+#### Object Detection
+
+- The KY-008 laser module emits a beam aimed at the first photoresistor (LDR1).
+- When an object interrupts the beam, LDR1 detects a drop in light, signaling the Arduino that an object is present at the entry point.
+- The second photoresistor (LDR2) is positioned at another checkpoint (such as near the color sensor or at the exit). It detects when the object reaches that point, allowing for more precise control and sequencing.
+
+#### Color Detection
+
+- The conveyor moves the object to the position of the TCS34725 color sensor (confirmed by LDR2 if positioned there).
+- The Arduino reads color data from the sensor to identify the color of the object.
+
+#### Positioning
+
+- The Nema 17 stepper motor, controlled by the A4988 driver, moves the conveyor belt.
+- The Arduino sends step and direction signals to the A4988 to rotate the motor and advance the belt.
+
+#### Control Loop
+
+- The Arduino receives input from both photoresistors:
+  - LDR1 (entry): object present/absent at the entry.
+  - LDR2 (checkpoint): object present/absent at the color sensor or exit.
+- When LDR1 detects an object, the conveyor advances the object to the checkpoint.
+- When LDR2 detects the object's arrival, the conveyor stops, reads the color, then restarts for the next object.
+- This dual-sensor approach increases accuracy and enables additional sorting or processing logic.
+
+## 5. The Arduino Code
+
+### Setting up
+
+Download the Arduino IDE using this [link](https://www.arduino.cc/). It's a software that will allow you to run and upload your code to the MCUs. Once the installation is done, we can set up by installing the necessary libraries via the **Library Manager** in the Arduino IDE (_make sure that you also install their dependencies when prompted to_). We will need the following Arduino libraries:
+
+```
+/* ========= REQUIRED LIBRAIRIES ============== */
+#include <Adafruit_TCS34725.h> // Library for our color sensor
+#include <Wire.h>
+```
+
+### Global variables and constants declarations
+
+- Constants representing the A4988 driver pins:
+
+```
+// === A4988 driver pins ===
+#define stepPin 3 // connected to Arduino D3
+#define dirPin 4 // connected to Arduino D4
+```
+
+- Constants representing the Photoresistors and Laser pins:
+
+```
+// === Photoresistors and Laser pins ===
+#define laserPin 5 // KY-008 laser emitter
+#define photo1 A0  // First photoresistor
+#define photo2 A1  // Second photoresistor
+```
+
+- Photoresistor's resistance value threshold to detect the presence of an object
+
+```
+// Threshold to detect if an object is blocking the beam
+const int detectionThreshold = 500;
+```
+
+- Declaration of TCS34725 color sensor: `Adafruit_TCS34725 tcs = Adafruit_TCS34725(TCS34725_INTEGRATIONTIME_50MS, TCS34725_GAIN_4X);`
+
+### setup() function
+
+```
+void setup()
+{
+  Serial.begin(115200); // start the serial monitor at 115200 bauds
+
+  // Configuration for stepper motor
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  digitalWrite(dirPin, HIGH);
+
+  // Configuration for Laser and photoresistors
+  pinMode(laserPin, OUTPUT);
+  digitalWrite(laserPin, HIGH); // Turn on laser
+
+  // Initialization of our color sensor
+  if (!tcs.begin()) // initialization failed
+  {
+    // print to the serial monitor for debugging
+    Serial.println("Color sensor setup failed !");
+    while (true); // Loop forever, don't proceed
+  }
+  if (!confirm_connect()) // ros and arduino connection failed
+  {
+    // print to the serial monitor for debugging
+    Serial.println("Connection failure !");
+    while (true); // Loop forever, don't proceed
+  }
+}
+```
+
+### Custom functions
+
+#### Function to read from ROS using the serial monitor:
+
+```
+String read_from_ros()
+{
+  if (Serial.available()) // check if data is available for reading
+  {
+    return Serial.readString(); // return data as string
+  }
+  return ""; // return an empty string if no data is available
+}
+```
+
+#### Function to confirm Arduino-ROS connection:
+
+```
+bool confirm_connect()
+{
+  String msg = read_from_ros(); // read from ros through serial
+
+  // if connection with ROS is successful, send confirmation message to ros 
+  if (msg == "ROS CONNECTED\r\n")
+  {
+    // print to the serial monitor for arduino to ros communication
+    Serial.println("ARDUINO CONNECTED");
+    return true;
+  }
+  return false; // cannot confirm connection
+}
+```
+
+#### Function to move the conveyor belt:
+
+```
+void startConveyor()
+{
+  String msg = read_from_ros(); // read from ros through serial
+  int i = 0;
+
+  // if ROS hasn't signaled to start conveyor, don't proceed
+  if (msg != "MOTOR ON\r\n")
+  {
+    return;
+  }
+  while (i < 200) // Move 200 steps, partial rotation
+  {
+    digitalWrite(stepPin, HIGH);
+    delayMicroseconds(1000); // control speed
+    digitalWrite(stepPin, LOW);
+    delayMicroseconds(1000);
+    i++;
+  }
+  // Let ROS know object reached end of conveyor belt
+  if (i == 200 - 1)
+  {
+    Serial.println("OK");
+  }
+}
+```
+
+#### Function to stop the conveyor belt:
+
+```
+void stopConveyor()
+{
+  // Just for logic
+  // Motor stops itself automatically when no longer receiving pulses
+}
+```
+
+#### Function for detecting an object's color through the TCS34725 color sensor:
+
+```
+// === Color detection via TCS34725 ===
+String detectColor()
+{
+  // Read raw red, green, blue and clear values
+  uint16_t red, green, blue, neutral;
+  tcs.getRawData(&red, &green, &blue, &neutral);
+
+  // Normalize color values for fair comparison
+  float sum = red + green + blue;
+  float R = red / sum;
+  float G = green / sum;
+  float B = blue / sum;
+
+  // ======== Color dectection logic ========
+  if (R > 0.35 && G > 0.35 && B < 0.25)
+    return "YELLOW";
+  else if (R > G && R > B)
+    return "RED";
+  else if (G > R && G > B)
+    return "GREEN";
+  else if (B > R && B > G)
+    return "BLUE";
+  else
+    return "UNKNOWN"; // Color is not among the supported ones
+}
+```
+
+### loop() function
+
+```
+void loop()
+{
+  // Read light levels from both photoresistors
+  int value1 = analogRead(photo1); // read from first photoresistor
+  int value2 = analogRead(photo2); // read from second photoresistor
+
+  // Check if laser beam is blocked (object detected)
+  if (value1 < detectionThreshold || value2 < detectionThreshold)
+  {
+    delay(800); // Time for object detection by color sensor
+    String objectColor = detectColor(); // detect the object's color
+    // print to the serial monitor for arduino to ros communication
+    Serial.print("GARBAGE"); Serial.println(objectColor);
+    startConveyor(); // move stepper motor
+    stopConveyor();
+    delay(1500); // 1.5 seconds pause before next detection
+    return;
+  }
+  Serial.println("NONE");
+}
+```
+
+_The full code is available to download [here](https://raw.githubusercontent.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/refs/heads/main/docs/week3/pole-electronic/code/servo_displayer.ino)_.
+
+## 6. Assembly of components
+
+<!-- The assembly process was carried out on a veroboard instead of a custom PCB, allowing for easy and flexible adjustments during construction.
+
+### Component Placement
+
+We start by planning where each component will go on the veroboard. We then place the ATmega328P microcontroller, PCA9685 PWM module, voltage regulator (LM7809 or LM-1950), zener diode, capacitors, and LEDs in order to minimize wire crossings and make the layout neat and logical. Finally, we insert the header pins for easy connection of servomotors and for accessing the microcontroller’s I/O pins for testing or expansion.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/8b286820-e45b-4a66-9b73-79a8bac15383" width="700">
+</p>
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/e60e12ca-4fa4-49f6-a9a0-062af97f446b" width="700">
+</p>
+
+### Integrating the power supply
+
+- Connect your 3.7V lithium batteries to the input side of the power regulation circuit.
+- Mount the LM-7809  on the veroboard and add the zener diode plus capacitors around it for filtering and stability.
+- Set up two separate power rails on the veroboard: one for 5V (logic, microcontroller, PCA9685) and one for 9V (servomotors).
+- Solder red and green LEDs to your rails as power indicators, so you can easily see when each voltage is present.
+
+### Wiring and soldering
+
+- Use a small drill bit or a sharp knife to carefully break copper traces on the veroboard where necessary, preventing unwanted connections.
+- Solder wires to link the I2C lines (SDA and SCL) from the ATmega328P to the corresponding pins on the PCA9685.
+- Connect each servomotor’s control wire to its dedicated PWM channel on the PCA9685, and hook up their power (to the 9V rail) and ground lines.
+- Double-check all connections for accuracy before soldering to ensure everything matches your schematic.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/a6d4fd28-c999-4ff7-93c3-465c833948e5" width="700">
+</p>
+
+### Mounting everything in the housing
+
+- Place the finished veroboard and all connected modules into the housing.
+- Secure the servomotors so that each one lines up with the correct segment of the display and can move freely.
+- Route the servo wires and any additional connectors to be accessible from outside the housing.
+
+<p align="center">
+    <img src="https://github.com/user-attachments/assets/4069ba01-519f-4f74-99c8-fc26eac6b152" width="700">
+</p> -->
+
+## 7. Testing and Validation
+
+Before uploading the Arduino program, you need to do some final checks:
+
+- Visually inspect and check all connections to prevent short circuits.
+- Apply power gradually while monitoring the LEDs and voltage rails.
+
+After performing these steps, upload [The Arduino Code](#5-the-arduino-code), and observe.
+
+<!-- Find below a demonstration video of our own setup: -->
+
+## 8. helpful Ressources
+
+- [Download KiCad](https://www.kicad.org/)
+- [Download SolidWorks](https://www.solidworks.com/sw/support/downloads.htm)
+- https://www.youtube.com/watch?v=9qZUjEsVWts
+- https://www.youtube.com/watch?v=WLVfZXxpHYI
+- https://www.youtube.com/watch?v=lkyUqMVJBQ0
