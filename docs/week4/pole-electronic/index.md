@@ -93,20 +93,16 @@ The schematic is divided into two main blocks:
     <img src="" width="1000">
 </p>
 
-<!-- _You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week4/pole-electronic/designs/servo_display_kicad.zip)_. -->
+_You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week4/pole-electronic/designs/servo_display_kicad.zip)_.
 
 ## 4. Conveyor System Logic
 
-#### Object Detection
+#### Object Presence and Color Detection
 
-- The KY-008 laser module emits a beam aimed at the first photoresistor (LDR1).
-- When an object interrupts the beam, LDR1 detects a drop in light, signaling the Arduino that an object is present at the entry point.
-- The second photoresistor (LDR2) is positioned at another checkpoint (such as near the color sensor or at the exit). It detects when the object reaches that point, allowing for more precise control and sequencing.
-
-#### Color Detection
-
-- The conveyor moves the object to the position of the TCS34725 color sensor (confirmed by LDR2 if positioned there).
-- The Arduino reads color data from the sensor to identify the color of the object.
+- The KY-008 laser module emits a beam aimed at the photoresistor (LDR).
+- When an object interrupts the beam, LDR detects a drop in light, signaling the Arduino that an object is present at the entry point.
+- The Arduino reads color data from the TCS34725 color sensor to identify the color of the object.
+- Through the serial monitor, the arduino sends a "GARBAGE COLOR" message to ROS to signal that an object is present and specify its color for tracking.
 
 #### Positioning
 
@@ -115,12 +111,11 @@ The schematic is divided into two main blocks:
 
 #### Control Loop
 
-- The Arduino receives input from both photoresistors:
-  - LDR1 (entry): object present/absent at the entry.
-  - LDR2 (checkpoint): object present/absent at the color sensor or exit.
-- When LDR1 detects an object, the conveyor advances the object to the checkpoint.
-- When LDR2 detects the object's arrival, the conveyor stops, reads the color, then restarts for the next object.
-- This dual-sensor approach increases accuracy and enables additional sorting or processing logic.
+- The Arduino receives input from the photoresistor (LDR) which helps to detect if an object is present/absent.
+- When LDR detects an object, Arduino sends a signal to ROS specifying its color.
+- ROS sends back a "MOTOR ON" message to Arduino, after which the conveyor advances the object to its end.
+- ROS then sends a signal "MOTOR OFF" to signal that the conveyor should stop.
+- Arduino receives this signal, the conveyor is stopped, and a "OK" confirmation message is sent back to ROS.
 
 ## 5. The Arduino Code
 
