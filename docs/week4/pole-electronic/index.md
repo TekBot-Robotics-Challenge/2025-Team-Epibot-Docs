@@ -13,7 +13,15 @@ In this documentation:
 
 ## 1. General Context
 
-This test introduces us to a fun and innovative way to make a **7-segment display** using **servo motors** instead of lights (LEDs). Each segment (the bars that make up each digit) is moved by a small servo motor. The display shows the numbers from 0 to 9, then from 9 to 0, changing every second.
+This project involves designing and building a smart conveyor system for a waste recycling company planning to set up operations in the TEKBOT CITY industrial zone. The goal is to develop a creative and efficient automated conveyor that sorts four types of waste, represented by colored objects (green, yellow, red, and blue cubes).
+
+## Technical Description
+
+The conveyor system will combine mechanical and intelligent components to automate waste sorting. The conveyor belt remains stationary until waste is detected, at which point it activates and moves the detected items through a sensor zone. After detection, the waste travels to the end of the conveyor, where it is manually collected and placed in the bin indicated by the sorting system.
+
+## Real-Time Web Interface
+
+To enable real-time monitoring, an intuitive web interface will be implemented. This interface will display the quantity of sorted waste by type (green, yellow, red, blue), providing administrators with up-to-date information about the sorting process. The interface will be user-friendly and accessible, ensuring that administrators can easily track the system’s performance at any time.
 
 ## 2. Description of components
 
@@ -74,23 +82,9 @@ To power up our setup, we should build a power supply that will provide safe and
 
 We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the schematic as well as the PCB for this project. Find its official documentation [here](https://docs.kicad.org/).
 
-To design the individual segments and model the housing that encloses all the circuitry, we used Solidworks (_download [here](https://www.solidworks.com/sw/support/downloads.htm)_). Learn more about this software [here](https://help.solidworks.com/).
+### KiCad schematic diagram
 
-### a. KiCad schematic diagram
-
-The schematic is divided into two main blocks:
-
-![The Schematic]()
-
-### b. Printed Circuit Board (PCB) design
-
-- PCB overview in the KiCad PCB editor
-
-<p align="center">
-    <img src="" width="1000">
-</p>
-
-_You can download the full KiCad project [here](https://github.com/TekBot-Robotics-Challenge/2025-Team-Epibot-Docs/raw/refs/heads/main/docs/week4/pole-electronic/designs/servo_display_kicad.zip)_.
+<img width="1080" height="607" alt="The Schematic" src="https://github.com/user-attachments/assets/86714b74-c157-4370-9024-7de918aece36" />
 
 ## 4. Conveyor System Logic
 
@@ -360,7 +354,7 @@ This section outlines the assembly steps of all components for this project:
 - Confirm all modules are firmly fixed and wires are clear of the conveyor mechanism.
 
 <video controls width="600">
-  <source src="/demo.mp4" type="video/mp4" />
+  <source src="/demo2.mp4" type="video/mp4" />
 </video>
 
 ## 7. Testing and Validation
