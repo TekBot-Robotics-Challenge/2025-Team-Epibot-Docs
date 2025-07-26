@@ -58,8 +58,7 @@ sudo chmod 666 /dev/ttyUSB0 /dev/ttyUSB1
 Find the USB ports for each robot arm.
 
 ### Connect the Follower Arm
-
-![dismantling the robotic arm and motors identification](<WhatsApp Image 2025-07-26 at 13.35.07 (1).jpeg>)
+![dismantling the robotic arm and motors identification](../../public/week4/images/IT/Website/motors_identification_.jpeg)
 
 ```bash
 # /dev/ttyUSB0: the port associated to the leader arm
@@ -133,7 +132,7 @@ python -m lerobot.teleoperate \
 ---
 
 ## 5. Dataset Recording
-![scene setup](<WhatsApp Image 2025-07-26 at 13.35.07.jpeg>)
+![scene_setup](/week4/images/IT/Website/scene_setup.jpeg)
 
 ### Create Hugging Face token
 Use the Hugging Face hub features for uploading datasets. First, login via the cli using a write-access token, this token can be generated from the Hugging Face settings.
@@ -149,9 +148,8 @@ Then store the Hugging Face repository name in a variable:
 HF_USER=$(huggingface-cli whoami | head -n 1)
 echo $HF_USER
 ```
-<video controls src="WhatsApp Video 2025-07-26 at 13.52.22.mp4" title="Recording"></video>
 Run this command to start recording with your laptop camera:
-
+<video controls src="/week4/videos/Recording.mp4" title="Recording"></video>
 ```bash
 # /dev/ttyUSB0: the port associated to the follower arm
 # --robot.id: a given unique name for the robot
