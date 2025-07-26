@@ -19,6 +19,7 @@ The primary purpose of Conveyor-Site is to provide a user-friendly interface for
 - **`API Communication`**: The ROS2 node forwards the color information to the web dashboard via the `/api/data` endpoint.
 - **`Redis Synchronization`**: The backend uses Redis to store and synchronize the color counts in real time.
 - **`Real-Time Display`**: The dashboard updates instantly, showing the count of each color as colored cubes.
+- **`Real-Time Statistics`**: The dashboard updates instanly, showing the statics of each color with their percentages.
 
 ## `Main Features`
 
@@ -31,5 +32,7 @@ The primary purpose of Conveyor-Site is to provide a user-friendly interface for
 
 - **`Responsive Design`**: The user interface is designed to be responsive, ensuring a smooth experience across various devices and screen sizes.
 - **`Reset Functionality`**: Users can reset all counters directly from the interface.
+
+- **`Real-Time Statistics`**: Users can see the percentages of each color sorted directly from the interface.
 
 In summary, Conveyor-Site connects hardware (Arduino), middleware (ROS2), Redis, and a modern web dashboard to provide a complete, real-time view of the waste sorting process for the waste sorting system.
