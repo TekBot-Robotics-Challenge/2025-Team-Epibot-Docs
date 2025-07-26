@@ -259,6 +259,7 @@ export default defineConfig({
                   },
                   { text: 'ROS bridge', link: '/week4/pole-it/Libserial_bridge' },
                   { text: 'Color Sending to website', link: '/week4/pole-it/Send_color' },
+                  { text: 'LeRobot Documentation', link: '/week4/pole-it/LeRobot' },
                 ]
               },
             ]
