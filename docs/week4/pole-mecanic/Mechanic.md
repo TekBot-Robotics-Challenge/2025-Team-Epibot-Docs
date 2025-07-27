@@ -1,287 +1,255 @@
-## <span style="color: #08C5D1;">## Mechanical Design Documentation – Autonomous Conveyor System</span>
+# <span style="color: #08C5D1;">Documentation of the Mechanical Design of the Conveyor System</span>
 
-### <span style="color: #9AC8EB;">Project Context</span>
+The objective of this challenge was to bring together all the skills we acquired during previous challenges to design an intelligent and efficient autonomous conveyor. To achieve this, we first brainstormed and sketched out ideas for what the conveyor would look like. The conveyor had to be 650mm long and 100mm above the ground. It also had to be modeled in SolidWorks. The process took two directions: the ideation phase, marked by virtual design, and the physical construction phase. This documentation details the process we followed during these phases, the mechanical constraints we encountered, and how we overcame them.
 
-The objective of this challenge is to bring together all the skills acquired during previous projects to design and build an `**autonomous, intelligent, and efficient conveyor system**`.
+## <span style="color: #3498DB;">Virtual Design Phase</span>
+### <span style="color: #1ABC9C;">Overview of the Virtual Design Process</span>
 
-To achieve this, our multidisciplinary team collaborated to produce sketches and diagrams envisioning the conveyor. The conveyor’s main dimensions are:
+The virtual design focused on SolidWorks for 3D modeling and Illustrator for sketches intended for laser cutting. The conveyor had to be 650mm long, with the belt positioned 100mm above the ground. First, we had to think about how our conveyor would stand. We opted for two parallel vertical supports connected by horizontal planks to ensure balance. A final horizontal plate was added to keep the entire structure fixed and sturdy.
 
-* **Length:** 650 mm
-* **Height of belt from floor:** 100 mm
+<iframe src="https://player.vimeo.com/video/1104886435?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_convoyeur_soilid_work" controls autoplay muted></iframe>
 
-The design process followed **two key phases**:
+### <span style="color: #1ed3afff;"> Support </span>
+<iframe src="https://player.vimeo.com/video/1104886485?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_support_convoyeur" controls autoplay muted></iframe>
 
-1. **Virtual Design** — conceptualizing and modeling our components in CAD.
-2. **Physical Design** — preparing for real-world fabrication and assembly.
+### `Key Components and Design Process`:
 
-This document details the mechanical conception process, the constraints we encountered, and how we solved them.
+- #### <span style="color: #DB6A8F">Vertical Support</span>
 
----
+<iframe src="https://player.vimeo.com/video/1104886493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_support_verticale" controls autoplay muted></iframe>
 
-## <span style="color: #08C5D1;">## 🖥️ Virtual Design</span>
+This is the vertical face that supports the entire assembly. It has a height of 115mm to comply with the challenge requirements. The 1mm difference is to provide a small margin. Initially, we planned to use wood, but the workspace of our laser cutter is limited to 600x300mm boards. Therefore, instead of 650mm plates, we opted for 590mm, giving us a 60mm margin.
 
-<iframe src="https://player.vimeo.com/video/1100264151?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="width:100%;height:300px;" title="vue-3d-convoyeur"></iframe>
+##### <span style="color: #2fbaf1ff;"> Features: </span>
+Two rows of small cavities to mount horizontal supports.
+Circular holes at the ends (30mm diameter) for inserting bearings to smooth the drum's rotational movement.
 
-The virtual design work primarily involved **SolidWorks** for 3D modeling, and **Illustrator** for preparing sketches intended for laser cutting.
+`Process`:
 
-Below is an overview of the mechanical components and the reasoning behind each design decision.
+--------Video de conception---------
 
----
+- <span style="color: #DB6A8F;">Horizontal Support:</span>
 
-### <span style="color: #9AC8EB;">🔩 Vertical Support</span>
+<iframe src="https://player.vimeo.com/video/1104886388?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_horrizontal_face" controls autoplay muted></iframe>
 
-<iframe src="https://player.vimeo.com/video/1100264624?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" title="vue-support-verticale-3d"></iframe>
+These are two surfaces placed on the two rows of cavities carved into the vertical supports, perpendicular to them, maintaining balance. They also act as stabilizers for the conveyor belt, preventing overloads and blockages. They are positioned around the drum for easy deployment above and below the belt. We chose a spacing of 70mm between the plates, making the support measure (70 + 12 * 2) 94mm wide (including the interlocking parts) and 450mm long.
 
-* This is the **main vertical plate** supporting the entire conveyor structure.
-* **Dimensions:**
+`Process:`
+----------------Videos montrant le process de création de support vertical---------------------
 
-  * Length: 650 mm (65 cm)
-  * Height: 110 mm (11 cm)
+#### <span style="color: #DB6A8F;">Base Support:</span>
 
-> We deliberately designed it 10 mm higher than the required 100 mm to maintain a small safety margin.
+<iframe src="https://player.vimeo.com/video/1104885921?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="base_vue_d" controls autoplay muted></iframe>
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Features: </span>
+This is the base on which the entire assembly rests. It consists of cavities to hold the vertical supports. Due to the laser cutter's workspace limitations, we segmented it into two complementary surfaces. In addition to supporting the structure, it serves as a base for components under the conveyor and allows us to extend the missing 60mm to reach the total length of 650mm.
 
-* **Two rows of small cavities** to mount the horizontal supports.
-* **Circular holes (30 mm diameter)** at each end to fit bearings, allowing smooth rotation of the drum shaft.
+`Assembly Process`:
 
-![emplacement_roulement](/images/mechanic_images/week4/emplacement_roulement.png)
+<iframe src="https://player.vimeo.com/video/1104886159?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_assembly" controls autoplay muted></iframe>
 
-> Many additional cavities serve mainly decorative purposes and to reduce weight.
+### <span style="color: #3498DB;">Conveyor Mobility System</span>
 
-**Important Note:**
+<iframe src="https://player.vimeo.com/video/1104894020?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_assembly_2" controls autoplay muted></iframe>
 
-* The motor mounting location was updated **after** the initial video capture. The final position was based on the actual dimensions of the Nema 17 stepper motor we procured.
+After defining a robust and balanced structure for the conveyor, we moved on to designing a system to enable waste mobility. The key component generating movement is a NEMA 17 motor. Initially, we had two drums aligned with the bearings. A leather belt was placed over the drums, serving as the moving surface. At this stage, the drum's movement drives the belt, which, like a pulley, moves all objects it carries.
 
-**Design Process**
+#### <span style="color: #DB6A8F;">Drum Design:</span>
 
-<iframe src="https://player.vimeo.com/video/1100264079?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style=";top:0;left:0;width:100%;height:300px;" title="support-de-face-conception"></iframe>
+<iframe src="https://player.vimeo.com/video/1100264137?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-vue-3d" controls autoplay muted></iframe>
 
----
+The drum is the cylindrical body in direct contact with the belt, transmitting motion. Its longitudinal ends fit into the bearings at the ends of the vertical supports. The main cylinder is 30mm wide, flanked by two 40mm-high discs to prevent overflows. There are two types:
+- `Leader Drum`: One end is longer (23/15mm) to pass through the 12mm-thick vertical surface and connect to the motor.
+- `Follower Drum`: Both ends are 15mm long.
 
-### <span style="color: #9AC8EB;">🔧 Horizontal Supports</span>
 
-<iframe src="https://player.vimeo.com/video/1100266127?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="vue-support-horizontal-3d"></iframe>
+#### <span style="color: #DB6A8F;"> Process of Conception:</span>
 
-* Two horizontal plates positioned into the rows of cavities on the vertical supports.
-* They run **perpendicular** to the vertical plates and ensure the entire structure stays balanced.
+<iframe src="https://player.vimeo.com/video/1100285370?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-design-video_AZAHWH1h" controls autoplay muted></iframe>
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Purpose: </span>
+### <span style="color: #1ed3afff;">Energy Transmission System:</span>
 
-* Provide stability to the conveyor belt, especially if it needs to carry heavy loads.
-* Help prevent overflow or jamming of transported items.
+This video https://www.youtube.com/watch?v=5Xn26kxmX5U helped us explore various possibilities. Initially, we opted for a pulley-belt system, but we lacked customizable belts. We experimented with elastic bands, string, and chain systems, but these failed due to mechanical constraints, friction, or lack of adhesion. Finally, we opted for a safer solution: directly connecting the motor to the drum via a custom-designed `Motor Support`.
 
-> The horizontal supports straddle the drum, making it easier to deploy the belt over them.
+<iframe src="https://player.vimeo.com/video/1104886392?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_moteur_vue_3d" controls autoplay muted></iframe>
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Dimensions:</span>
+**`Position`**
+![position of support motor](/images/mechanic_images/week4/support_moteur_emplacement.png)
 
-* **Spacing between plates:** 70 mm
-* **Width of each plate:** 70 + (2 × 40) mm = 150 mm
+This structure allows us to fix the motor horizontally while maintaining the entire assembly vertically using four pillars in each direction.
+The fixation of the motor and drum axles is ensured by a `junction`. It is a cylindrical body with two openings at its ends: one with a 5mm diameter for the NEMA motor shaft and the other with a 10mm diameter for the drum shaft. A tolerance of 0.1mm was later added to facilitate the insertion of each component into the two openings.
+`Position`
 
-  * The extra 40 mm per side accounts for the interlocking features.
-* **Length:** 590 mm
+![Jonction position](/images/mechanic_images/week4/emplacement_jonction_moteur_support.png)
 
-**Design Process**
+`3D view`
 
-<iframe src="https://player.vimeo.com/video/1100264115?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style=";top:0;left:0;width:100%;height:300px;" title="support-horrizontal-design-process"></iframe>
+<iframe src="https://player.vimeo.com/video/1104886453?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Vue_3d_jonction" controls autoplay muted></iframe>
 
----
+`Assembly Process`:
 
-### <span style="color: #9AC8EB;">🥁 Drum</span>
+<iframe src="https://player.vimeo.com/video/1104886019?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fication_tampour" controls autoplay muted></iframe>
 
-<iframe src="https://player.vimeo.com/video/1100264137?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style=";top:0;left:0;width:100%;height:300px;" title="tambour-vue-3d"></iframe>
 
-* Cylindrical part directly in contact with the conveyor belt, transmitting motion.
+<iframe src="https://player.vimeo.com/video/1104886105?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fixation_support_moteur" controls autoplay muted></iframe>
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Features:</span>
+## <span style="color: #3498DB;">Sensors and Object Detection</span>
 
-* Both drum ends are designed to fit into bearings mounted in the vertical supports.
-* One drum end has an extended shaft (**23 mm vs. 15 mm**) to:
+![sensors positions](/images/mechanic_images/week4/emplacements_supports_laser.png)
 
-  * Pass through the thicker vertical plate.
-  * Accommodate a pulley that transmits rotation from the motor.
+To enable waste detection on the conveyor, we collaborated with the electronics team to design a `laser-phototransistor` system. The laser emits a beam captured by the phototransistor. When the beam is interrupted, it indicates the presence of an object on the conveyor. To protect the components, the electronics engineers designed PCBs.
 
-![ drum protruding through vertical plate](/images/mechanic_images/week4/port_capteurs_parts.png)
+Our mechanical challenge was to design a mechanism to support this system, ensuring precise alignment. We designed adjustable supports with sliding cylindrical trunks in a screwable base.
 
-**Design Process**
+#### <span style="color: #1e6293ff;">Laser Port:</span>
 
+<iframe src="https://player.vimeo.com/video/1104886142?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="port_laser_vue_D" controls autoplay muted></iframe>
 
+This is a platform with a rectangular configuration at the top, featuring an open hollow face for laser diffusion and a rectangular opening opposite for wiring. The length is approximately the sum of the lengths of the PCB coupled with the laser.
 
----
+#### <span style="color: #1e6293f0;"> Phototransistor Port:</span>
 
-### <span style="color: #9AC8EB;">⛓️ Pulley System</span>
+<iframe src="https://player.vimeo.com/video/1104886471?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_photo_résistance" controls autoplay muted></iframe>
 
-<iframe src="https://player.vimeo.com/video/1100264175?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="vue-poulie-3d"></iframe>
+This is a rectangular platform designed to house the phototransistor PCB. Since the laser sensor is fixed, a sliding platform was added to adjust the horizontal position of the phototransistor for perfect calibration. A fairly large opening was also provided for wiring.
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Objective:</span>
+#### <span style="color: #1e6293f0;">Base:</span>
+<iframe src="https://player.vimeo.com/video/1104886475?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_socle" controls autoplay muted></iframe>
 
-To transmit motion from the **Nema 17 stepper motor** to the drum.
+This is the main link allowing height adjustment, equipped with a cylindrical body to house the support and a 4mm opening for fixing the desired height.
 
-* We explored several transmission methods. The following video was a valuable reference:
-  [YouTube Video on Pulley Systems](https://www.youtube.com/watch?v=5Xn26kxmX5U)
+`Wiring simulation`: 
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Solution: </span>
+<iframe src="https://player.vimeo.com/video/1104886150?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="reglage_hauteur_support" controls autoplay muted></iframe>
 
-* We chose a **belt and pulley system.**
-* Since we couldn’t source custom belts of precise lengths, we decided to use **elastic bands** as belts.
+#### <span style="color: #1e6293f0;">The carpet:</span>
 
-**Elastic Band Specifications:**
+<iframe src="https://player.vimeo.com/video/1104898477?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tapis_FwweSzvM" controls autoplay muted></iframe>
 
-* Length: 100 mm
-* Width: 1 mm
-* Height: 1 mm
+It's a surface that, as it rotates, pulls whatever it supports.
+`Conception:`
 
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Pulley Details:</span>
+<iframe src="https://player.vimeo.com/video/1104886397?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="video conception_tapis" controls autoplay muted></iframe>
 
-* Two pulleys were designed:
 
-  * One with a 5 mm axial hole (fits the motor shaft).
-  * One with a 10 mm axial hole (fits the drum shaft).
+### <span style="color: #1ed3afff;">Chassis Design</span>
+In total, the electronics team implemented five PCBs, including those for the laser and phototransistor. Our challenge was to design a chassis to house these components, ensuring protection, functionality, and aesthetics.
 
-> The pulleys were specifically modeled to hold multiple elastic bands for better grip and reliability.
+![pcb done](/images/mechanic_images/week4/PCBs.png)
 
----
 
-### <span style="color: #9AC8EB;">🎯 Sensor Supports</span>
+- `Motor Driver Box:`
 
-<iframe src="https://player.vimeo.com/video/1100264058?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="port-capteur-vue-3d"></iframe>
+<iframe src="https://player.vimeo.com/video/1104886502?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_conteneur_driver" controls autoplay muted></iframe>
 
-We designed a dedicated structure to hold:
+The motor driver is a PCB measuring 44mm in length and 57mm in width. We designed a small cubic box with two opposing openings on the lateral faces for wiring, a sliding lid, and small perforations for heat dissipation and compartment ventilation.
 
-* A **color sensor** (TCS34725)
-* A **presence detector** (KY-008)
-
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Design:</span>
-
-* A surface parallel to the conveyor belt for mounting the color sensor.
-* A vertical surface perpendicular to the belt for mounting the KY-008 presence sensor.
-* Both surfaces are supported by a bent bar attached to one of the horizontal plates.
-
-![Images of sensor components and mounts](/images/mechanic_images/week4/port_capteurs_parts.png)
-
-**Design Process**
-
-<iframe src="https://player.vimeo.com/video/1100264021?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:;" title="port-capteur-3D"></iframe>
-
----
-
-## <span style="color: #08C5D1;">## 🛠️ Assembly in SolidWorks</span>
-
-
-<iframe src="https://player.vimeo.com/video/1100263974?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;"title="assemblage-video-solid-works"></iframe>
-
-To create an accurate virtual assembly, we imported:
-
-* A **Nema 17 stepper motor** model (downloaded from [GrabCAD](https://grabcad.com/)).
-* A **KY-008 laser sensor.**
-* A **TCS34725 color sensor.**
-This ensured our virtual model closely represents the real mechanical constraints and space requirements.
-
-[Download All SolidWorks Files and Assets](/images/mechanic_images/week4/conveyor_virtual_design.zip)
-
----
-## <span style="color: #08C5D1;">## 📂 Download All Components</span>
-
-
-# ⚙️ Physical Construction Phase
-
----
-
-## <span style="color: #08C5D1;">## ✅ Obtaining the Parts</span>
-
-### <span style="color: #9AC8EB;">3D Printing</span>
-
-At this stage, we already had all the CAD files and parts designed. Components like the sensor bracket, the drum, and the pulleys were 3D-printed using PLA material because they are small-sized parts.  
-
-The workflow was as follows:
-
-- Convert SolidWorks files to `.stl` format.
-- Import the `.stl` files into **PrusaSlicer**.
-- Generate the G-code.
-- Transfer the G-code to the 3D printer.
-
----
-
-### <span style="color: #9AC8EB;">###  Laser Cutting </span>
-
-The vertical and horizontal panels were too long to print or fit into standard laser-cutting machines. One challenge was that the working area of our laser cutter was limited to about **60 × 30 cm**, while our vertical supports were designed to be 65 cm long.
-
-#### <span style="color: #DB6A8F; padding-left: 8px;"> Design Adaptations</span>
-
-To overcome this, we modified our design:
-
-- We **split the motor zone from the rest of the conveyor** and connected them horizontally with a new support plate.  
-
-    ![Screenshot showing separation and demarcation](/images/mechanic_images/week4/separation_demarquation.png)
-
-- We created a **new motor zone** to house the motor separately.  
-
-<iframe src="https://player.vimeo.com/video/1100824407?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px;" title="création de la zone motrice"></iframe>
-
-- We designed a **basal support structure** capable of holding the entire assembly. We also made adjustments to the dimensions to ensure the final length still reached **650 mm**.
-
-<iframe src="https://player.vimeo.com/video/1100824443?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:300px%;" title="support_basale"></iframe>
-
-After these changes, we updated the assembly in SolidWorks, which resulted in the following view:
-
-<iframe src="https://player.vimeo.com/video/1100825538?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" style="top:0;left:0;width:100%;height:;" title="vue_assembly_modificated"></iframe>
-
----
-
-## <span style="color: #08C5D1;">## ✂️ Laser Cutting Workflow</span>
-
-To prepare for laser cutting, we:
-
-- Opened the **technical drawings (mise en plan)** of the parts.
-- Exported them in **SVG format**.
-- Configured the laser cutting parameters using **Adobe Illustrator**.
-
-Here are some screenshots from this process:
-
-- ![Mise en plan 1 screenshot](/images/mechanic_images/week4/mise_en_plan_1.png)
-- ![Mise en plan 2 screenshot](/images/mechanic_images/week4/mise_en_plan_2.png)
-- ![Mise en plan 3 screenshot](/images/mechanic_images/week4/mise_en_plan_3.png)
-
-All the files used for laser cutting are available for download in the folder laser_cutting_plans.
-
-Once the files were ready, we proceeded with the cutting and 3D printing of all the necessary parts.
-
-![Images of obtained materials](/images/mechanic_images/week4/material.jpg)
-
----
-
-## <span style="color: #08C5D1;">## 🔧 Assembly Process</span>
-
-Once we had all the components, we started assembling the conveyor. Here’s a step-by-step summary of the process:
-
-- **Insertion of the four bearings** into their dedicated slots.  
-    ![Screenshot showing bearing insertion](/images/mechanic_images/week4/roulement_fixing.jpg)
-
-- **Mounting the two horizontal supports** into the rows of cavities on the vertical supports.
-    ![Screenshot showing horizontal supports installation](/images/mechanic_images/week4/montage_verti-horrizontal_2.jpg)
-
-- **Inserting the drums** into the bearing axes.  
-    ![Screenshot showing drum insertion](/images/mechanic_images/week4/poulie_fixing.jpg)
-
-- **Placing the second vertical face** on top of the assembly.  
-    ![Screenshot showing second vertical panel assembly](/images/mechanic_images/week4/second_face.jpg)
-
-- **Inserting the pulleys** onto the motor and drum shafts.  
-    ![Screenshot showing pulley insertion](/images/mechanic_images/week4/poulie_fixing.jpg)
-
-    ![Screenshot showing pulley insertion](/images/mechanic_images/week4/poulie_fixing_2.jpg)
-
-- **Fixing the NEMA 17 motor** and the basal horizontal support. 
-
-- **Cutting the conveyor belt:**
-    - We used a **1.2 × 0.065 m leather sheet** (the same material typically used in upholstery).
-    - The belt was placed over the drums and its ends were glued together to form the loop.
-
-    ![Screenshot of belt cutting](/images/mechanic_images/week4/decoupe.jpg)
+- `Central PCB Box`:
   
-    ![Screenshot of belt after cutting and gluing](/images/mechanic_images/week4/tapis_picking.jpg)
+  <iframe src="https://player.vimeo.com/video/1104886426?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_conteneur_pas_driver" controls autoplay muted></iframe>
 
-- **Attaching the sensors** to the sensor bracket.  
-- **Fixing the sensor bracket** to the vertical support.  
+This is the brain of all operations on the conveyor (similar to an Arduino replica). It measures 870x74mm and must be powered by a set of four Li-ion batteries. Therefore, we designed a box with two compartments (one for the PCB and one for the power supply), always with a sliding lid. Perforations were added to allow heat dissipation.
 
----
+### <span style="color: #1ABC9C;"> Download Resources: </span>
+
+Here is the [link](/images/mechanic_images/week4/conveyor_virtual_design.zip) to download all the components.
+--
+
+`Solid Work Animation`
+
+<iframe src="https://player.vimeo.com/video/1104914025?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="animation-convoyeur-solid-work" controls autoplay muted></iframe>
+
+## <span style="color: #08C5D1;">Physical Construction Phase</span>
+
+![Mounting Result](/images/mechanic_images/week4/Result_after_mountinf.jpg)
+
+### <span style="color: #3498DB;">Obtaining the Components</span>
+Once we had all the plans and parts ready, we moved on to the physical production phase. The sensor ports, drums, junctions, and other small components were 3D printed in PLA due to their small size. To achieve this, we first converted the SolidWorks files into STL format, then used the PrusaSlicer software to generate the G-code, which we sent to the printer (a Prusa MK4S Original).
+
+#### <span style="color: #1ABC9C;">Laser Cutting</span>
+The vertical and horizontal planks, as well as the basal supports, were too large for 3D printing, so they were laser-cut from 4mm-thick plywood.
+
+![decoupe laser](/images/mechanic_images/week4/découpe_laser.jpg)
+
+`Process:`
+To cut the planks, we followed these steps:
+
+- Opened the detailed drawings of the parts.
+- Exported them in SVG format.
+- Configured the cutting parameters using Adobe Illustrator.
+
+![decoupe laser](/images/mechanic_images/week4/mise_en_plan_1.png)
+![decoupe laser](/images/mechanic_images/week4/mise_en_plan_2.png)
+![decoupe laser](/images/mechanic_images/week4/mise_en_plan_3.png)
+
+For the central PCB chassis, we used an open-source model available at [Boxes Hackerspace Bamberg](https://boxes.hackerspace-bamberg.de/?language=en). We customized it by replacing the standard perforations with star-shaped and octagonal ones to give it a more "cute" aesthetic.
+
+![Central PCB Box](/images/mechanic_images/week4/boxpy1.png)
+
+![Central PCB Box](/images/mechanic_images/week4/boxpy2.png)
+
+The files used for laser cutting are downloadable along with the other resources in the "laser_cutting_plans" folder. Once all this was done, we proceeded with the **`cutting`** and **`printing processes.`**
+
+![Materials](/images/mechanic_images/week4/material.jpg)
+
+### <span style="color: #3498DB;">Assembly of Components</span>
+Once all the materials were ready, we began assembling the conveyor system. Below are the key steps we followed:
+
+- Insertion of the Four Bearings into Their Dedicated Holes
+ 
+![Mountage](/images/mechanic_images/week4/roulement_fixing.jpg)
+
+- Mounting the Two Horizontal Supports into the Rows of Cavities on the Vertical Supports
+  
+![Mountage](/images/mechanic_images/week4/montage_verti-horrizontal_2.jpg)
+
+- Insertion of the Drums into the Axis of the Bearings
+  
+![Mountage](/images/mechanic_images/week4/poulie_fixing.jpg)
+
+- Superposition of the Second Vertical Face
+  
+![Mountage](/images/mechanic_images/week4/second_face.jpg)
+
+  
+- Fixation of the Color Sensor
+
+
+![Mountage](/images/mechanic_images/week4/capteur_couleur fixation_2.jpg)
+![Mountage](/images/mechanic_images/week4/support_capteurs_fixation.jpg)
+
+
+- Fixation of the Motor onto Its Support and Then Onto the Conveyor
+  
+![Mountage](/images/mechanic_images/week4/support_moteur_fixation.jpg)
+
+- Fixation of the Motor Driver Container Directly onto the Platform
+- Fixation of the Sensor Bases
+
+![Mountage](/images/mechanic_images/week4/support_capteurs_fixation.jpg)
+
+- wiring all component to central pcb (Performed by the Electronics Team)
+  
+![Mountage](/images/mechanic_images/week4/compatiment_central_fixing.jpg)
+  
+- Calibration Test (Performed by the Electronics Team)
+This test ensured that the laser beam successfully reached the phototransistor.
+
+<iframe src="https://player.vimeo.com/video/1104885965?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="calibrage et teste de mobilité" controls autoplay muted></iframe>
+
+### <span style="color: #3498DB;">Final Result</span>
+
+![Mounting Result](/images/mechanic_images/week4/Result_after_mountinf.jpg)
+
+## <span style="color: #3498DB;">Bonus: Automatic Sorting System</span>
+
+<iframe src="https://player.vimeo.com/video/1104885940?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Bonus_TRC" controls autoplay muted></iframe>
+
+Once the conveyor was complete, we implemented an automatic sorting system to make the process smart and autonomous. For this, we opted to build the "SO-101 Robot Arm" project from Hugging Face, which involved creating and training robotic arms to perform precise tasks. The parts used are available via the link: SO-ARM100 GitHub Repository , and the assembly process we followed is accessible at: LeRobot SO-101 Documentation .
+
+The new system works as follows: When waste arrives in front of the robotic arm, the conveyor stops. In collaboration with the mechanical team, we decided to integrate an ultrasonic sensor to manage this functionality. We designed and 3D-printed a custom support for the ultrasonic sensor using an open-source file.
+
+![Mounting Result](/images/mechanic_images/week4/ultra_song.jpg)
+
+
+## <span style="color: #08C5D1;">Conclusion: A Journey of Innovation</span>
+This project was a testament to our ability to combine creativity, technical skills, and teamwork. Every step of the way— from ideation to virtual design, physical construction, and troubleshooting— taught us valuable lessons. As we prepare for the Tekbot Robotics Challenges, we are proud of what we have achieved and excited to showcase our conveyor system.
