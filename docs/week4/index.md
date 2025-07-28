@@ -21,3 +21,11 @@ The system must detect waste, activate the conveyor belt, and display the sortin
 - The detected color is then **sent to the web platform**.  
 - A **web interface** allows **real-time monitoring** of the quantity of sorted waste.
 
+[![Vercel Homepage](/week4/images/pcb1.jpeg)](/week4/images/pcb1.jpeg)
+[![Vercel Homepage](/week4/images/pcb2.jpeg)](/week4/images/pcb2.jpeg)
+[![Vercel Homepage](/week4/images/pcb3.jpeg)](/week4/images/pcb3.jpeg)
+[![Vercel Homepage](/week4/images/pcb4.jpeg)](/week4/images/pcb4.jpeg)
+[![Vercel Homepage](/week4/images/convenyor.jpeg)](/week4/images/convenyor.jpeg)
+[![Vercel Homepage](/week4/images/conveyor1.jpeg)](/week4/images/conveyor1.jpeg)
+[![Vercel Homepage](/week4/images/conveyor2.jpeg)](/week4/images/conveyor2.jpeg)
+[![Vercel Homepage](/week4/images/conveyor3.jpeg)](/week4/images/conveyor3.jpeg)
