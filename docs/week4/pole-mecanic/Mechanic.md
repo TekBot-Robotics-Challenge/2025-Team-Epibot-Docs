@@ -24,18 +24,12 @@ This is the vertical face that supports the entire assembly. It has a height of 
 Two rows of small cavities to mount horizontal supports.
 Circular holes at the ends (30mm diameter) for inserting bearings to smooth the drum's rotational movement.
 
-`Process`:
-
---------Video de conception---------
-
 - <span style="color: #DB6A8F;">Horizontal Support:</span>
 
 <iframe src="https://player.vimeo.com/video/1104886388?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_horrizontal_face" controls autoplay muted></iframe>
 
 These are two surfaces placed on the two rows of cavities carved into the vertical supports, perpendicular to them, maintaining balance. They also act as stabilizers for the conveyor belt, preventing overloads and blockages. They are positioned around the drum for easy deployment above and below the belt. We chose a spacing of 70mm between the plates, making the support measure (70 + 12 * 2) 94mm wide (including the interlocking parts) and 450mm long.
 
-`Process:`
-----------------Videos montrant le process de création de support vertical---------------------
 
 #### <span style="color: #DB6A8F;">Base Support:</span>
 
@@ -152,6 +146,10 @@ This is the brain of all operations on the conveyor (similar to an Arduino repli
 ### <span style="color: #1ABC9C;"> Download Resources: </span>
 
 Here is the [link](/images/mechanic_images/week4/conveyor_virtual_design.zip) to download all the components.
+
+> Note: We can observe that the distance between the mat and the ground in SolidWorks is approximately 95mm out of 100mm. This offset of 5mm is intentional because we noticed during assembly that the mat did not adhere perfectly to the upper horizontal support, resulting in a deviation of approximately ±5mm. Therefore, we reduced the measurement in SolidWorks to ensure that the mat is actually 100mm off the ground after assembly.
+
+![+-5mm margin explication](/images/mechanic_images/week4/decalage.png)
 --
 
 `Solid Work Animation`
