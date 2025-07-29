@@ -7,16 +7,16 @@ The objective of this challenge was to bring together all the skills we acquired
 
 The virtual design focused on SolidWorks for 3D modeling and Illustrator for sketches intended for laser cutting. The conveyor had to be 650mm long, with the belt positioned 100mm above the ground. First, we had to think about how our conveyor would stand. We opted for two parallel vertical supports connected by horizontal planks to ensure balance. A final horizontal plate was added to keep the entire structure fixed and sturdy.
 
-<iframe src="https://player.vimeo.com/video/1104886435?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_convoyeur_soilid_work" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886435?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_convoyeur_soilid_work" muted></iframe>
 
 ### <span style="color: #1ed3afff;"> Support </span>
-<iframe src="https://player.vimeo.com/video/1104886485?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_support_convoyeur" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886485?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_support_convoyeur" muted></iframe>
 
 ### `Key Components and Design Process`:
 
 - #### <span style="color: #DB6A8F">Vertical Support</span>
 
-<iframe src="https://player.vimeo.com/video/1104886493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_support_verticale" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886493?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="vue_3d_support_verticale" muted></iframe>
 
 This is the vertical face that supports the entire assembly. It has a height of 115mm to comply with the challenge requirements. The 1mm difference is to provide a small margin. Initially, we planned to use wood, but the workspace of our laser cutter is limited to 600x300mm boards. Therefore, instead of 650mm plates, we opted for 590mm, giving us a 60mm margin.
 
@@ -24,32 +24,35 @@ This is the vertical face that supports the entire assembly. It has a height of 
 Two rows of small cavities to mount horizontal supports.
 Circular holes at the ends (30mm diameter) for inserting bearings to smooth the drum's rotational movement.
 
+`Design prcecess`:
+<iframe src="https://player.vimeo.com/video/1105380277?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="suppport-verticale-conception_RS8nGNLp"></iframe>
+
 - <span style="color: #DB6A8F;">Horizontal Support:</span>
 
-<iframe src="https://player.vimeo.com/video/1104886388?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_horrizontal_face" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886388?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_horrizontal_face" muted></iframe>
 
 These are two surfaces placed on the two rows of cavities carved into the vertical supports, perpendicular to them, maintaining balance. They also act as stabilizers for the conveyor belt, preventing overloads and blockages. They are positioned around the drum for easy deployment above and below the belt. We chose a spacing of 70mm between the plates, making the support measure (70 + 12 * 2) 94mm wide (including the interlocking parts) and 450mm long.
 
 
 #### <span style="color: #DB6A8F;">Base Support:</span>
 
-<iframe src="https://player.vimeo.com/video/1104885921?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="base_vue_d" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104885921?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="base_vue_d" muted></iframe>
 
 This is the base on which the entire assembly rests. It consists of cavities to hold the vertical supports. Due to the laser cutter's workspace limitations, we segmented it into two complementary surfaces. In addition to supporting the structure, it serves as a base for components under the conveyor and allows us to extend the missing 60mm to reach the total length of 650mm.
 
 `Assembly Process`:
 
-<iframe src="https://player.vimeo.com/video/1104886159?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_assembly" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886159?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_assembly" muted></iframe>
 
 ### <span style="color: #3498DB;">Conveyor Mobility System</span>
 
-<iframe src="https://player.vimeo.com/video/1104894020?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_assembly_2" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104894020?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_assembly_2" muted></iframe>
 
 After defining a robust and balanced structure for the conveyor, we moved on to designing a system to enable waste mobility. The key component generating movement is a NEMA 17 motor. Initially, we had two drums aligned with the bearings. A leather belt was placed over the drums, serving as the moving surface. At this stage, the drum's movement drives the belt, which, like a pulley, moves all objects it carries.
 
 #### <span style="color: #DB6A8F;">Drum Design:</span>
 
-<iframe src="https://player.vimeo.com/video/1100264137?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-vue-3d" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1100264137?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-vue-3d" muted></iframe>
 
 The drum is the cylindrical body in direct contact with the belt, transmitting motion. Its longitudinal ends fit into the bearings at the ends of the vertical supports. The main cylinder is 30mm wide, flanked by two 40mm-high discs to prevent overflows. There are two types:
 - `Leader Drum`: One end is longer (23/15mm) to pass through the 12mm-thick vertical surface and connect to the motor.
@@ -58,18 +61,22 @@ The drum is the cylindrical body in direct contact with the belt, transmitting m
 
 #### <span style="color: #DB6A8F;"> Process of Conception:</span>
 
-<iframe src="https://player.vimeo.com/video/1100285370?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-design-video_AZAHWH1h" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1100285370?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tambour-design-video_AZAHWH1h" muted></iframe>
 
 ### <span style="color: #1ed3afff;">Energy Transmission System:</span>
 
 This video https://www.youtube.com/watch?v=5Xn26kxmX5U helped us explore various possibilities. Initially, we opted for a pulley-belt system, but we lacked customizable belts. We experimented with elastic bands, string, and chain systems, but these failed due to mechanical constraints, friction, or lack of adhesion. Finally, we opted for a safer solution: directly connecting the motor to the drum via a custom-designed `Motor Support`.
 
-<iframe src="https://player.vimeo.com/video/1104886392?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_moteur_vue_3d" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886392?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="support_moteur_vue_3d" muted></iframe>
 
 **`Position`**
 ![position of support motor](/images/mechanic_images/week4/support_moteur_emplacement.png)
 
 This structure allows us to fix the motor horizontally while maintaining the entire assembly vertically using four pillars in each direction.
+
+`Design Process`:
+<iframe src="https://player.vimeo.com/video/1105377771?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="support-moteur-conception_Fx41k9A0"></iframe>
+
 The fixation of the motor and drum axles is ensured by a `junction`. It is a cylindrical body with two openings at its ends: one with a 5mm diameter for the NEMA motor shaft and the other with a 10mm diameter for the drum shaft. A tolerance of 0.1mm was later added to facilitate the insertion of each component into the two openings.
 `Position`
 
@@ -77,14 +84,14 @@ The fixation of the motor and drum axles is ensured by a `junction`. It is a cyl
 
 `3D view`
 
-<iframe src="https://player.vimeo.com/video/1104886453?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Vue_3d_jonction" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886453?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Vue_3d_jonction" muted></iframe>
 
 `Assembly Process`:
 
-<iframe src="https://player.vimeo.com/video/1104886019?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fication_tampour" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886019?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fication_tampour" muted></iframe>
 
 
-<iframe src="https://player.vimeo.com/video/1104886105?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fixation_support_moteur" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886105?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="fixation_support_moteur" muted></iframe>
 
 ## <span style="color: #3498DB;">Sensors and Object Detection</span>
 
@@ -96,33 +103,42 @@ Our mechanical challenge was to design a mechanism to support this system, ensur
 
 #### <span style="color: #1e6293ff;">Laser Port:</span>
 
-<iframe src="https://player.vimeo.com/video/1104886142?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="port_laser_vue_D" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886142?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="port_laser_vue_D" muted></iframe>
 
 This is a platform with a rectangular configuration at the top, featuring an open hollow face for laser diffusion and a rectangular opening opposite for wiring. The length is approximately the sum of the lengths of the PCB coupled with the laser.
 
+`Design Process`:
+<iframe src="https://player.vimeo.com/video/1105377754?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="support-laser-conception_pIUJlHyR"></iframe>
+
 #### <span style="color: #1e6293f0;"> Phototransistor Port:</span>
 
-<iframe src="https://player.vimeo.com/video/1104886471?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_photo_résistance" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886471?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_photo_résistance" muted></iframe>
 
 This is a rectangular platform designed to house the phototransistor PCB. Since the laser sensor is fixed, a sliding platform was added to adjust the horizontal position of the phototransistor for perfect calibration. A fairly large opening was also provided for wiring.
 
+`Design Process`:
+<iframe src="https://player.vimeo.com/video/1105377711?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="conception-poho-resistance_B12ylD9I"></iframe>
+
 #### <span style="color: #1e6293f0;">Base:</span>
-<iframe src="https://player.vimeo.com/video/1104886475?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_socle" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886475?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_socle" muted></iframe>
 
 This is the main link allowing height adjustment, equipped with a cylindrical body to house the support and a 4mm opening for fixing the desired height.
 
+`Design Process`:
+<iframe src="https://player.vimeo.com/video/1105377734?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" width="100%" height="300px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="conception-socle_VPtp7sIC"></iframe>
+
 `Wiring simulation`: 
 
-<iframe src="https://player.vimeo.com/video/1104886150?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="reglage_hauteur_support" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886150?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="reglage_hauteur_support" muted></iframe>
 
 #### <span style="color: #1e6293f0;">The carpet:</span>
 
-<iframe src="https://player.vimeo.com/video/1104898477?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tapis_FwweSzvM" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104898477?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="tapis_FwweSzvM" muted></iframe>
 
 It's a surface that, as it rotates, pulls whatever it supports.
-`Conception:`
 
-<iframe src="https://player.vimeo.com/video/1104886397?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="video conception_tapis" controls autoplay muted></iframe>
+`Conception:`
+<iframe src="https://player.vimeo.com/video/1104886397?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="video conception_tapis" muted></iframe>
 
 
 ### <span style="color: #1ed3afff;">Chassis Design</span>
@@ -133,13 +149,13 @@ In total, the electronics team implemented five PCBs, including those for the la
 
 - `Motor Driver Box:`
 
-<iframe src="https://player.vimeo.com/video/1104886502?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_conteneur_driver" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104886502?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_conteneur_driver" muted></iframe>
 
 The motor driver is a PCB measuring 44mm in length and 57mm in width. We designed a small cubic box with two opposing openings on the lateral faces for wiring, a sliding lid, and small perforations for heat dissipation and compartment ventilation.
 
 - `Central PCB Box`:
   
-  <iframe src="https://player.vimeo.com/video/1104886426?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_conteneur_pas_driver" controls autoplay muted></iframe>
+  <iframe src="https://player.vimeo.com/video/1104886426?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="vue_3d_conteneur_pas_driver" muted></iframe>
 
 This is the brain of all operations on the conveyor (similar to an Arduino replica). It measures 870x74mm and must be powered by a set of four Li-ion batteries. Therefore, we designed a box with two compartments (one for the PCB and one for the power supply), always with a sliding lid. Perforations were added to allow heat dissipation.
 
@@ -154,7 +170,7 @@ Here is the [link](/images/mechanic_images/week4/conveyor_virtual_design.zip) to
 
 `Solid Work Animation`
 
-<iframe src="https://player.vimeo.com/video/1104914025?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="animation-convoyeur-solid-work" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104914025?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="animation-convoyeur-solid-work" muted></iframe>
 
 ## <span style="color: #08C5D1;">Physical Construction Phase</span>
 
@@ -232,7 +248,7 @@ Once all the materials were ready, we began assembling the conveyor system. Belo
 - Calibration Test (Performed by the Electronics Team)
 This test ensured that the laser beam successfully reached the phototransistor.
 
-<iframe src="https://player.vimeo.com/video/1104885965?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="calibrage et teste de mobilité" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104885965?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="calibrage et teste de mobilité" muted></iframe>
 
 ### <span style="color: #3498DB;">Final Result</span>
 
@@ -240,7 +256,7 @@ This test ensured that the laser beam successfully reached the phototransistor.
 
 ## <span style="color: #3498DB;">Bonus: Automatic Sorting System</span>
 
-<iframe src="https://player.vimeo.com/video/1104885940?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Bonus_TRC" controls autoplay muted></iframe>
+<iframe src="https://player.vimeo.com/video/1104885940?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="top:0;left:0;width:100%;height:300px;" title="Bonus_TRC" muted></iframe>
 
 Once the conveyor was complete, we implemented an automatic sorting system to make the process smart and autonomous. For this, we opted to build the "SO-101 Robot Arm" project from Hugging Face, which involved creating and training robotic arms to perform precise tasks. The parts used are available via the link: SO-ARM100 GitHub Repository , and the assembly process we followed is accessible at: LeRobot SO-101 Documentation .
 
