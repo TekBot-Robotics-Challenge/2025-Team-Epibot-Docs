@@ -20,7 +20,7 @@ This project involves designing and building a smart conveyor system for a waste
 The conveyor system will combine mechanical and intelligent components to automate waste sorting. The conveyor belt remains stationary until waste is detected, at which point it activates and moves the detected items through a sensor zone. After detection, the waste travels to the end of the conveyor, where it is manually collected and placed in the bin indicated by the sorting system.
 
 ## Real-Time Web Interface
-
+  
 To enable real-time monitoring, an intuitive web interface will be implemented. This interface will display the quantity of sorted waste by type (green, yellow, red, blue), providing administrators with up-to-date information about the sorting process. The interface will be user-friendly and accessible, ensuring that administrators can easily track the system’s performance at any time.
 
 ## 2. Description of components
