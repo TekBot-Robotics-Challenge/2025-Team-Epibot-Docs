@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.C_7JoTpM.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"week4/pole-it/index.md","filePath":"week4/pole-it/index.md"}'),o={name:"week4/pole-it/index.md"};function n(r,i,s,c,d,p){return a(),t("div")}const m=e(o,[["render",n]]);export{l as __pageData,m as default};
