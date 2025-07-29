@@ -257,7 +257,7 @@ export default defineConfig({
                       { text: 'Troubleshooting', link: '/week4/pole-it/conveyor-site-docs/troubleshooting' },
                     ]
                   },
-                  { text: 'ROS bridge', link: '/week4/pole-it/Libserial_bridge' },
+                  { text: 'Arduino & ROS-humble communication', link: '/week4/pole-it/Libserial_bridge' },
                   { text: 'Color Sending to website', link: '/week4/pole-it/Send_color' },
                   { text: 'LeRobot Documentation', link: '/week4/pole-it/LeRobot' },
                    { text: 'IA Bonus Documentation', link: '/week4/pole-it/Bonus_en_IA' },
