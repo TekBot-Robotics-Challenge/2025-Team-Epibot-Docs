@@ -15,11 +15,11 @@ In this documentation:
 
 This project involves designing and building a smart conveyor system for a waste recycling company planning to set up operations in the TEKBOT CITY industrial zone. The goal is to develop a creative and efficient automated conveyor that sorts four types of waste, represented by colored objects (green, yellow, red, and blue cubes).
 
-## Technical Description
+### Technical Description
 
 The conveyor system will combine mechanical and intelligent components to automate waste sorting. The conveyor belt remains stationary until waste is detected, at which point it activates and moves the detected items through a sensor zone. After detection, the waste travels to the end of the conveyor, where it is manually collected and placed in the bin indicated by the sorting system.
 
-## Real-Time Web Interface
+### Real-Time Web Interface
   
 To enable real-time monitoring, an intuitive web interface will be implemented. This interface will display the quantity of sorted waste by type (green, yellow, red, blue), providing administrators with up-to-date information about the sorting process. The interface will be user-friendly and accessible, ensuring that administrators can easily track the system’s performance at any time.
 
@@ -82,9 +82,65 @@ To power up our setup, we should build a power supply that will provide safe and
 
 We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the schematic as well as the PCB for this project. Find its official documentation [here](https://docs.kicad.org/).
 
-### KiCad schematic diagram
+### a. KiCad schematic diagrams
 
 <img width="1080" height="607" alt="The Schematic" src="https://github.com/user-attachments/assets/a9ec8b74-3040-4ff7-befc-33c808cfbcb3" />
+
+### b. Printed Circuit boards (PCBs) designs
+
+#### KY-008 Laser Module PCB
+
+This circuit is designed to host and drive the KY-008 laser module.
+
+- The laser module is directly inserted into a 3-pin female connector, designed to power it via VCC, GND, and signal.
+- A 3V green LED in series with a 220 ohm resistor is integrated on the board as a power-on indicator for the module.
+- A 3-pin terminal block is present for external power or control from a master board (for example, an Arduino). This terminal block makes it easy to connect VCC, GND, and the activation signal.
+
+This PCB thus serves as an interface between the KY-008 laser and the rest of the system, while providing a visual indication of its status.
+
+#### Photoresistor Module PCB
+
+This PCB allows for ambient light measurement and threshold sensitivity adjustment.
+
+- A photoresistor (R4) is inserted into a socket (direct pads).
+- A 10 kΩ potentiometer allows adjustment of the sensor’s sensitivity (RV1).
+- Two resistors: 10 kΩ (R5) to form a voltage divider with the photoresistor, and 220 ohms (R6) for the LED.
+- A 3V green LED (D1) serves as an indicator light showing circuit activation.
+- Two 2-pin terminal blocks allow connection of the circuit to power (VCC/GND) and to retrieve the analog output voltage.
+
+Components are mounted directly or via headers if needed. This PCB allows for manual adjustment of the light detection level and a stable analog reading from the voltage divider output.
+
+#### TCS34725 Color Sensor PCB
+
+This PCB is a carrier board for the TCS34725 color sensor, which operates over I2C.
+
+- The sensor is mounted via a 7-pin female header (J3), connected to the SDA, SCL, VCC, GND, INT, LED, NC lines.
+- A 3V green LED, mounted with a 220 ohm resistor, provides constant auxiliary lighting to ensure stable measurements.
+- Two 2-pin terminal blocks are available:
+  - One for powering the module (VCC/GND),
+  - The other for exposing the I2C lines or retrieving signals.
+
+This PCB makes it easy to integrate the TCS34725 sensor, power it, and communicate via I2C with an external microcontroller, while ensuring proper illumination of the analyzed surface thanks to the integrated LED.
+
+#### A4988 Stepper Motor Driver PCB
+
+This PCB is intended to host an A4988 driver (Pololu module) to control a NEMA 17 stepper motor. It is designed to facilitate power, control, and motor connections. It is composed of:
+
+- 1 green 3V LED (D4) with a 220 ohm resistor (R2) serving as a logic power indicator.
+- 3 x 2-pin terminal blocks:
+  - Terminal 1 (VDD/GND): for logic power to the A4988 (5V).
+  - Terminal 2 (VMOT/GND): for motor power (e.g., 9V or 12V).
+  - Terminal 3 (SIGNAL): for possible reception of control or status signals (e.g., RESET/SLEEP), or for custom use depending on project wiring.
+- 1 male 4-pin header:
+  - This connector allows direct connection to the NEMA 17 motor, with pins 1A, 1B, 2A, 2B.
+
+##### Operation:
+
+- The A4988 driver is mounted via a double-row female connector (not shown here but usually 2x8 pins).
+- Logic power (5V) and motor power (9V or 12V) are separated for stable operation.
+- Control signals (STEP, DIR) are sent via a 2-pin terminal block.
+- The NEMA motor is directly connected to the 4-pin male header, for simple and clear wiring.
+
 
 ## 4. Conveyor System Logic
 
