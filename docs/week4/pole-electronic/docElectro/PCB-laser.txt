@@ -1,0 +1,19 @@
+---
+
+##  1. **KY-008 Laser Module PCB**
+
+This PCB is used to properly integrate the **KY-008 laser module**, used to detect the passage of an object on the conveyor belt. It is permanently activated as defined in the Arduino code.
+
+###  Components:
+
+* **KY-008 laser**: inserted into a **3-pin female header** (VCC, GND, Signal).
+* **3V green LED** + **220 ohm resistor**: indicates the active state of the laser module (functions as a power indicator).
+* **3-pin terminal block**: to connect the module to the Arduino board or another control board. This terminal block provides power (VCC/GND) and optionally the ON/OFF signal.
+
+### 🔧 Function:
+
+* The laser is **permanently powered** via the `digitalWrite(laserPin, HIGH)` pin in the `KY008` code.
+* The **LED indicator** indicates whether the power supply is active.
+* The card serves as a **compact interface**, reducing bulky wiring, while being **modular**: it can be connected or replaced without major intervention.
+
+---

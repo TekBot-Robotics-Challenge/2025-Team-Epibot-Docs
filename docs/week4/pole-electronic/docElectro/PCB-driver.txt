@@ -1,0 +1,31 @@
+---
+
+##  4. **A4988 Stepper Motor Driver PCB (Nema 17)**
+
+This PCB houses an **A4988 driver** to control the Nema 17 stepper motor, responsible for the mechanical sorting.
+
+###  Components:
+
+* **A4988** (Pololu module): inserted via a **double-row female header**.
+* **3V green LED + 220 ohm resistor (D4 + R2)**: logic operation indicator.
+* **3 2-pin terminal blocks**:
+
+* **VDD/GND terminal block**: for the A4988 **logic** power supply (5V).
+* **VMOT/GND terminal block**: for the **motor** power supply (e.g., 12V).
+* **SIGNAL Terminal Block**: To connect the **STEP, DIR, ENABLE signals** from the Arduino board.
+* **4-pin Male Header**:
+
+* To **directly connect** the NEMA 17 motor (1A, 1B, 2A, 2B).
+
+### 🔧 Function:
+
+* The code controls the motor via `digitalWrite(stepPin, HIGH)` in the `Nema17` class.
+* The driver receives **STEP pulses** to rotate the motor according to the sorting requirements.
+* The motor power supply is **isolated from the logic**, ensuring electrical stability.
+
+###  Advantages:
+
+* The PCB offers **clear connection** (each function has its own terminal block).
+* It is **modular**: each component (driver, motor) can be replaced without modifying the other parts. * The use of headers makes the system easy to maintain or modify.
+
+---

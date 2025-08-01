@@ -1,0 +1,25 @@
+---
+
+##  2. **Photoresistor Module PCB**
+
+This PCB is responsible for **detecting an object** passing in front of the laser by **measuring the change in light**. It is used in `Photoresistor::isHit()` to enable or disable sorting.
+
+###  Components:
+
+* **Photoresistor (LDR)**: Detects ambient light.
+* **10 kΩ Potentiometer (RV1)**: Dynamically adjusts the **detection threshold** based on lighting conditions.
+* **10 kΩ Resistor (R5)**: Forms a **divider bridge** with the LDR to provide a variable analog voltage.
+* **3V Green LED + 220 ohm Resistor (R6)**: Indicator indicating detection or simply power on.
+
+* **2 2-pin terminal blocks**:
+
+* One for the **power supply** (VCC/GND).
+* Another for the **analog output** (signal from the LDR or potentiometer).
+
+### 🔧 Function:
+
+* The system reads the voltage on the LDR (`photoPin = A0`) and compares it to the voltage from the potentiometer (`thresholdPin = A1`).
+* If the voltage exceeds, the `isHit()` method returns `true`, triggering the motor to stop.
+* This PCB is **highly configurable** via the potentiometer, making it **robust** in a variety of lighting environments.
+
+---

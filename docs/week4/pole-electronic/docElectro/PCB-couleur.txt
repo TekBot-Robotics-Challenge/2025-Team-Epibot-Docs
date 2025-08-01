@@ -1,0 +1,23 @@
+
+---
+
+##  3. **TCS34725 Color Sensor PCB**
+
+This PCB manages the power and I2C connections required to operate the TCS34725 color sensor, which is used to classify objects by color.
+
+###  Components:
+
+* **TCS34725**: inserted via a **7-pin female header** (SDA, SCL, LED, INT, GND, VCC, etc.).
+* **3V green LED + 220 ohm resistor**: ensures **uniform illumination** of the detected surface.
+* **2 2-pin terminal blocks**:
+
+* One for power.
+* Another to extend the I2C lines or retrieve signals.
+
+### 🔧 Function:
+
+* The sensor is queried via I2C in the `TCS34725::detectColor()` class.
+* The R, G, and B components are **normalized** to classify objects (code via `if (r > 0.45 && g < 0.4 && ...)`).
+* The PCB is **fully modular**: it plugs into a motherboard without direct soldering, and can be easily removed.
+
+---

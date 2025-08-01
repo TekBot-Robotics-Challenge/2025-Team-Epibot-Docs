@@ -1,0 +1,61 @@
+---
+
+This circuit is a faithful and functional reproduction of an **Arduino Uno** board, built around the **ATmega328P-P** microcontroller, with complete power management, programming, and expansion interfaces. This design aims to provide a standalone board that is fully compatible with various embedded modules.
+
+### 1. Microcontroller and Clock
+
+The heart of the system is an **ATmega328P**, clocked at **16 MHz** using a **quartz** connected to pins XTAL1 and XTAL2. Two **22 pF ceramic capacitors** ensure oscillation stability, in accordance with the manufacturer's recommendations. This configuration guarantees timekeeping accuracy and the reliability of the microcontroller in all its operations.
+
+### 2. Reset Circuit
+
+A **push button** is integrated and connected to the **RESET** pin of the microcontroller, with a **10 kΩ pull-up resistor** to prevent accidental reboots. When the button is pressed, the RESET pin is temporarily connected to ground, causing a clean system reset.
+
+### 3. Power Management
+
+The board receives a **14.7V** input voltage via a **2-pin terminal block**. A **1N4007 rectifier diode** is placed at the input to protect the circuit against accidental polarity reversals.
+
+An **LM7809 linear regulator** stabilizes this voltage at **9V**, and its output is accessible via a second terminal block to power any external modules requiring this voltage.
+
+To provide a 5V power supply to the microcontroller and its peripherals, the circuit uses a 5.1V 1N4733A Zener diode, mounted to regulate the output voltage. This ingenious choice eliminates the need for a 7805 regulator while ensuring sufficient voltage for the 5V components. Three 220 µF electrolytic capacitors are arranged for filtering: upstream and downstream of the LM7809, as well as in parallel with the Zener, to stabilize voltages and filter out interference.
+
+Two status LEDs display the active voltages:
+
+* A red LED (3V) in series with a 330 Ω resistor indicates the presence of 9V.
+* A green LED (3V) in series with a 220 Ω resistor indicates the availability of 5V.
+
+### 4. USB Interface – Programming
+
+The board integrates the **CH340G** circuit, a **USB-to-serial** converter, essential for programming the ATmega328P from a PC. This module provides communication between the USB port and the microcontroller's **RX/TX** pins (PD0/PD1), allowing code upload from the Arduino IDE.
+
+A **6-pin female header** is also included to facilitate programming via an external USB-TTL cable, or for serial communication with other modules.
+
+### 5. Expansion Connectors
+
+Two **14-pin female headers** expose all the ATmega328P's digital and analog pins:
+
+* Pins **D0 to D13** (digital inputs/outputs),
+* Pins **A0 to A5** (analog inputs).
+
+An additional 6-pin female header provides convenient access to communication lines or SPI/ICSP programming.
+
+6. Available Voltage Outputs
+
+The board offers two power outputs via terminal blocks:
+
+* A 9V output, taken directly from the LM7809, to power more powerful loads or modules,
+* A 5V output, stabilized via a 5.1V Zener diode, to power logic modules, sensors, and peripherals requiring 5V.
+
+### 7. Compatibility and Integration
+
+This board is designed to be **100% compatible with separately developed embedded modules**, including:
+
+* The **KY-008 laser module**,
+* The **photoresistor module with potentiometer adjustment**,
+* The **TCS34725 color sensor module**,
+* The **A4988 stepper motor driver**.
+
+Each of these modules is powered by the 5V or 9V lines provided by the board, as needed, via the output terminals.
+
+---
+
+This modular design allows for efficient experimentation and prototyping of embedded systems with a complete and reproducible platform.
