@@ -4,14 +4,14 @@ In this documentation:
 
 - [1. General Context](#1-general-context)
 - [2. Description of components](#2-description-of-components)
-- [3. Computer-Aided Design](#3-computer-aided-design)
+- [3. Parts Design](#3-parts-design)
 - [4. Conveyor System Logic](#4-conveyor-system-logic)
 - [5. The Arduino Code](#5-the-arduino-code)
 - [6. Assembly of components](#6-assembly-of-components)
 - [7. Testing the project](#7-testing-the-project)
 - [8. Helpful Ressources](#8-helpful-ressources)
 
-## General Context
+## 1.General Context
 
 This project involves designing and building a smart conveyor system for a waste recycling company planning to set up operations in the TEKBOT CITY industrial zone. The goal is to develop a creative and efficient automated conveyor that sorts four types of waste, represented by colored objects (green, yellow, red, and blue cubes).
 

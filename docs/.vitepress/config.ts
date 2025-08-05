@@ -271,13 +271,19 @@ export default defineConfig({
             text: 'Electronic Pole',
             collapsed: true,
             items: [
-              // { text: 'Test 1', link: '/week1/pole-it' },
               { 
                 text: 'Test 4',
                 link: '/week4/pole-electronic/',
                 collapsed: true,
                 items: [
-                  { text: '', link: '/week4/pole-electronic/' },
+                  { text: 'Overview', link: '/week4/pole-electronic/markdowns/1overview' },
+                  { text: 'List of components', link: '/week4/pole-electronic/markdowns/2components' },
+                  { text: 'Parts design', link: '/week4/pole-electronic/markdowns/3design' },
+                  { text: 'Conveyor system logic', link: '/week4/pole-electronic/markdowns/4logic' },
+                  { text: 'The arduino Code', link: '/week4/pole-electronic/markdowns/5code' },
+                  { text: 'Uploading the arduino code', link: '/week4/pole-electronic/markdowns/6upload_arduino' },
+                  { text: 'Assembly steps and testing', link: '/week4/pole-electronic/markdowns/7assembly_testing' },
+                  { text: 'Helpful ressources', link: '/week4/pole-electronic/markdowns/8ressources' },
                 ]
               },
             ]

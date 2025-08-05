@@ -1,4 +1,4 @@
-## 3.  Computer-Aided Design
+## 3. Parts Design
 
 We used the KiCad EDA (_download [here](https://www.kicad.org/)_) to design the schematic as well as the Printed Circuit Boards (PCBs) for this project. Find its official documentation [here](https://docs.kicad.org/).
 
