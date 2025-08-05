@@ -1,10 +1,6 @@
----
-
 # TRC2K25 - Automated Sorting System with Arduino
 
 This project implements an Arduino-based automated sorting system, integrating a color sensor, a photoresistor laser, an ultrasonic sensor, a Nema17 stepper motor with an A4988 driver, and serial communication with ROS.
-
----
 
 ## Code Architecture
 
@@ -14,12 +10,11 @@ The code is divided into namespaces to organize the components:
 * `SENSOR`: Sensor control.
 * `TRC2K25`: Sorting logic, ROS interface.
 
----
 /*
-**
-**
-**
+** PROJECT: FINAL TEST - THE CONVEYOR
+** TEAM: EPIBOT
 */
+
 // ======= Include the necessary libraries =======
 
 #include <Adafruit_TCS34725.h> // Library to manage the TCS34725 color sensor
@@ -333,10 +328,6 @@ conveyorEpibot.start(); // Starts sorting
 return;
 }
 
----
-
----
-
 ## Component Contents
 
 ### 1. `MOTOR` — Nema17 Stepper Motor Control
@@ -383,8 +374,6 @@ return;
 * Returns true if an object is detected within 2 cm.
 * The destructor dynamically releases the `NewPing` object.
 
----
-
 ### 3. `TRC2K25` — Sorting System Logic
 
 #### `conveyor` (main class)
@@ -413,8 +402,6 @@ return;
 * `read()`: Reads a serial message.
 * `Write(message)`: Writes a serial message.
 
----
-
 ## Arduino Main Loop
 
 ```cpp
@@ -440,8 +427,6 @@ conveyorEpibot.stop();
 2. Executes the sorting logic.
 3. (Stop not used.)
 
----
-
 ## Hardware Required
 
 | Module | Purpose | Arduino Pins |
@@ -453,8 +438,6 @@ conveyorEpibot.stop();
 | Nema17 + A4988 | Object Transport | Dir = D3, Step = D2 |
 | Arduino (ATmega328P) | Central Control | UART for ROS, etc. |
 
----
-
 ## Upload Code to Custom Arduino Board
 
 1. Connect your board via USB (CH340G recommended).
@@ -463,8 +446,6 @@ conveyorEpibot.stop();
 4. Click **"Upload"**.
 
 *If you used an ATmega328P + CH340G bootloader, the upload will be performed as on a standard Uno.*
-
----
 
 ## Operation Summary
 
@@ -476,8 +457,6 @@ ROS ←→ Arduino
 |→ Nema17 → Transport
 |→ HC-SR04 → Limit switch
 ```
-
----
 
 ## Serial Exchange Example
 

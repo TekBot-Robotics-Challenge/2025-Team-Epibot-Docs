@@ -134,7 +134,7 @@ This PCB is intended to host an A4988 driver (Pololu module) to control a NEMA 1
 - 1 male 4-pin header:
   - This connector allows direct connection to the NEMA 17 motor, with pins 1A, 1B, 2A, 2B.
 
-##### Operation:
+#### Operation:
 
 - The A4988 driver is mounted via a double-row female connector (not shown here but usually 2x8 pins).
 - Logic power (5V) and motor power (9V or 12V) are separated for stable operation.
