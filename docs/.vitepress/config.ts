@@ -300,6 +300,31 @@ export default defineConfig({
           },
         ],
       },
+
+      // Final Challenge
+      {
+        text: 'Final Challenge',
+        collapsed: true,
+        items: [
+           // Pole IT
+          {
+            text: 'IT Pole',
+            collapsed: true,
+            items: [
+              { 
+                text: 'Jetson Nano Dofbot',
+                collapsed: true,
+                items: [
+                    { text: 'Introduction', link: '/final_challenge/pole_it/dofbot_jetson' },
+                    { text: 'Waste Sorting Pick & Place System', link: '/final_challenge/pole_it/dofbot_jetson/waste_sorting_pick' },
+                    { text: 'PickPlace Class', link: '/final_challenge/pole_it/dofbot_jetson/pick_and_place' },
+                ]
+              },
+            ]
+          },
+
+        ],
+      },
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/TekBot-Robotics-Challenge' }
